@@ -1,0 +1,32 @@
+{
+  "err":"0",
+  "msg":"创建成功",
+  "site":"地址/getState",
+  "data":[
+    {
+      "id":"01",
+      "server":"空闲",
+      "executeID":"",
+      "sum":"1",
+      "finish":"1",
+      "error":"0"
+    },
+    {
+      "id":"02",
+      "server":"空闲",
+      "executeID":"",
+      "sum":"1",
+      "finish":"1",
+      "error":"0"
+    },
+    {
+      "id":"03",
+      "server":"空闲",
+      "executeID":"",
+      "sum":"1",
+      "finish":"1",
+      "error":"0"
+    }
+
+  ]
+}
