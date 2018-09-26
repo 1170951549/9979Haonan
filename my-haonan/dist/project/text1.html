@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>9979</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/cropper.min.css">
+  <!--<link rel="stylesheet" href="css/ImgCropping.css">-->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .cut {
+      width: 100%;
+      height: 200px;
+      margin: 30px auto;
+    }
+    .c-item {
+      max-width: 800px;
+      margin: 10px auto;
+      margin-top: 20px;
+    }
+
+    .content {
+      margin: auto;
+      max-width: 1200px;
+      margin-bottom: 100px;
+    }
+
+    .test-button {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+    }
+
+    /*.btn {*/
+      /*display: inline-block;*/
+      /*line-height: 1;*/
+      /*white-space: nowrap;*/
+      /*cursor: pointer;*/
+      /*background: #fff;*/
+      /*border: 1px solid #c0ccda;*/
+      /*color: #1f2d3d;*/
+      /*text-align: center;*/
+      /*box-sizing: border-box;*/
+      /*outline: none;*/
+      /*margin:20px 10px 0px 0px;*/
+      /*padding: 9px 15px;*/
+      /*font-size: 14px;*/
+      /*border-radius: 4px;*/
+      /*color: #fff;*/
+      /*background-color: #50bfff;*/
+      /*border-color: #50bfff;*/
+      /*transition: all .2s ease;*/
+      /*text-decoration: none;*/
+      /*user-select: none;*/
+    /*}*/
+
+    .des {
+      line-height: 30px;
+    }
+
+    code.language-html {
+      padding: 10px 20px;
+      margin: 10px 0px;
+      display: block;
+      background-color: #333;
+      color: #fff;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, Droid, Sans, Mono, Source, Code, Pro, Menlo, Lucida, Sans, Type, Writer, Ubuntu, Mono;
+      border-radius: 5px;
+      white-space: pre;
+    }
+
+    .show-info {
+      margin-bottom: 50px;
+    }
+
+    .show-info h2 {
+      line-height: 50px;
+    }
+
+    /*.title, .title:hover, .title-focus, .title:visited {
+      color: black;
+    }*/
+
+    .title {
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      line-height: 1.5;
+      margin: 20px 0px;
+      background-image: -webkit-linear-gradient(left,#3498db,#f47920 10%,#d71345 20%,#f7acbc 30%,#ffd400 40%,#3498db 50%,#f47920 60%,#d71345 70%,#f7acbc 80%,#ffd400 90%,#3498db);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-size: 200% 100%;
+      animation: slide 5s infinite linear;
+      font-size: 40px;
+    }
+
+    .test {
+      height: 500px;
+    }
+
+    .model {
+      position: fixed;
+      z-index: 10;
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .model-show {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .model img {
+      display: block;
+      margin: auto;
+      max-width: 80%;
+      user-select: none;
+      background-position: 0px 0px, 10px 10px;
+      background-size: 20px 20px;
+      background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);
+    }
+
+    .c-item {
+      display: block;
+      user-select: none;
+    }
+
+    @keyframes slide {
+      0%  {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -100% 0;
+      }
+    }
+    .loadingS{
+      text-align: center;
+      margin-top: 8%;
+      display: none;
+    }
+    .divImg{
+      transform: scale(1);          /*图片原始大小1倍*/
+      transition: all ease 0.5s;
+    }
+    .divImg.active{
+      transform: scale(2);          /*图片需要放大3倍*/
+      position: absolute;           /*是相对于前面的容器定位的，此处要放大的图片，不能使用position：relative；以及float，否则会导致z-index无效*/
+      z-index: 100;
+      top: 50%;
+      left: 28%;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">{{title}}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+          <!--<li><a href="#">Link</a></li>-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新增 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">产品</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">VIP</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">admin <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">切换用户</a></li>
+              <li><a href="#">退出</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container" style="padding: 2%">
+    <div class="row" style="margin: 0">
+      <!--<small>创建前请确认产品ID和图片地址准确无误</small>-->
+      <h2>生成产品</h2>
+      <hr>
+      <form id="form-member-add">
+        <div class="form-group">
+          <label>生产厂家</label>
+          <select class="form-control" name="厂家">
+            <option v-bind:value="goods.Name" >{{goods.Name}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>产品ID</label>
+          <select class="form-control proID" name="产品ID">
+            <option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>保存目录</label>
+          <input type="text"  class="form-control proMl" name="保存目录">
+          <span class="help-block">本次生产保存的路径</span>
+        </div>
+        <label>URL地址</label>
+        <div class="input-group">
+          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="任务">
+          <span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>
+        </div>
+        <button type="button" class="btn btn-primary" v-on:click="getcode()" style="margin-top: 30px">创建</button>
+      </form>
+    </div>
+    <div class="row rowImg" style="margin: 0">
+      <h3>图片<small>生成图片</small></h3>
+      <div class="loadingS">
+        <img src="temp/5-121204193R0-50.gif">
+      </div>
+      <div :class="{'col-xs-6':true,'col-md-3':true,'divImg':true,active:index==isChoose}" v-for="(pro,index) in goodImg" @click="rowImg(index,$event)" >
+        <!--:class="{'thumbnail':true,'active':isChoose} @click="rowImg($event)"-->
+        <a href="javascript:;" class="thumbnail" >
+          <img v-bind:src="['http://tp1.015144.com'+pro]" >
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="model" v-show="model" @click="model = false">
+            <div class="model-show">
+              <img :src="modelSrc" alt="">
+            </div>
+          </div>
+          <div class="cut">
+            <vue-cropper ref="cropper" :img="option.img" :output-size="option.size" :output-type="option.outputType" :info="true" :full="option.full"
+                         :can-move="option.canMove" :can-move-box="option.canMoveBox" :fixed-box="option.fixedBox" :original="option.original"
+                         :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth" :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
+                         @real-time="realTime" :high="option.high" ></vue-cropper>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              选项
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><button @click="changeImg" class="btn">changeImg</button></li>
+              <li> <label class="btn" for="uploads">upload</label>
+                <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"
+                       @change="uploadImg($event, 1)"></li>
+              <li> <button @click="clearCrop" class="btn">清除</button></li>
+              <li role="separator" class="divider"><button @click="refreshCrop" class="btn">刷新</button></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="test-button">
+            <!--<button @click="changeImg" class="btn">changeImg</button>-->
+            <!--<label class="btn" for="uploads">upload</label>-->
+            <!--<input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"-->
+                   <!--@change="uploadImg($event, 1)">-->
+            <!--<button @click="startCrop" v-if="!crap" class="btn">start</button>-->
+            <!--<button @click="stopCrop" v-else class="btn">stop</button>-->
+            <!--<button @click="clearCrop" class="btn">clear</button>-->
+            <!--<button @click="refreshCrop" class="btn">refresh</button>-->
+            <!--<button @click="changeScale(1)" class="btn">+</button>-->
+            <!--<button @click="changeScale(-1)" class="btn">-</button>-->
+            <!--<button @click="rotateLeft" class="btn">rotateLeft</button>-->
+            <!--<button @click="rotateRight" class="btn">rotateRight</button>-->
+            <!--<button @click="finish('base64')" class="btn">preview(base64)</button>-->
+            <!--<button @click="finish('blob')" class="btn">preview(blob)</button>-->
+            <!--<a @click="down('base64')" class="btn">download(base64)</a>-->
+            <!--<a @click="down('blob')" class="btn">download(blob)</a>-->
+            <!--<div style="display:block; width: 100%;">-->
+              <!--<label class="c-item">-->
+                <!--<span>上传图片是否显示原始宽高 (针对大图 可以铺满)</span>-->
+                <!--<input type="checkbox" v-model="option.original">-->
+                <!--<span>original: {{ option.original}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>能否拖动图片</span>-->
+                <!--<input type="checkbox" v-model="option.canMove">-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>能否拖动截图框</span>-->
+                <!--<input type="checkbox" v-model="option.canMoveBox">-->
+                <!--<span>canMoveBox: {{ option.canMoveBox}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>截图框固定大小</span>-->
+                <!--<input type="checkbox" v-model="option.fixedBox">-->
+                <!--<span>fixedBox: {{ option.fixedBox}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>是否输出原图比例的截图</span>-->
+                <!--<input type="checkbox" v-model="option.full">-->
+                <!--<span>full: {{ option.full}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>是否自动生成截图框</span>-->
+                <!--<input type="checkbox" v-model="option.autoCrop">-->
+                <!--<span>autoCrop: {{ option.autoCrop}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>是否根据dpr生成适合屏幕的高清图片</span>-->
+                <!--<input type="checkbox" v-model="option.high">-->
+                <!--<span>high: {{ option.high}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<span>截图框是否限制在图片里(只有在自动生成截图框时才能生效)</span>-->
+                <!--<input type="checkbox" v-model="option.centerBox">-->
+                <!--<span>centerBox: {{ option.centerBox}}</span>-->
+              <!--</label>-->
+              <!--<label class="c-item">-->
+                <!--<p>输出图片格式</p>-->
+                <!--<label>jpg-->
+                  <!--<input type="radio" name="type" value="jpeg" v-model="option.outputType">-->
+                <!--</label>-->
+                <!--<label>png-->
+                  <!--<input type="radio" name="type" value="png" v-model="option.outputType">-->
+                <!--</label>-->
+                <!--<label>webp-->
+                  <!--<input type="radio" name="type" value="webp" v-model="option.outputType">-->
+                <!--</label>-->
+              <!--</label>-->
+            <!--</div>-->
+          </div>
+          <div class="show-preview" :style="{'width': previews.w + 'px', 'height': previews.h + 'px',  'overflow': 'hidden', 'margin': '5px'}">
+            <div :style="previews.div">
+              <img :src="previews.url" :style="previews.img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="http://cdn.bootcss.com/vue-resource/1.1.0/vue-resource.js"></script>
+<script src="js/ceshi.js"></script>
+
+<script type="text/javascript" src="js/cropper.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  var ezjsUtil = Vue.ezjsUtil;
+  var app = new Vue({
+    el:'#app',
+    data:{
+      title:"9979",
+      goods:[],
+      goodXm:[],
+      goodImg:[],
+      isChoose:-1,
+      bol:false,
+
+      model: false,
+      modelSrc: '',
+      crap: false,
+      previews: {},
+      lists: [
+        {
+          img: 'http://ofyaji162.bkt.clouddn.com/touxiang.jpg'
+        },
+        {
+          img: 'https://o90cnn3g2.qnssl.com/0C3ABE8D05322EAC3120DDB11F9D1F72.png'
+        },
+        {
+          img: 'http://ofyaji162.bkt.clouddn.com/bg1.jpg',
+        },
+        {
+          img: 'http://ofyaji162.bkt.clouddn.com/bg2.jpg',
+        },
+        {
+          img: 'http://ofyaji162.bkt.clouddn.com/can.jpg'
+        },
+        {
+          img: 'http://ofyaji162.bkt.clouddn.com/nightcat.jpg'
+        }
+      ],
+      option: {
+        img: 'https://avatars3.githubusercontent.com/u/15681693',
+        size: 1,
+        full: false,
+        outputType: 'png',
+        canMove: true,
+        fixedBox: false,
+        original: false,
+        canMoveBox: true,
+        autoCrop: true,
+        // 只有自动截图开启 宽度高度才生效
+        autoCropWidth: 200,
+        autoCropHeight: 150,
+        centerBox: false,
+        high: true
+      },
+      show: true
+    },
+    components: {
+      'vue-cropper': window['vue-cropper'].default
+    },
+    methods:{
+      changeImg() {
+        this.option.img = this.lists[~~(Math.random() * this.lists.length)].img
+      },
+      startCrop() {
+        // start
+        this.crap = true
+        this.$refs.cropper.startCrop()
+      },
+      stopCrop() {
+        //  stop停止截图
+        this.crap = false
+        this.$refs.cropper.stopCrop()
+      },
+      clearCrop() {
+        // clear清除截图
+        this.$refs.cropper.clearCrop()
+      },
+      refreshCrop() {
+        // clear
+        this.$refs.cropper.refresh()
+      },
+      changeScale(num) {
+        num = num || 1
+        this.$refs.cropper.changeScale(num)
+      },
+      rotateLeft() {
+        //向左边旋转90度
+        this.$refs.cropper.rotateLeft()
+      },
+      rotateRight() {
+        //向右边旋转90度
+        this.$refs.cropper.rotateRight()
+      },
+      finish(type) {
+        // 输出
+        // var test = window.open('about:blank')
+        // test.document.body.innerHTML = '图片生成中..'
+        if (type === 'blob') {
+          this.$refs.cropper.getCropBlob((data) => {
+            var img = window.URL.createObjectURL(data)
+            this.model = true
+            this.modelSrc = img
+          })
+        } else {
+          this.$refs.cropper.getCropData((data) => {
+            this.model = true
+            this.modelSrc = data
+          })
+        }
+      },
+      // 实时预览函数
+      realTime(data) {
+        console.log(data)
+        this.previews = data
+      },
+      finish2(type) {
+        this.$refs.cropper2.getCropData((data) => {
+          this.model = true
+          this.modelSrc = data
+        })
+      },
+      finish3(type) {
+        this.$refs.cropper3.getCropData((data) => {
+          this.model = true
+          this.modelSrc = data
+        })
+      },
+      down(type) {
+        // event.preventDefault()
+        var aLink = document.createElement('a')
+        aLink.download = 'demo'
+        // 输出
+        if (type === 'blob') {
+          this.$refs.cropper.getCropBlob((data) => {
+            this.downImg = window.URL.createObjectURL(data)
+             aLink.href = window.URL.createObjectURL(data)
+             aLink.click()
+          })
+        } else {
+          this.$refs.cropper.getCropData((data) => {
+            this.downImg = data
+            aLink.href = data
+            aLink.click()
+            $.ajax({
+              url: '/upload',
+              method: 'POST',
+              data:{base64:data} ,
+              //默认为true，设为false后直到ajax请求结束(调完回掉函数)后才会执行$.ajax(...)后面的代码
+              async: false,
+              //下面三个，因为直接使用FormData作为数据，contentType会自动设置，也不需要jquery做进一步的数据处理(序列化)。
+              // cache: false,
+              // contentType: false,
+              // processData: true,
+              cache: false,
+              processData: true,
+              type:JSON,
+              success: function(res) {
+                // let imgToken = res.data;
+                // _this.cropperLoading = false;
+                //传参
+                // Bus.$emit('getTarget', imgToken);
+                console.log(111)
+                alert(res);
+                // console.log(res.data)
+              },
+              error: function(error) {
+                _this.cropperLoading = false;
+                _this.$Modal.error({
+                  title: '系统错误',
+                  content: '请重新裁剪图片进行上传！'
+                });
+              }
+            });
+          })
+        }
+      },
+      uploadImg(e, num) {
+        //上传图片
+        // this.option.img
+        var file = e.target.files[0]
+        if (!/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/.test(e.target.value)) {
+          alert('图片类型必须是.gif,jpeg,jpg,png,bmp中的一种')
+          return false
+        }
+        var reader = new FileReader()
+        reader.onload = (e) => {
+          let data
+          if (typeof e.target.result === 'object') {
+            // 把Array Buffer转化为blob 如果是base64不需要
+            data = window.URL.createObjectURL(new Blob([e.target.result]))
+          } else {
+            data = e.target.result
+          }
+          if (num === 1) {
+            this.option.img = data
+          } else if (num === 2) {
+            this.example2.img = data
+          }
+        }
+        // 转化为base64
+        // reader.readAsDataURL(file)
+        // 转化为blob
+        reader.readAsArrayBuffer(file)
+      },
+      imgLoad(msg) {
+        console.log(msg)
+      },
+      // 点击选择图片
+      btnClick () {
+        let _this = this;
+        // 模拟input点击选择文件
+        document.getElementById('myCropper-input').click();
+      },
+      // 选择之后的回调
+      handleFile (e) {
+        let _this = this;
+        let inputDOM = this.$refs.inputer;
+        // 通过DOM取文件数据
+        _this.file = inputDOM.files[0];
+        // 判断文件格式
+        if (_this.imgCropperData.accept.indexOf(_this.file.type) == -1) {
+          _this.$Modal.error({
+            title: '格式错误',
+            content: '您选择的图片格式不正确！'
+          });
+          return;
+        }
+        // 判断文件大小限制
+        if (_this.file.size > 5242880) {
+          _this.$Modal.error({
+            title: '超出限制',
+            content: '您选择的图片过大，请选择5MB以内的图片！'
+          });
+          return;
+        }
+        // _this.imgCropperData.imgSrc = _this.file;
+        // _this.initCropper();
+        // console.log(_this.file)
+        var reader = new FileReader();
+        // 将图片将转成 base64 格式
+        reader.readAsDataURL(_this.file);
+        reader.onload = function () {
+          _this.imgCropperData.imgSrc = this.result;
+          _this.initCropper();
+        }
+      },
+      // 初始化剪切
+      initCropper () {
+        let _this = this;
+        // 初始化裁剪区域
+        _this.imgObj = $('<img src="' + _this.imgCropperData.imgSrc + '">');
+        let $avatarPreview = $('.avatar-preview');
+        $('#myCropper-workspace').empty().html(_this.imgObj);
+        _this.imgObj.cropper({
+          aspectRatio: _this.proportionX / _this.proportionY,
+          preview: $avatarPreview,
+          crop: function(e) {
+
+          }
+        });
+        _this.hasSelectImg = true;
+      },
+
+      getGoods(){
+        this.$http.get('../interface/setTask.json').then((res) => {
+          this.goods = res.data
+          console.log(JSON.stringify(this.goods))
+          console.log(this.goods)
+        }, (err) => {
+          console.log(err)
+        })
+      },
+      getXm(){
+        this.$http.get('../interface/xmPro.json').then((res) => {
+          this.goodXm = res.data
+          console.log(this.goodXm)
+        }, (err) => {
+          console.log(err)
+        })
+      },
+      getcode(){
+        //把产品ID加入到img后面
+        $(".rw").val($(".rw").val()+" "+$('.proID').val()+" "+0);
+        //创建数据
+        //this.$http.post("http://amazon.2012.net/creatMisson",$('#form-member-add').serialize(),{
+        this.$http.post("http://tp1.015144.com/creatMisson",$('#form-member-add').serialize(),{
+          headers:{
+            'Accept':'*/*',
+            'Content-Type':"application/x-www-form-urlencoded",
+            'Access-Control-Allow-Origin': '*'
+          }
+        }).then(function (res) {
+          console.log("创建成功，请在监控页面耐心等待。");
+          alert("创建成功，请在监控页面耐心等待。");
+          $(".loadingS").show();
+          //获取
+          let thit = this;
+          setTimeout(function () {
+            $(".loadingS").hide();
+            thit.$http.get('http://tp1.015144.com/viewImage/'+$('.proMl').val()+'/'+$('.proID').val()+'/?ImageName=coast_sea_turbidite_layers_126232_1280x720.jpg&onlyList=1')
+              .then((res) => {
+              thit.goodImg = res.data
+              if(thit.goodImg == ""){
+                alert("获取失败");
+                $(".rw").val("");
+              }else{
+                $(".rw").val("");
+              }
+              console.log(JSON.stringify(thit.goodImg))
+              console.log(thit.goodImg)
+            }, (err) => {
+              console.log(err)
+            })
+          },10000)
+        }).catch(function () {
+            console.log("创建失败，请检查提交参数。")
+            alert("创建失败，请检查提交参数。")
+          });
+      },
+      rowImg:function(index,event){
+        console.log(event.currentTarget)
+        console.log(index)
+        this.isChoose = index
+        this.bol = !this.bol
+        if(!this.bol){
+          if(this.isChoose == index ){
+            this.isChoose = -1
+          }
+        }
+        console.log(this.isChoose)
+      }
+    },
+    mounted() {
+      console.log(this.$refs.cropper)
+    },
+    created(){
+      this.getGoods(),
+        this.getXm()
+    },
+    watch:{
+      goods(val){
+        this.goods = val
+      },
+      goodXm(val){
+        this.goodXm = val
+      }
+    }
+  })
+
+</script>
