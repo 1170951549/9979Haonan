@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ceshi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ceshi1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3841">
+              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ceshi2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2898">
+              <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="260" column="98" lean-forward="false" selection-start-line="260" selection-start-column="98" selection-end-line="260" selection-end-column="98" />
+              <folding>
+                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#21280#21400#0" expanded="false" />
+                <element signature="e#21440#22375#0" expanded="false" />
+                <element signature="e#22413#22875#0" expanded="false" />
+                <element signature="e#22894#23147#0" expanded="false" />
+                <element signature="e#23162#23365#0" expanded="false" />
+                <element signature="e#24882#25168#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="670" column="22" lean-forward="false" selection-start-line="670" selection-start-column="22" selection-end-line="670" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#8441#8448#1" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="tsconfig.json" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>avatar-preview</find>
+      <find>myCropper-preview-1</find>
+      <find>myCropper-preview</find>
+      <find>replaceImg</find>
+      <find>proportionX</find>
+      <find>myCropper-input</find>
+      <find>myCropper-workspace</find>
+      <find>uploadUrl</find>
+      <find>imgBase64Data</find>
+      <find>tailoringImg</find>
+      <find>append</find>
+      <find>sureCut</find>
+      <find>imgCropperData</find>
+      <find>getCroppedCanvas</find>
+      <find>down</find>
+      <find>finish</find>
+      <find>imgUploadSrc</find>
+      <find>download</find>
+      <find>demo</find>
+      <find>crop_ok</find>
+      <find>canMove</find>
+      <find>centerBox</find>
+      <find>realTime</find>
+      <find>finish3</find>
+      <find>Modal title</find>
+      <find>proMl</find>
+      <find>form-control</find>
+      <find>dropdownMenu1</find>
+      <find>rw</find>
+      <find>FileReader</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/my-haonan/src/components/static/h-ui.admin/js/H-ui.admin.js" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/static/h-ui/js/H-ui.min.js" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/product-add.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/member-add.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/menber-add-work.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/member-add-user.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/member-add-work.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/show-add.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/Header.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/product-list.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/build/webpack.base.conf.js" />
+        <option value="$PROJECT_DIR$/my-haonan/myHaonan.json" />
+        <option value="$PROJECT_DIR$/my-haonan/src/main.js" />
+        <option value="$PROJECT_DIR$/my-haonan/src/App.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/static/myHaonan.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/index.html" />
+        <option value="$PROJECT_DIR$/my-haonan/config/index.js" />
+        <option value="$PROJECT_DIR$/my-haonan/router.js" />
+        <option value="$PROJECT_DIR$/my-haonan/build/webpack.dev.conf.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/HZ$D.220.2581/main.js" />
+        <option value="$USER_HOME$/AppData/Local/Temp/HZ$D.220.2582/App.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/welcome.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/ceshi.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/text.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/my-haonan/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/my-haonan/index.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/text.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/product-list.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/user.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/welcome.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/lookOver.json" />
+        <option value="$USER_HOME$/Documents/Tencent Files/1170951549/FileRecv/新建文本文档 (2).html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/proHttp.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/setTask.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/js/main.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/ceshi1.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/index.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/css/cropper.min.css" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/css/cropper.css" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/js/cropper.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/js/ceshi.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html" />
+        <option value="$PROJECT_DIR$/my-haonan/app.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
+        <option value="$PROJECT_DIR$/my-haonan/.gitignore" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/my-haonan/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="49" />
+    <option name="y" value="117" />
+    <option name="width" value="1573" />
+    <option name="height" value="858" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\9979Haonan\my-haonan\dist\project" />
+      <recent name="D:\9979Haonan\my-haonan\dist\project\js" />
+      <recent name="D:\9979Haonan\my-haonan\dist\project\css" />
+      <recent name="D:\9979Haonan\my-haonan\dist\project\temp" />
+      <recent name="D:\9979Haonan\my-haonan\dist\interface" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\9979Haonan\my-haonan\dist\project" />
+      <recent name="D:\9979Haonan\my-haonan\dist\js" />
+      <recent name="D:\9979Haonan\my-haonan\static" />
+      <recent name="D:\9979Haonan\my-haonan\src\components" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.app.js">
+    <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/9979Haonan/my-haonan/dist/index.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/9979Haonan/index.html" />
+    <configuration name="text1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/9979Haonan/my-haonan/dist/project/text1.html" />
+    <configuration name="text.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/9979Haonan/my-haonan/dist/project/text.html" />
+    <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/my-haonan" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.text1.html" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.text1.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.text.html" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="" />
+      <created>1534148527011</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534148527011</updated>
+      <workItem from="1534148528105" duration="2895000" />
+      <workItem from="1534153637321" duration="868000" />
+      <workItem from="1534208622581" duration="20808000" />
+      <workItem from="1534294811336" duration="7978000" />
+      <workItem from="1534326194557" duration="2600000" />
+      <workItem from="1534382653337" duration="11761000" />
+      <workItem from="1534727212072" duration="5104000" />
+      <workItem from="1534744987147" duration="6473000" />
+      <workItem from="1534815050181" duration="12868000" />
+      <workItem from="1534899949090" duration="2878000" />
+      <workItem from="1534912582065" duration="848000" />
+      <workItem from="1534918179946" duration="2353000" />
+      <workItem from="1534921787537" duration="6802000" />
+      <workItem from="1534986489976" duration="3996000" />
+      <workItem from="1534999043444" duration="600000" />
+      <workItem from="1535004278861" duration="12245000" />
+      <workItem from="1535072524454" duration="15904000" />
+      <workItem from="1535332064661" duration="6918000" />
+      <workItem from="1535358112265" duration="5133000" />
+      <workItem from="1535418365859" duration="10686000" />
+      <workItem from="1535504649595" duration="3479000" />
+      <workItem from="1535509231595" duration="388000" />
+      <workItem from="1535510442011" duration="220000" />
+      <workItem from="1535510916056" duration="118000" />
+      <workItem from="1535511284983" duration="140000" />
+      <workItem from="1535511732037" duration="3542000" />
+      <workItem from="1535523535956" duration="160000" />
+      <workItem from="1535523936534" duration="56000" />
+      <workItem from="1535525097786" duration="7183000" />
+      <workItem from="1535591172312" duration="19206000" />
+      <workItem from="1535677684675" duration="10320000" />
+      <workItem from="1536022959874" duration="10213000" />
+      <workItem from="1536109565829" duration="1492000" />
+      <workItem from="1536116058957" duration="237000" />
+      <workItem from="1536116347305" duration="6931000" />
+      <workItem from="1536195652246" duration="27861000" />
+      <workItem from="1536281174911" duration="13085000" />
+      <workItem from="1536369200303" duration="878000" />
+      <workItem from="1536384718560" duration="12964000" />
+      <workItem from="1536541474586" duration="5060000" />
+      <workItem from="1536551130054" duration="16192000" />
+      <workItem from="1536627223531" duration="18892000" />
+      <workItem from="1536713897261" duration="21292000" />
+      <workItem from="1536799645866" duration="18675000" />
+      <workItem from="1536886747979" duration="10380000" />
+      <workItem from="1536899691954" duration="12061000" />
+      <workItem from="1537146407205" duration="18053000" />
+      <workItem from="1537232910441" duration="11869000" />
+      <workItem from="1537319386505" duration="20888000" />
+      <workItem from="1537404907088" duration="22491000" />
+      <workItem from="1537491562806" duration="1765000" />
+      <workItem from="1537494917191" duration="1465000" />
+      <workItem from="1537496586225" duration="103000" />
+      <workItem from="1537496730879" duration="7946000" />
+      <workItem from="1537512392266" duration="7248000" />
+      <workItem from="1537837510731" duration="15340000" />
+      <workItem from="1537865926437" duration="37000" />
+      <workItem from="1537865993755" duration="4710000" />
+      <workItem from="1537924070548" duration="4577000" />
+      <workItem from="1537930816241" duration="12093000" />
+      <workItem from="1537948802898" duration="180000" />
+      <workItem from="1537949002856" duration="589000" />
+      <workItem from="1537949626635" duration="285000" />
+      <workItem from="1537950119843" duration="1764000" />
+    </task>
+    <task id="LOCAL-00001" summary="优化">
+      <created>1537951429923</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1537951429923</updated>
+    </task>
+    <task id="LOCAL-00002" summary="优化">
+      <created>1537951487519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1537951487519</updated>
+    </task>
+    <task id="LOCAL-00003" summary="优化">
+      <created>1537951925398</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537951925398</updated>
+    </task>
+    <task id="LOCAL-00004" summary="优化">
+      <created>1537952177783</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537952177783</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="492146000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119072706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28291622" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28291622" sideWeight="0.49789253" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20978262" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119072706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <MESSAGE value="优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/my-haonan/src/components/show-add.vue</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://D:/站群环境01/模板接口.js</url>
+          <line>651</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="24" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/css/cropper.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/css/cropper.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="304" column="1" lean-forward="false" selection-start-line="304" selection-start-column="1" selection-end-line="304" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/js/cropper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="3760" column="5" lean-forward="false" selection-start-line="3760" selection-start-column="5" selection-end-line="3760" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/gitHub/MallWeb/Thaonan09.0f8.net/section/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="303" column="55" lean-forward="true" selection-start-line="303" selection-start-column="55" selection-end-line="303" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/gitHub/MallWeb/Thaonan10.0f8.net/section/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6555">
+          <caret line="285" column="54" lean-forward="false" selection-start-line="285" selection-start-column="54" selection-end-line="285" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-932">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/WeChat Files/I13363996825/Files/ProductGenerate.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="102" column="28" lean-forward="false" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/build/webpack.base.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/build/webpack.dev.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/src/components/product-list.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="145" column="52" lean-forward="true" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="45" column="11" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/.postcssrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/e9097461-889f-452b-ac46-cec9ad4736a3.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/a9d20243-ae1c-4d28-b9ef-87d7d0dd6c18.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/ba73fd1f-a073-49fa-b65a-316b09aa955e.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/59bb4917-df0a-4d52-9587-268a6f4e6015.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/49452ace-53e4-4ffb-af15-d6e017d70bfa.jpeg" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="3845" column="4" lean-forward="false" selection-start-line="3845" selection-start-column="4" selection-end-line="3845" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/1a3137b6-bace-40fe-8c5c-0a45263d2afa.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/4b0754e7-2ec4-4d8a-a24e-3ac62d23cf67.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/04d433a7-24b1-4128-aec4-290d073ff8c0.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/07346ac4-bb12-4e8f-a1bf-4c9229e77da6.jpeg" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/e227f3d2-c711-4470-ba35-4663aafc2da6.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/js/ceshi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46845" lean-forward="false" selection-start-line="0" selection-start-column="46845" selection-end-line="0" selection-end-column="46845" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2942">
+          <caret line="206" column="5" lean-forward="false" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/157ddb7d-c4c5-4221-b237-68f29bfc151e.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/ddb365f4-1a20-4edc-b2bf-bd3788ea785a.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/a94ceef7-f819-4129-a6e9-85c94909bd1b.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/6c300d77-e047-4bfa-a369-4d54de8b52cf.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/3a8b4a2b-8eec-49bb-b10c-7aa2ac94dd3b.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/2d291af6-72a5-4429-8c47-da97cd56101e.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/e8b756ac-c251-4f60-884c-36edc13bd1a0.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/0da4555c-a585-4af1-b224-ffe77eead500.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/1500756b-114a-42ea-8dab-dcf61f26cf46.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/09a1dca5-b67b-4537-9cba-f3bf8f338f71.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/d711da9d-6788-43d4-ba7c-9e8d89edd19b.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/a1c9a6f7-eb6a-4a5b-9e08-a1be205f1513.png" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/d820b041-e723-4405-94b3-5da88512dcd0.png" />
+    <entry file="file://$PROJECT_DIR$/static/h-ui/css/H-ui.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3841">
+          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2898">
+          <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="260" column="98" lean-forward="false" selection-start-line="260" selection-start-column="98" selection-end-line="260" selection-end-column="98" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#li#1;n#ul#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#21280#21400#0" expanded="false" />
+            <element signature="e#21440#22375#0" expanded="false" />
+            <element signature="e#22413#22875#0" expanded="false" />
+            <element signature="e#22894#23147#0" expanded="false" />
+            <element signature="e#23162#23365#0" expanded="false" />
+            <element signature="e#24882#25168#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="670" column="22" lean-forward="false" selection-start-line="670" selection-start-column="22" selection-end-line="670" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#8441#8448#1" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
