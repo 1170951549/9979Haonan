@@ -386,7 +386,7 @@
               success: function (res) {
                 //var a = res.replace("png","jpg")
                 //获取图片的value
-                $(".rw").val(window.location.host+"/img/"+ res);
+                $(".rw").val("http://"+window.location.host+"/img/"+ res);
                // console.log(a)
               },
               error: function (error) {
