@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -85,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="146">
-              <caret line="387" column="50" lean-forward="true" selection-start-line="387" selection-start-column="50" selection-end-line="387" selection-end-column="50" />
+              <caret line="387" column="55" lean-forward="false" selection-start-line="387" selection-start-column="55" selection-end-line="387" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -430,7 +429,7 @@
       <workItem from="1537955070438" duration="82000" />
       <workItem from="1537955284415" duration="1236000" />
       <workItem from="1538009981956" duration="6107000" />
-      <workItem from="1538016156908" duration="9584000" />
+      <workItem from="1538016156908" duration="9930000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -471,7 +470,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509788000" />
+    <option name="totallyTimeSpent" value="510134000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -743,7 +742,7 @@
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
-          <caret line="387" column="50" lean-forward="true" selection-start-line="387" selection-start-column="50" selection-end-line="387" selection-end-column="50" />
+          <caret line="387" column="55" lean-forward="false" selection-start-line="387" selection-start-column="55" selection-end-line="387" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
