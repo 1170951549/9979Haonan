@@ -330,7 +330,7 @@
         img: '',
         size: 1,
         full: false,
-        outputType: 'png',
+        outputType: 'jpg',
         canMove: false,
         fixedBox: false,
         original: false,
@@ -384,11 +384,9 @@
               processData: true,
               type: JSON,
               success: function (res) {
-
                 //获取图片的value
                 $(".rw").val(window.location.host+"/img/"+ res);
-                // alert("成功生成");
-                console.log("localhost:3010/img/" + res)
+                this.getcode();
               },
               error: function (error) {
                 _this.cropperLoading = false;
@@ -491,6 +489,7 @@
                       //完成后加载图片到页面
                       thit.$http.get('http://tp1.015144.com/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + rwsImg + '&onlyList=1')
                         .then((res) => {
+
                           thit.goodImg = res.data;
                           console.log(JSON.stringify(thit.goodImg));
                           console.log(thit.goodImg);
