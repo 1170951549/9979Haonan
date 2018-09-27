@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/218b8608-fd1a-423f-a473-e763d50cf144.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/28d2dfaf-c53c-4c48-abd5-c262ff3cdfc1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/2b4addd3-554b-4284-9d13-c97ba921d6c5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/37e6662d-56b1-4921-a4dd-5c0103c83b9a.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/46549726-fbc2-443e-870b-7bd7344d331d.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/aaeccbbb-6b10-4600-b901-271f3592761b.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/b033e104-95d8-4449-9a6b-8208656ef219.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/c7b586b4-1292-4236-bf13-cbe200380588.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/e76b0288-fdbd-4105-8138-540a0432f634.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +29,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state relative-caret-position="276">
+              <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -41,7 +51,7 @@
       <file leaf-file-name="text1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="2314">
               <caret line="390" column="44" lean-forward="false" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -58,8 +68,8 @@
       <file leaf-file-name="text.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="387" column="64" lean-forward="false" selection-start-line="387" selection-start-column="64" selection-end-line="387" selection-end-column="64" />
+            <state relative-caret-position="346">
+              <caret line="498" column="48" lean-forward="true" selection-start-line="498" selection-start-column="48" selection-end-line="498" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -152,8 +162,8 @@
       <find>country</find>
       <find>countryName</find>
       <find>selectCountry</find>
-      <find>cityName</find>
       <find>创建</find>
+      <find>cityName</find>
       <find>proMl</find>
     </findStrings>
   </component>
@@ -209,10 +219,10 @@
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html" />
         <option value="$PROJECT_DIR$/my-haonan/.gitignore" />
-        <option value="$PROJECT_DIR$/my-haonan/app.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
+        <option value="$PROJECT_DIR$/my-haonan/app.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
       </list>
     </option>
@@ -277,13 +287,6 @@
               <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
               <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -314,18 +317,18 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\9979Haonan\my-haonan\dist\project" />
+      <recent name="D:\9979Haonan\my-haonan\dist\js" />
+      <recent name="D:\9979Haonan\my-haonan\static" />
+      <recent name="D:\9979Haonan\my-haonan\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\9979Haonan\my-haonan\dist\project" />
       <recent name="D:\9979Haonan\my-haonan\dist\project\js" />
       <recent name="D:\9979Haonan\my-haonan\dist\project\css" />
       <recent name="D:\9979Haonan\my-haonan\dist\project\temp" />
       <recent name="D:\9979Haonan\my-haonan\dist\interface" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\9979Haonan\my-haonan\dist\project" />
-      <recent name="D:\9979Haonan\my-haonan\dist\js" />
-      <recent name="D:\9979Haonan\my-haonan\static" />
-      <recent name="D:\9979Haonan\my-haonan\src\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,7 +447,7 @@
       <workItem from="1537955070438" duration="82000" />
       <workItem from="1537955284415" duration="1236000" />
       <workItem from="1538009981956" duration="6107000" />
-      <workItem from="1538016156908" duration="16986000" />
+      <workItem from="1538016156908" duration="19478000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -492,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="517190000" />
+    <option name="totallyTimeSpent" value="519682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,9 +508,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119072706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26448894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2850925" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
@@ -682,14 +684,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/05507616-6775-4ff4-9ee0-f2bb3e138dbd.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -754,7 +748,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="2314">
           <caret line="390" column="44" lean-forward="false" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -767,10 +761,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="387" column="64" lean-forward="false" selection-start-line="387" selection-start-column="64" selection-end-line="387" selection-end-column="64" />
+        <state relative-caret-position="346">
+          <caret line="498" column="48" lean-forward="true" selection-start-line="498" selection-start-column="48" selection-end-line="498" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

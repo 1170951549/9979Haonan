@@ -384,8 +384,10 @@
               processData: true,
               type: JSON,
               success: function (res) {
+                //var a = res.replace("png","jpg")
                 //获取图片的value
                 $(".rw").val(window.location.host+"/img/"+ res);
+               // console.log(a)
               },
               error: function (error) {
                 _this.cropperLoading = false;
@@ -457,13 +459,14 @@
         $('.proMl').val("F" + years + "" + monts + "" + dates);
         //任务名称+ XXX 0
         $(".porId").val($(".rw").val() + " " + $('.proID').val() + " " + 0);
-
+        console.log(Newstr)
         //获取图片的value
         var rws = $(".porId").val();
         //截取图片名称
         var reg = rws.substring(rws.lastIndexOf('/') + 1, rws.indexOf(' '));
         var rwsImg = reg;
 
+        var Newstr =  rwsImg.replace("png","jpg");
         //创建数据
         this.$http.post("http://tp1.015144.com/creatMisson", $('#form-member-add').serialize(), {
           headers: {
@@ -486,13 +489,13 @@
                       clearInterval(t);//等于空闲（完成）清除定时器
                       $(".loadingS").hide();
                       //完成后加载图片到页面
-                      thit.$http.get('http://tp1.015144.com/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + rwsImg + '&onlyList=1')
+                      thit.$http.get('http://tp1.015144.com/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + Newstr + '&onlyList=1')
                         .then((res) => {
-
                           thit.goodImg = res.data;
                           console.log(JSON.stringify(thit.goodImg));
                           console.log(thit.goodImg);
                           console.log(res.body.length);
+                          console.log(res.data);
                           if(res.body.length<1){
                             alert("图片加载失败");
                             return;
