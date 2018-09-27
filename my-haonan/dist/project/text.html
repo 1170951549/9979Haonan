@@ -240,7 +240,7 @@
           <label>URL地址</label>
           <input type="text" class="form-control porId" name="任务">
         </div>
-        <button type="button" class="btn btn-primary" @click="getcode" style="margin-top: 30px">创建</button>
+        <button type="button" class="btn btn-primary" @click="getcode" style="margin-top: 30px">生成</button>
       </form>
     </div>
     <div class="row rowImg" style="margin: 0">
@@ -285,7 +285,7 @@
           <div class="test-button">
             <label class="btn" for="uploads">上传图片</label>
             <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg" @change="uploadImg($event, 1)">
-            <a @click="down('base64')" class="btn">生成图片</a><!--(base64)-->
+            <a @click="down('base64')" class="btn">生成产品</a><!--(base64)-->
           </div>
           <div class="show-preview" :style="{'width': previews.w + 'px', 'height': previews.h + 'px',  'overflow': 'hidden', 'margin': '5px'}">
             <div :style="previews.div">
@@ -384,6 +384,7 @@
               processData: true,
               type: JSON,
               success: function (res) {
+
                 //获取图片的value
                 $(".rw").val(window.location.host+"/img/"+ res);
                 // alert("成功生成");
@@ -456,7 +457,7 @@
         var years = time.getFullYear();
         var monts = time.getMonth() + 1;
         var dates = time.getDate();
-        $('.proMl').val(years + "" + monts + "" + dates);
+        $('.proMl').val("F" + years + "" + monts + "" + dates);
         //任务名称+ XXX 0
         $(".porId").val($(".rw").val() + " " + $('.proID').val() + " " + 0);
 
