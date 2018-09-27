@@ -273,38 +273,38 @@
                          :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth" :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
                          @real-time="realTime" :high="option.high" ></vue-cropper>
           </div>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              选项
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><button @click="changeImg" class="btn">changeImg</button></li>
-              <li> <label class="btn" for="uploads">upload</label>
-                <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"
-                       @change="uploadImg($event, 1)"></li>
-              <li> <button @click="clearCrop" class="btn">清除</button></li>
-              <li role="separator" class="divider"><button @click="refreshCrop" class="btn">刷新</button></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
+          <!--<div class="dropdown">-->
+            <!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">-->
+              <!--选项-->
+              <!--<span class="caret"></span>-->
+            <!--</button>-->
+            <!--<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">-->
+              <!--<li><button @click="changeImg" class="btn">changeImg</button></li>-->
+              <!--<li> <label class="btn" for="uploads">upload</label>-->
+                <!--<input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"-->
+                       <!--@change="uploadImg($event, 1)"></li>-->
+              <!--<li> <button @click="clearCrop" class="btn">清除</button></li>-->
+              <!--<li role="separator" class="divider"><button @click="refreshCrop" class="btn">刷新</button></li>-->
+              <!--<li><a href="#">Separated link</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
           <div class="test-button">
-            <!--<button @click="changeImg" class="btn">changeImg</button>-->
-            <!--<label class="btn" for="uploads">upload</label>-->
-            <!--<input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"-->
-                   <!--@change="uploadImg($event, 1)">-->
-            <!--<button @click="startCrop" v-if="!crap" class="btn">start</button>-->
-            <!--<button @click="stopCrop" v-else class="btn">stop</button>-->
-            <!--<button @click="clearCrop" class="btn">clear</button>-->
-            <!--<button @click="refreshCrop" class="btn">refresh</button>-->
-            <!--<button @click="changeScale(1)" class="btn">+</button>-->
-            <!--<button @click="changeScale(-1)" class="btn">-</button>-->
-            <!--<button @click="rotateLeft" class="btn">rotateLeft</button>-->
-            <!--<button @click="rotateRight" class="btn">rotateRight</button>-->
-            <!--<button @click="finish('base64')" class="btn">preview(base64)</button>-->
-            <!--<button @click="finish('blob')" class="btn">preview(blob)</button>-->
-            <!--<a @click="down('base64')" class="btn">download(base64)</a>-->
-            <!--<a @click="down('blob')" class="btn">download(blob)</a>-->
+            <button @click="changeImg" class="btn">changeImg</button>
+            <label class="btn" for="uploads">upload</label>
+            <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"
+                   @change="uploadImg($event, 1)">
+            <button @click="startCrop" v-if="!crap" class="btn">start</button>
+            <button @click="stopCrop" v-else class="btn">stop</button>
+            <button @click="clearCrop" class="btn">clear</button>
+            <button @click="refreshCrop" class="btn">refresh</button>
+            <button @click="changeScale(1)" class="btn">+</button>
+            <button @click="changeScale(-1)" class="btn">-</button>
+            <button @click="rotateLeft" class="btn">rotateLeft</button>
+            <button @click="rotateRight" class="btn">rotateRight</button>
+            <button @click="finish('base64')" class="btn">preview(base64)</button>
+            <button @click="finish('blob')" class="btn">preview(blob)</button>
+            <a @click="down('base64')" class="btn">download(base64)</a>
+            <a @click="down('blob')" class="btn">download(blob)</a>
             <!--<div style="display:block; width: 100%;">-->
               <!--<label class="c-item">-->
                 <!--<span>上传图片是否显示原始宽高 (针对大图 可以铺满)</span>-->
@@ -519,38 +519,22 @@
           })
         } else {
           this.$refs.cropper.getCropData((data) => {
-            this.downImg = data
-            aLink.href = data
-            aLink.click()
-            $.ajax({
-              url: '/upload',
-              method: 'POST',
-              data:{base64:data} ,
-              //默认为true，设为false后直到ajax请求结束(调完回掉函数)后才会执行$.ajax(...)后面的代码
-              async: false,
-              //下面三个，因为直接使用FormData作为数据，contentType会自动设置，也不需要jquery做进一步的数据处理(序列化)。
-              // cache: false,
-              // contentType: false,
-              // processData: true,
-              cache: false,
-              processData: true,
-              type:JSON,
-              success: function(res) {
-                // let imgToken = res.data;
-                // _this.cropperLoading = false;
-                //传参
-                // Bus.$emit('getTarget', imgToken);
-                console.log(111)
-                alert(res);
-                // console.log(res.data)
-              },
-              error: function(error) {
-                _this.cropperLoading = false;
-                _this.$Modal.error({
-                  title: '系统错误',
-                  content: '请重新裁剪图片进行上传！'
-                });
+            // this.downImg = data;
+            // aLink.href = data;
+            // aLink.click();
+            this.$http.post("/upload",{base64:data},{
+              headers:{
+                'Accept':'*/*',
+                'Content-Type':"application/x-www-form-urlencoded",
+                'Access-Control-Allow-Origin': '*'
               }
+            }).then(function (res) {
+              console.log("创建成功，请在监控页面耐心等待。");
+              alert("创建成功，请在监控页面耐心等待。");
+              console.log(res)
+            }).catch(function () {
+              console.log("创建失败，请在监控页面耐心等待。");
+
             });
           })
         }

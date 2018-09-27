@@ -270,21 +270,21 @@
                          @real-time="realTime" :high="option.high" ></vue-cropper>
           </div>
           <div class="test-button">
-            <button @click="changeImg" class="btn">changeImg</button>
-            <label class="btn" for="uploads">上传</label>
+            <!--<button @click="changeImg" class="btn">changeImg</button>-->
+            <label class="btn" for="uploads">上传图片</label>
             <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg"
                    @change="uploadImg($event, 1)">
             <!--<button @click="startCrop" v-if="!crap" class="btn">start</button>-->
             <!--<button @click="stopCrop" v-else class="btn">stop</button>-->
-            <button @click="clearCrop" class="btn">清除</button>
-            <button @click="refreshCrop" class="btn">刷新</button>
-            <button @click="changeScale(1)" class="btn">+</button>
-            <button @click="changeScale(-1)" class="btn">-</button>
-            <button @click="rotateLeft" class="btn">向左旋转</button>
-            <button @click="rotateRight" class="btn">向右旋转</button>
-            <button @click="finish('base64')" class="btn">预览</button><!--(base64)-->
+            <!--<button @click="clearCrop" class="btn">清除</button>-->
+            <!--<button @click="refreshCrop" class="btn">刷新</button>-->
+            <!--<button @click="changeScale(1)" class="btn">+</button>-->
+            <!--<button @click="changeScale(-1)" class="btn">-</button>-->
+            <!--<button @click="rotateLeft" class="btn">向左旋转</button>-->
+            <!--<button @click="rotateRight" class="btn">向右旋转</button>-->
+            <!--<button @click="finish('base64')" class="btn">预览</button>&lt;!&ndash;(base64)&ndash;&gt;-->
             <!--<button @click="finish('blob')" class="btn">预览(blob)</button>-->
-            <a @click="down('base64')" class="btn">下载</a><!--(base64)-->
+            <a @click="down('base64')" class="btn">生成图片</a><!--(base64)-->
             <!--<a @click="down('blob')" class="btn">下载(blob)</a>-->
             <!--<div style="display:block; width: 100%;">-->
               <!--<label class="c-item">-->
@@ -378,28 +378,9 @@
       modelSrc: '',
       crap: false,
       previews: {},
-      lists: [
-        {
-          img: 'http://ofyaji162.bkt.clouddn.com/touxiang.jpg'
-        },
-        {
-          img: 'https://o90cnn3g2.qnssl.com/0C3ABE8D05322EAC3120DDB11F9D1F72.png'
-        },
-        {
-          img: 'http://ofyaji162.bkt.clouddn.com/bg1.jpg',
-        },
-        {
-          img: 'http://ofyaji162.bkt.clouddn.com/bg2.jpg',
-        },
-        {
-          img: 'http://ofyaji162.bkt.clouddn.com/can.jpg'
-        },
-        {
-          img: 'http://ofyaji162.bkt.clouddn.com/nightcat.jpg'
-        }
-      ],
+
       option: {
-        img: 'https://avatars3.githubusercontent.com/u/15681693',
+        img: '',
         size: 1,
         full: false,
         outputType: 'png',
@@ -522,8 +503,14 @@
               type:JSON,
               success: function(res) {
                 //获取图片的value
-                //$(".rw").val(res);
-                console.log(res)
+                // var rws=$(".rw").val(res);
+                // var reg = /\S+\.(?:png|jpg|gif|bmp)$/i;
+                // var rwsImg = rws.match(reg);
+                //获取图片的value
+                 $(".rw").val(res);
+                 // alert("成功生成");
+                console.log("localhost:3010/img/"+res)
+               // console.log(rwsImg)
                 // let imgToken = res.data;
                 // _this.cropperLoading = false;
                 //传参
@@ -593,15 +580,16 @@
         })
       },
       getcode(){
+        //把产品ID加入到img后面
+        $(".rw").val($(".rw").val()+" "+$('.proID').val()+" "+0);
         //获取图片的value
        var rws=$(".rw").val();
         //截取图片名称
-      //var rwsImg = rws.match(/\/(\w+\.(?:png|jpg|gif|bmp))$/i)[1];
-        var reg = /\w+\.(?:png|jpg|gif|bmp)$/i;
-        var rwsImg = rws.match(reg);
+          //var rwsImg = rws.match(/\/(\w+\.(?:png|jpg|gif|bmp))$/i)[1];
+        var reg = rws.substring(rws.lastIndexOf('/') + 1,rws.indexOf(' '));
+        var rwsImg = reg ;
       console.log(rwsImg)
-        //把产品ID加入到img后面
-        $(".rw").val($(".rw").val()+" "+$('.proID').val()+" "+0);
+
         //创建数据
         //this.$http.post("http://amazon.2012.net/creatMisson",$('#form-member-add').serialize(),{
         this.$http.post("http://tp1.015144.com/creatMisson",$('#form-member-add').serialize(),{
