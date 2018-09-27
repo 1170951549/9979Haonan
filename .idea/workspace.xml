@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" afterPath="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,8 +58,8 @@
       <file leaf-file-name="text.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="460" column="21" lean-forward="false" selection-start-line="460" selection-start-column="21" selection-end-line="460" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="464" column="36" lean-forward="true" selection-start-line="464" selection-start-column="36" selection-end-line="464" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -443,7 +439,7 @@
       <workItem from="1537955070438" duration="82000" />
       <workItem from="1537955284415" duration="1236000" />
       <workItem from="1538009981956" duration="6107000" />
-      <workItem from="1538016156908" duration="15290000" />
+      <workItem from="1538016156908" duration="15314000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -480,11 +476,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538017190501</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化">
+      <created>1538036061622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538036061622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="515494000" />
+    <option name="totallyTimeSpent" value="515518000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,8 +500,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119072706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.119072706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2850925" sideWeight="0.5126449" order="7" side_tool="true" content_ui="tabs" />
@@ -760,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="460" column="21" lean-forward="false" selection-start-line="460" selection-start-column="21" selection-end-line="460" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="464" column="36" lean-forward="true" selection-start-line="464" selection-start-column="36" selection-end-line="464" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
