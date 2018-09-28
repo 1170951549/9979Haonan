@@ -11,14 +11,6 @@ const cors = require('cors');
 const uuid = require('node-uuid');
 
 
-app.use(cors({
-  origin:['http://localhost'],
-  methods:['GET','POST'],
-  alloweHeaders:['Conten-Type', 'Authorization']
-}));
-
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false ,limit: 2 * 1024 * 1024 * 1024 * 1024}));
 app.use(express.static('dist'));
@@ -40,6 +32,14 @@ app.use(express.static('dist'));
 //     next();
 //   }
 // });
+app.all('*', function(req, res, next) {
+  console.log(req.method);
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Headers', 'Content-type');
+  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS,PATCH");
+  res.header('Access-Control-Max-Age',1728000);//预请求缓存20天
+  next();
+});
 
 app.post('/upload',(req,res)=>{
   console.log(req.body.base64);
