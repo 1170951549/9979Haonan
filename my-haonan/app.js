@@ -32,6 +32,9 @@ app.all('*',function (req, res, next) {
 });
 
 app.post('/upload',(req,res)=>{
+  res.header("Access-Control-Allow-Origin","*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With,Origin,Content-Type,Accept");
+  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
   console.log(req.body.base64);
   //res.send("0");
   //console.log(uuid.v4());
