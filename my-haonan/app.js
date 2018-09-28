@@ -33,12 +33,12 @@ app.use(express.static('dist'));
 //   }
 // });
 app.all('*', function(req, res, next) {
-  console.log(req.method);
-  res.header('Access-Control-Allow-Origin', 'http://128.14.138.170');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  res.header('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  res.header('Access-Control-Allow-Credentials', true);//预请求缓存20天
-  next();
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+  res.header("X-Powered-By",' 3.2.1')
+  if(req.method=="OPTIONS") res.send(200);/*让options请求快速返回*/
+  else  next();
 });
 
 app.post('/upload',(req,res)=>{
