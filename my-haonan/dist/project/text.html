@@ -468,7 +468,7 @@
 
         var Newstr =  rwsImg.replace("png","jpg");
         //创建数据
-        this.$http.post("http://tp1.015144.com/creatMisson", $('#form-member-add').serialize(), {
+        this.$http.post("http://tp1.015144.com/creatMisson", $('#form-member-add').serialize(),{
           headers: {
             'Accept': '*/*',
             'Content-Type': "application/x-www-form-urlencoded",
@@ -514,11 +514,12 @@
                   })
               }, 5000);
             }else if(res.status != 200){
-              alert("失败")
+              alert("失败");
             }
         }).catch(function (err) {
           console.log(err);
           alert("失败");
+          console.log(123456789);
         });
       },
       rowImg: function (index, event) {
