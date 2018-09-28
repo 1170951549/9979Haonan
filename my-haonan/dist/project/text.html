@@ -394,11 +394,12 @@
                // console.log(a)
               },
               error: function (error) {
-                _this.cropperLoading = false;
-                _this.$Modal.error({
-                  title: '系统错误',
-                  content: '请重新裁剪图片进行上传！'
-                });
+                // _this.cropperLoading = false;
+                // _this.$Modal.error({
+                //   title: '系统错误',
+                //   content: '请重新裁剪图片进行上传！'
+                // });
+                console.log(error)
               }
             });
           })
@@ -411,8 +412,7 @@
         if (!/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/.test(e.target.value)) {
           alert('图片类型必须是.gif,jpeg,jpg,png,bmp中的一种');
           return false;
-        }
-        ;
+        };
         var reader = new FileReader();
         reader.onload = (e) => {
           let data;
