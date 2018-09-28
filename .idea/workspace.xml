@@ -4,7 +4,68 @@
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/my-haonan/app.js" afterPath="$PROJECT_DIR$/my-haonan/app.js" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/follow-redirects/index.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/follow-redirects/index.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/follow-redirects/package.json" afterPath="$PROJECT_DIR$/my-haonan/node_modules/follow-redirects/package.json" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/CHANGELOG.md" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/CHANGELOG.md" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/README.md" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/README.md" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/index.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/index.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/config-factory.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/config-factory.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/context-matcher.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/context-matcher.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/handlers.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/handlers.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/index.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/index.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/logger.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/logger.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/path-rewriter.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/path-rewriter.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/router.js" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/lib/router.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/arr-diff/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/arr-diff/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/arr-diff/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/arr-diff/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/array-unique/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/array-unique/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/array-unique/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/array-unique/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/braces/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/braces/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/braces/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/braces/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/expand-brackets/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/expand-brackets/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/expand-brackets/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/expand-brackets/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/node_modules/is-extglob/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/node_modules/is-extglob/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/node_modules/is-extglob/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/node_modules/is-extglob/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/extglob/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/is-glob/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/is-glob/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/is-glob/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/is-glob/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/lib/chars.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/lib/expand.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/lib/glob.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/lib/utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-extglob/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-extglob/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-extglob/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-extglob/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-glob/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-glob/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-glob/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/node_modules/is-glob/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/node_modules/micromatch/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/package.json" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy-middleware/package.json" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy/package.json" afterPath="$PROJECT_DIR$/my-haonan/node_modules/http-proxy/package.json" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/package-lock.json" afterPath="$PROJECT_DIR$/my-haonan/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/package.json" afterPath="$PROJECT_DIR$/my-haonan/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +82,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+            <state relative-caret-position="253">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -31,8 +92,8 @@
       <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="516" column="26" lean-forward="false" selection-start-line="516" selection-start-column="26" selection-end-line="516" selection-end-column="26" />
+            <state relative-caret-position="414">
+              <caret line="344" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,8 +129,33 @@
       <file leaf-file-name="text1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8970">
-              <caret line="390" column="44" lean-forward="false" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="44" />
+            <state relative-caret-position="22">
+              <caret line="488" column="41" lean-forward="true" selection-start-line="488" selection-start-column="41" selection-end-line="488" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#8326#8333#1" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ceshi3.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -200,14 +286,14 @@
         <option value="$PROJECT_DIR$/my-haonan/dist/project/js/cropper.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/js/ceshi.js" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html" />
         <option value="$PROJECT_DIR$/my-haonan/.gitignore" />
         <option value="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
         <option value="$PROJECT_DIR$/my-haonan/config/index.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
         <option value="$PROJECT_DIR$/my-haonan/app.js" />
       </list>
     </option>
@@ -227,9 +313,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/my-haonan/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="175" />
-    <option name="y" value="124" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="93" />
+    <option name="y" value="110" />
     <option name="width" value="1573" />
     <option name="height" value="858" />
   </component>
@@ -250,6 +336,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,30 +349,10 @@
               <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
               <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,7 +506,8 @@
       <workItem from="1537955284415" duration="1236000" />
       <workItem from="1538009981956" duration="6107000" />
       <workItem from="1538016156908" duration="20718000" />
-      <workItem from="1538096806653" duration="13561000" />
+      <workItem from="1538096806653" duration="16422000" />
+      <workItem from="1538118718855" duration="1252000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -487,7 +555,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="534483000" />
+    <option name="totallyTimeSpent" value="538596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,17 +567,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="175" y="124" width="1573" height="858" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32703584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26448894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.49789253" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3633842" sideWeight="0.51530945" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2850925" sideWeight="0.52107483" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3633842" sideWeight="0.48469055" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2850925" sideWeight="0.4789252" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.4915701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -518,7 +587,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -630,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2942">
-          <caret line="206" column="5" lean-forward="false" selection-start-line="206" selection-start-column="5" selection-end-line="206" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/157ddb7d-c4c5-4221-b237-68f29bfc151e.png" />
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/ddb365f4-1a20-4edc-b2bf-bd3788ea785a.png" />
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/img/a94ceef7-f819-4129-a6e9-85c94909bd1b.png" />
@@ -714,26 +775,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8970">
-          <caret line="390" column="44" lean-forward="false" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="516" column="26" lean-forward="false" selection-start-line="516" selection-start-column="26" selection-end-line="516" selection-end-column="26" />
+        <state relative-caret-position="414">
+          <caret line="344" column="16" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="554" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#8326#8333#1" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="488" column="41" lean-forward="true" selection-start-line="488" selection-start-column="41" selection-end-line="488" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -755,8 +838,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+        <state relative-caret-position="253">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>

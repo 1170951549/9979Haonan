@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+
+const proxy = require('express-http-proxy');
 const fs = require('fs');
 const path = require('path');
 const router = require('./router');
@@ -9,26 +11,18 @@ const PORT = 3010;
 
 const cors = require('cors');
 const uuid = require('node-uuid');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false, limit: 2 * 1024 * 1024 * 1024 * 1024}));
-app.all('*', function (req, res, next) {
-  res.header("Access-Control-Allow-Credentials", "true");
-  res.header("Access-Control-Allow-Origin", req.headers.origin);
-  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type,username");
-  //res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
-  //res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
-  //console.log( req.method);
-  next();
-});
+
+app.use('/picSever', proxy('tp1.015144.com'));
 app.use(express.static('dist'));
 // app.set("views", path.join(__dirname, "dist"));
 // app.set("view engine", "html");
 // app.engine( '.html', require( 'ejs' ).__express );
 // app.use(router);
 
-
-
+//跨域
 // app.all('*', function (req, res, next) {
 //   res.header("Access-Control-Allow-Origin", "*");
 //   res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
