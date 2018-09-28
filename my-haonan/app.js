@@ -34,7 +34,7 @@ app.use(express.static('dist'));
 // });
 app.all('*', function(req, res, next) {
   console.log(req.method);
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'http://128.14.138.170');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.header('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.header('Access-Control-Allow-Credentials', true);//预请求缓存20天
