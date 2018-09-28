@@ -468,7 +468,7 @@
 
         var Newstr =  rwsImg.replace("png","jpg");
         //创建数据
-        this.$http.post("http://tp1.015144.com/creatMisson", $('#form-member-add').serialize(),{
+        this.$http.post("/picSever/creatMisson", $('#form-member-add').serialize(),{
           headers: {
             'Accept': '*/*',
             'Content-Type': "application/x-www-form-urlencoded",
@@ -483,13 +483,13 @@
               var times = 0;
               var t = setInterval(() => {
                 times += 1;
-                thit.$http.get('http://tp1.015144.com/getState')
+                thit.$http.get('/picSever/getState')
                   .then((res) => {
                     if (res.body.服务器状态 == "空闲") {
                       clearInterval(t);//等于空闲（完成）清除定时器
                       $(".loadingS").hide();
                       //完成后加载图片到页面
-                      thit.$http.get('http://tp1.015144.com/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + Newstr + '&onlyList=1')
+                      thit.$http.get('/picSever/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + Newstr + '&onlyList=1')
                         .then((res) => {
                           thit.goodImg = res.data;
                           console.log(JSON.stringify(thit.goodImg));
