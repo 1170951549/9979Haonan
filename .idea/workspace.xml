@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/app.js" afterPath="$PROJECT_DIR$/my-haonan/app.js" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/5467e0ba-7134-4453-90e6-49e3117d8379.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,18 +24,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="115">
+              <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-552">
-              <caret line="491" column="47" lean-forward="false" selection-start-line="491" selection-start-column="47" selection-end-line="491" selection-end-column="47" />
+            <state relative-caret-position="58">
+              <caret line="436" column="44" lean-forward="false" selection-start-line="436" selection-start-column="44" selection-end-line="436" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -54,26 +59,23 @@
       <file leaf-file-name="ceshi1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-              <folding>
-                <element signature="e#1539#2181#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-93">
+              <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text1.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="text1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="491" column="45" lean-forward="false" selection-start-line="491" selection-start-column="36" selection-end-line="491" selection-end-column="45" />
+            <state relative-caret-position="242">
+              <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -81,7 +83,7 @@
                 <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#8326#8333#1" expanded="true" />
+                <element signature="e#8513#8520#1" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -91,8 +93,8 @@
       <file leaf-file-name="ceshi3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+            <state relative-caret-position="874">
+              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -102,18 +104,11 @@
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setTask.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/setTask.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3611">
-              <caret line="157" column="5" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="157" selection-end-column="5" />
-              <folding />
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="12" />
+              <folding>
+                <element signature="e#39#2832#0" expanded="false" />
+                <element signature="e#2875#3051#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,8 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>imgBase64Data</find>
-      <find>tailoringImg</find>
       <find>append</find>
       <find>sureCut</find>
       <find>imgCropperData</find>
@@ -166,13 +159,15 @@
       <find>FileReader</find>
       <find>分组1</find>
       <find>area</find>
-      <find>country</find>
-      <find>countryName</find>
       <find>selectCountry</find>
       <find>创建</find>
+      <find>str</find>
+      <find>country</find>
+      <find>countryName</find>
       <find>cityName</find>
       <find>proMl</find>
-      <find>str</find>
+      <find>goods</find>
+      <find>上传图片</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,7 +209,6 @@
         <option value="$PROJECT_DIR$/my-haonan/dist/interface/lookOver.json" />
         <option value="$USER_HOME$/Documents/Tencent Files/1170951549/FileRecv/新建文本文档 (2).html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/proHttp.html" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/interface/setTask.json" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/js/main.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/ceshi1.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/index.html" />
@@ -226,12 +220,13 @@
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html" />
         <option value="$PROJECT_DIR$/my-haonan/.gitignore" />
         <option value="$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
         <option value="$PROJECT_DIR$/my-haonan/config/index.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/interface/setTask.json" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
         <option value="$PROJECT_DIR$/my-haonan/app.js" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
       </list>
     </option>
   </component>
@@ -285,6 +280,19 @@
               <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
               <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
               <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,7 +452,7 @@
       <workItem from="1538009981956" duration="6107000" />
       <workItem from="1538016156908" duration="20718000" />
       <workItem from="1538096806653" duration="16422000" />
-      <workItem from="1538118718855" duration="1367000" />
+      <workItem from="1538118718855" duration="7747000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -492,7 +500,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="538711000" />
+    <option name="totallyTimeSpent" value="545091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -671,44 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/user.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="126" column="21" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="126" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/setTask.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3611">
-          <caret line="157" column="5" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="157" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="24" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#1539#2181#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,24 +695,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        <state relative-caret-position="874">
+          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/setTask.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="23">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/xmPro.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="491" column="45" lean-forward="false" selection-start-line="491" selection-start-column="36" selection-end-line="491" selection-end-column="45" />
+        <state relative-caret-position="46">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="12" />
+          <folding>
+            <element signature="e#39#2832#0" expanded="false" />
+            <element signature="e#2875#3051#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/interface/user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="436" column="44" lean-forward="false" selection-start-line="436" selection-start-column="44" selection-end-line="436" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -758,16 +751,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
+    <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="491" column="47" lean-forward="false" selection-start-line="491" selection-start-column="47" selection-end-line="491" selection-end-column="47" />
+        <state relative-caret-position="115">
+          <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -775,7 +783,7 @@
             <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#8326#8333#1" expanded="true" />
+            <element signature="e#8513#8520#1" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>

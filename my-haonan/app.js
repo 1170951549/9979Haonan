@@ -39,7 +39,7 @@ app.use(express.static('dist'));
 // });
 
 app.post('/upload', (req, res) => {
-  console.log(req.body.base64);
+ // console.log(req.body.base64);
   //res.send("0");
   //console.log(uuid.v4());
   var imgPath = uuid.v4();

@@ -219,6 +219,9 @@
           <select class="form-control" name="厂家">
             <option v-bind:value="goods.Name">{{goods.Name}}</option>
           </select>
+          <!--<select class="form-control" name="厂家">-->
+            <!--<option v-bind:value="pors.country" v-for="pors in goods">{{pors.country}}</option>-->
+          <!--</select>-->
         </div>
         <div class="form-group">
           <label>产品ID</label>
@@ -234,7 +237,7 @@
         <label>URL地址</label>
         <div class="input-group">
           <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="产品的ID">
-          <span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>
+          <span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">生成产品</span>
         </div>
         <div class="form-group" style="display: none">
           <label>URL地址</label>
@@ -357,6 +360,7 @@
         this.previews = data;
       },
       down(type) {//下载
+        var thit = this;
         // event.preventDefault()
         var aLink = document.createElement('a');
         aLink.download = 'demo';
@@ -387,6 +391,9 @@
                 //var a = res.replace("png","jpg")
                 //获取图片的value
                 $(".rw").val("http://"+window.location.host+"/img/"+ res);
+                $(".bs-example-modal-lg").hide();
+                $(".modal-backdrop").hide();
+                thit.getcode();
                 // console.log(a)
               },
               error: function (error) {
@@ -459,7 +466,6 @@
         $('.proMl').val("F" + years + "" + monts + "" + dates);
         //任务名称+ XXX 0
         $(".porId").val($(".rw").val() + " " + $('.proID').val() + " " + 0);
-        console.log(Newstr)
         //获取图片的value
         var rws = $(".porId").val();
         //截取图片名称
