@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/app.js" afterPath="$PROJECT_DIR$/my-haonan/app.js" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/img/5467e0ba-7134-4453-90e6-49e3117d8379.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
+      <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/text.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="text.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="436" column="44" lean-forward="false" selection-start-line="436" selection-start-column="44" selection-end-line="436" selection-end-column="44" />
+            <state relative-caret-position="288">
+              <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -66,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="text1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="text1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
+              <caret line="395" column="31" lean-forward="true" selection-start-line="393" selection-start-column="14" selection-end-line="395" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -224,9 +219,9 @@
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/interface/setTask.json" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi1.html" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/text1.html" />
         <option value="$PROJECT_DIR$/my-haonan/app.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/text.html" />
       </list>
     </option>
   </component>
@@ -452,7 +447,7 @@
       <workItem from="1538009981956" duration="6107000" />
       <workItem from="1538016156908" duration="20718000" />
       <workItem from="1538096806653" duration="16422000" />
-      <workItem from="1538118718855" duration="7747000" />
+      <workItem from="1538118718855" duration="8365000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -500,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545091000" />
+    <option name="totallyTimeSpent" value="545709000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -728,29 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="436" column="44" lean-forward="false" selection-start-line="436" selection-start-column="44" selection-end-line="436" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#8326#8333#1" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -770,7 +742,7 @@
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
+          <caret line="395" column="31" lean-forward="true" selection-start-line="393" selection-start-column="14" selection-end-line="395" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -784,6 +756,29 @@
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#8513#8520#1" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/text.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="392" column="31" lean-forward="false" selection-start-line="392" selection-start-column="31" selection-end-line="392" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#span#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#8326#8333#1" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>

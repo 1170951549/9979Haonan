@@ -357,6 +357,7 @@
         this.previews = data;
       },
       down(type) {//下载
+        var thit = this;
         // event.preventDefault()
         var aLink = document.createElement('a');
         aLink.download = 'demo';
@@ -387,6 +388,9 @@
                 //var a = res.replace("png","jpg")
                 //获取图片的value
                 $(".rw").val("http://"+window.location.host+"/img/"+ res);
+                $(".bs-example-modal-lg").hide();
+                $(".modal-backdrop").hide();
+                thit.getcode();
                // console.log(a)
               },
               error: function (error) {
