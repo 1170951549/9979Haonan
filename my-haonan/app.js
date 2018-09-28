@@ -7,7 +7,15 @@ const path = require('path');
 const router = require('./router');
 const PORT = 3010;
 
+const cors = require('cors');
 const uuid = require('node-uuid');
+
+
+app.use(cors({
+  origin:['http://localhost'],
+  methods:['GET','POST'],
+  alloweHeaders:['Conten-Type', 'Authorization']
+}));
 
 
 
@@ -19,26 +27,21 @@ app.use(express.static('dist'));
 // app.engine( '.html', require( 'ejs' ).__express );
 // app.use(router);
 
-app.all('*',function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-  res.header("X-Powered-By",' 3.2.1');
-  res.header("Content-Type", "application/json;charset=utf-8");
-  if (req.method == 'OPTIONS') {
-    res.send(200); /让options请求快速返回/
-  }
-  else {
-    next();
-  }
-});
+// app.all('*',function (req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+//   res.header("X-Powered-By",' 3.2.1');
+//   res.header("Content-Type", "application/json;charset=utf-8");
+//   if (req.method == 'OPTIONS') {
+//     res.send(200); /让options请求快速返回/
+//   }
+//   else {
+//     next();
+//   }
+// });
 
 app.post('/upload',(req,res)=>{
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
-  res.header("X-Powered-By",' 3.2.1');
-  res.header("Content-Type", "application/json;charset=utf-8");
   console.log(req.body.base64);
   //res.send("0");
   //console.log(uuid.v4());
