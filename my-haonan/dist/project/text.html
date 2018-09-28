@@ -470,9 +470,13 @@
         //创建数据
         this.$http.post("http://tp1.015144.com/creatMisson", $('#form-member-add').serialize(), {
           headers: {
-            'Accept': '*/*',
-            'Content-Type': "application/x-www-form-urlencoded",
-            'Access-Control-Allow-Origin': '*'
+           // 'Accept': '*/*',
+            //'Content-Type': "application/x-www-form-urlencoded",
+            //'Access-Control-Allow-Origin': '*'
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods':'GET, POST, OPTIONS, PUT, PATCH, DELETE',
+            'Access-Control-Allow-Headers':'X-Requested-With,content-type',
+            'Access-Control-Allow-Credentials':true
           }
         }).then(function (res) {
             if(res.status == 200){
