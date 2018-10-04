@@ -212,16 +212,36 @@
       <h2>生成产品</h2>
       <hr>
       <form id="form-member-add">
+        <div class="form-group" style="display: none;">
+          <label>生产厂家</label>
+          <input type="text" class="form-control proCJ" name="厂家">
+        </div>
         <div class="form-group">
           <label>生产厂家</label>
-          <select class="form-control" name="厂家">
-            <option v-bind:value="goods.Name">{{goods.Name}}</option>
+          <!--<select class="form-control" name="厂家">-->
+            <!--<option v-bind:value="goods.Name">{{goods.Name}}</option>-->
+          <!--</select>-->
+          <select class="form-control" name="" v-model="countryName" @change="selectCountry">
+            <option :value="item" v-for="(item,index) in goods" class="changjia">
+              {{item.country}}
+              <svg class="icon icon-arrow-bottom" aria-hidden="true">
+                <use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>
+              </svg>
+            </option>
           </select>
         </div>
         <div class="form-group">
           <label>产品ID</label>
-          <select class="form-control proID" name="产品ID">
-            <option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>
+          <!--<select class="form-control proID" name="产品ID">-->
+            <!--<option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>-->
+          <!--</select>-->
+          <select  class="form-control proID" name="产品ID" v-model="cityName">
+            <option :value="item.proID" v-for="(item,index) in countryName.city">
+              {{item.proName}}-{{item.proID}}
+              <svg class="icon icon-arrow-bottom" aria-hidden="true">
+                <use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>
+              </svg>
+            </option>
           </select>
         </div>
         <div class="form-group" style="display: none;">
@@ -340,7 +360,9 @@
         centerBox: true,
         high: true
       },
-      show: true
+      show: true,
+      countryName:{},
+      cityName:"请选择城市"
     },
     components: {
       'vue-cropper': window['vue-cropper'].default
@@ -349,6 +371,9 @@
       let _this = this;
     },
     methods: {
+      selectCountry(value){
+        this.cityName=this.countryName.city[0];
+      },
       // 实时预览函数
       realTime(data) {
         console.log(data);
@@ -436,7 +461,7 @@
       },
       /**/
       getGoods() {
-        this.$http.get('../interface/setTask.json').then((res) => {
+        this.$http.get('../interface/xmPro.json').then((res) => {
           this.goods = res.data;
           //console.log(JSON.stringify(this.goods));
           //console.log(this.goods);
@@ -453,6 +478,7 @@
         })
       },
       getcode() {
+
         //目录时间
         var time = new Date();
         var years = time.getFullYear();
@@ -464,6 +490,9 @@
         console.log(Newstr)
         //获取图片的value
         var rws = $(".porId").val();
+        //获取厂家  去掉左右空格
+        var changjia = $.trim($(".changjia").html())
+        $(".proCJ").val(changjia);
         //截取图片名称
         var reg = rws.substring(rws.lastIndexOf('/') + 1, rws.indexOf(' '));
         var rwsImg = reg;
