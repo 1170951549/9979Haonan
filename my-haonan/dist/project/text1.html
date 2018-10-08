@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
   <title>9979</title>
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,50 +11,49 @@
   <link rel="stylesheet" href="css/cropper.min.css">
   <!--<link rel="stylesheet" href="css/ImgCropping.css">-->
   <style>
+    a{
+      text-decoration: none;
+    }
+    ul li{
+      list-style: none;
+    }
     .loadingS {
       text-align: center;
       margin-top: 8%;
       display: none;
     }
-
     .divImg {
       transform: scale(1); /*图片原始大小1倍*/
       transition: all ease 0.5s;
     }
-
     .divImg.active {
-      transform: scale(2); /*图片需要放大3倍*/
+      transform: scale(1.8); /*图片需要放大3倍*/
       position: absolute; /*是相对于前面的容器定位的，此处要放大的图片，不能使用position：relative；以及float，否则会导致z-index无效*/
       z-index: 100;
-      top: 50%;
-      left: 28%;
+      top: 35%;
+      left: 35%;
     }
-
     .cut {
       width: 100%;
       height: 300px;
       margin: 30px auto;
     }
-
     .c-item {
       max-width: 800px;
       margin: 10px auto;
       margin-top: 20px;
     }
-
     .content {
       margin: auto;
       max-width: 1200px;
       margin-bottom: 100px;
     }
-
     .test-button {
       display: flex;
       flex-wrap: wrap;
       align-content: center;
       justify-content: center;
     }
-
     .btn {
       display: inline-block;
       line-height: 1;
@@ -78,11 +76,9 @@
       text-decoration: none;
       user-select: none;
     }
-
     .des {
       line-height: 30px;
     }
-
     code.language-html {
       padding: 10px 20px;
       margin: 10px 0px;
@@ -94,18 +90,12 @@
       border-radius: 5px;
       white-space: pre;
     }
-
     .show-info {
       margin-bottom: 50px;
     }
-
     .show-info h2 {
       line-height: 50px;
     }
-
-    /*.title, .title:hover, .title-focus, .title:visited {
-      color: black;
-    }*/
     .title {
       display: block;
       text-decoration: none;
@@ -119,11 +109,9 @@
       animation: slide 5s infinite linear;
       font-size: 40px;
     }
-
     .test {
       height: 500px;
     }
-
     .model {
       position: fixed;
       z-index: 10;
@@ -134,7 +122,6 @@
       left: 0;
       background: rgba(0, 0, 0, 0.8);
     }
-
     .model-show {
       display: flex;
       justify-content: center;
@@ -142,7 +129,6 @@
       width: 100vw;
       height: 100vh;
     }
-
     .model img {
       display: block;
       margin: auto;
@@ -152,12 +138,10 @@
       background-size: 20px 20px;
       background-image: linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);
     }
-
     .c-item {
       display: block;
       user-select: none;
     }
-
     @keyframes slide {
       0% {
         background-position: 0 0;
@@ -166,7 +150,100 @@
         background-position: -100% 0;
       }
     }
+    /*轮播*/
+    .slide {
+      width: 80%;
+      height: 80%;
+      margin:  auto;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      display: none;
+    }
 
+    .slide .slideshow {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+    }
+    .slide ul{
+      overflow: hidden;
+      height: 100%;
+    }
+    .slide li {
+      position: absolute;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide .bar {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      margin: 0 auto;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .slide .bar span {
+      width: 20px;
+      height: 5px;
+      border: 1px solid;
+      background: white;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .slide .active {
+      background: red !important;
+    }
+
+    .slide .image-enter-active {
+      transform: translateX(0);
+      transition: all 1.5s ease;
+    }
+
+    .slide .image-leave-active {
+      transform: translateX(-100%);
+      transition: all 1.5s ease;
+    }
+
+    .slide .image-enter {
+      transform: translateX(100%);
+    }
+
+    .slide .image-leave {
+      transform: translateX(0);
+    }
+    .slide .slideBtn{
+      position: absolute;
+      font-size: 30px;
+      text-decoration: none;
+      padding: 1%;
+      text-align: center;
+      background-color: black;
+      top: 49%;
+      z-index: 10000;
+    }
+    .clos{
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: white;
+      font-size: 25px;
+      background-color: deepskyblue;
+      padding: 0.1% 2%;
+      text-decoration: none;
+      z-index: 100000;
+    }
   </style>
 </head>
 <body>
@@ -174,8 +251,7 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -186,8 +262,9 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-               aria-expanded="false">新增 <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              新增 <span class="caret"></span>
+            </a>
             <ul class="dropdown-menu">
               <li><a href="#">产品</a></li>
             </ul>
@@ -196,8 +273,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">VIP</a></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-               aria-expanded="false">admin <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              admin <span class="caret"></span>
+            </a>
             <ul class="dropdown-menu">
               <li><a href="#">切换用户</a></li>
               <li><a href="#">退出</a></li>
@@ -212,14 +290,14 @@
       <h2>生成产品</h2>
       <hr>
       <form id="form-member-add">
+        <!--生产厂家-->
         <div class="form-group" style="display: none;">
-          <label>生产厂家</label>
           <input type="text" class="form-control proCJ" name="厂家">
         </div>
         <div class="form-group">
           <label>生产厂家</label>
           <!--<select class="form-control" name="厂家">-->
-            <!--<option v-bind:value="goods.Name">{{goods.Name}}</option>-->
+          <!--<option v-bind:value="goods.Name">{{goods.Name}}</option>-->
           <!--</select>-->
           <select class="form-control" name="" v-model="countryName" @change="selectCountry">
             <option :value="item" v-for="(item,index) in goods" class="changjia">
@@ -230,10 +308,11 @@
             </option>
           </select>
         </div>
+        <!--产品ID-->
         <div class="form-group">
           <label>产品ID</label>
           <!--<select class="form-control proID" name="产品ID">-->
-            <!--<option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>-->
+          <!--<option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>-->
           <!--</select>-->
           <select  class="form-control proID" name="产品ID" v-model="cityName">
             <option :value="item.proID" v-for="(item,index) in countryName.city">
@@ -244,6 +323,7 @@
             </option>
           </select>
         </div>
+        <!--保存目录-->
         <div class="form-group" style="display: none;">
           <label>保存目录</label>
           <input type="text" class="form-control proMl" name="保存目录">
@@ -251,9 +331,10 @@
         </div>
         <label>URL地址</label>
         <div class="input-group">
-          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="产品的ID">
+          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="">
           <span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>
         </div>
+        <!--地址-->
         <div class="form-group" style="display: none">
           <label>URL地址</label>
           <input type="text" class="form-control porId" name="任务">
@@ -277,6 +358,25 @@
       </div>
     </div>
   </div>
+  <div class="slide">
+    <a class="clos" @click="clos">X</a>
+    <a class="slideBtn"  @click="slideBtnL" style="left: 0;">&lt;</a>
+    <a class="slideBtn"  @click="slideBtnR" style="right: 0;">&gt;</a>
+    <div class="slideshow" >
+      <transition-group tag="ul" name="image">
+        <li class="liimg" v-for="(img, index) in goodImg" v-show="index===mark" :key="index">
+          <a href="javascript:;">
+            <img :src="['http://tp1.015144.com'+img]">
+          </a>
+        </li>
+      </transition-group>
+    </div>
+    <!--<div class="bullet">-->
+      <!--<span v-for="(item, index) in goodImg" :class="{ 'active':index===mark }" @click="change(index)" :key="index">-->
+      <!--</span>-->
+    <!--</div>-->
+  </div>
+
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -337,6 +437,8 @@
       goodXm: [],
       goodImg: [],
       isChoose: -1,
+      timer: null, //定时器
+      mark: 0, //比对图片索引的变量
       bol: false,
       /*裁剪*/
       model: false,
@@ -371,6 +473,21 @@
       let _this = this;
     },
     methods: {
+      slideBtnL() {
+        this.mark++;
+        if (this.mark === $(".liimg").length) {
+          this.mark = 0;
+        }
+      },
+      slideBtnR() {
+        this.mark--;
+        if (this.mark <=0) {
+          this.mark = $(".liimg").length-1;
+        }
+      },
+      clos(){
+        $(".slide").hide();
+      },
       selectCountry(value){
         this.cityName=this.countryName.city[0];
       },
@@ -487,7 +604,6 @@
         $('.proMl').val("F" + years + "" + monts + "" + dates);
         //任务名称+ XXX 0
         $(".porId").val($(".rw").val() + " " + $('.proID').val() + " " + 0);
-        console.log(Newstr)
         //获取图片的value
         var rws = $(".porId").val();
         //获取厂家  去掉左右空格
@@ -553,22 +669,24 @@
           console.log(123456789);
         });
       },
+      /*img点击效果*/
       rowImg: function (index, event) {
         console.log(event.currentTarget);
         console.log(index);
-        this.isChoose = index;
-        this.bol = !this.bol;
-        if (!this.bol) {
-          if (this.isChoose == index) {
-            this.isChoose = -1;
-          }
-        }
-        console.log(this.isChoose);
+        $(".slide").show();
+        // this.isChoose = index;
+        // this.bol = !this.bol;
+        // if (!this.bol) {
+        //   if (this.isChoose == index) {
+        //     this.isChoose = -1;
+        //   }
+        // }
+        // console.log(this.isChoose);
       }
     },
     created() {
-      this.getGoods(),
-        this.getXm()
+      this.getGoods();
+      this.getXm()
     },
     watch: {
       goods(val) {

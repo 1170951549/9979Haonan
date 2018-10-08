@@ -21,11 +21,11 @@
       transition: all ease 0.5s;
     }
     .divImg.active {
-      transform: scale(2); /*图片需要放大3倍*/
+      transform: scale(1.8); /*图片需要放大3倍*/
       position: absolute; /*是相对于前面的容器定位的，此处要放大的图片，不能使用position：relative；以及float，否则会导致z-index无效*/
       z-index: 100;
-      top: 50%;
-      left: 28%;
+      top: 35%;
+      left: 35%;
     }
     .cut {
       width: 100%;
@@ -144,6 +144,8 @@
         background-position: -100% 0;
       }
     }
+    /*轮播*/
+
   </style>
 </head>
 <body>
@@ -258,6 +260,7 @@
       </div>
     </div>
   </div>
+
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -324,7 +327,6 @@
       modelSrc: '',
       crap: false,
       previews: {},
-
       option: {
         img: '',
         size: 1,
@@ -339,7 +341,7 @@
         autoCropWidth: 200,
         autoCropHeight: 150,
         centerBox: true,
-        high: true
+        high: true,
       },
       show: true,
       countryName:{},
@@ -459,7 +461,6 @@
         })
       },
       getcode() {
-
         //目录时间
         var time = new Date();
         var years = time.getFullYear();
@@ -533,6 +534,7 @@
           console.log(123456789);
         });
       },
+      /*img点击效果*/
       rowImg: function (index, event) {
         console.log(event.currentTarget);
         console.log(index);
@@ -547,7 +549,7 @@
       }
     },
     created() {
-      this.getGoods(),
+      this.getGoods();
         this.getXm()
     },
     watch: {
