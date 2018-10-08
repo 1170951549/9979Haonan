@@ -466,7 +466,8 @@
       },
       show: true,
       countryName:{},
-      cityName:"请选择城市"
+      cityName:"请选择城市",
+      num:0
     },
     components: {
       'vue-cropper': window['vue-cropper'].default
@@ -532,6 +533,7 @@
                 $(".rw").val("http://"+window.location.host+"/img/"+ res);
                 $(".bs-example-modal-lg").hide();
                 $(".modal-backdrop").hide();
+                alert("正在生产,请稍后...");
                 thit.getcode();
                 // console.log(a)
               },
@@ -597,7 +599,10 @@
         })
       },
       getcode() {
-
+        if(this.num>0){
+            $(".rowImg .divImg").hide();
+        }
+        this.num++;
         //目录时间
         var time = new Date();
         var years = time.getFullYear();
@@ -645,6 +650,7 @@
                         console.log(thit.goodImg);
                         console.log(res.body.length);
                         console.log(res.data);
+                        $(".rowImg .divImg").show();
                         if(res.body.length<1){
                           alert("图片加载失败");
                           return;

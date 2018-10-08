@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="css/cropper.min.css">
   <!--<link rel="stylesheet" href="css/ImgCropping.css">-->
   <style>
+    a{
+      text-decoration: none;
+    }
+    ul li{
+      list-style: none;
+    }
     .loadingS {
       text-align: center;
       margin-top: 8%;
@@ -145,7 +151,101 @@
       }
     }
     /*轮播*/
+    .slide {
+      width: 80%;
+      height: 80%;
+      margin:  auto;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      display: none;
+    }
 
+    .slide .slideshow {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+    }
+    .slide ul{
+      overflow: hidden;
+      height: 100%;
+      padding: 0;
+    }
+    .slide li {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide .bar {
+      position: absolute;
+      width: 100%;
+      bottom: 10px;
+      margin: 0 auto;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .slide .bar span {
+      width: 20px;
+      height: 5px;
+      border: 1px solid;
+      background: white;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .slide .active {
+      background: red !important;
+    }
+
+    .slide .image-enter-active {
+      transform: translateX(0);
+      transition: all 1.5s ease;
+    }
+
+    .slide .image-leave-active {
+      transform: translateX(-100%);
+      transition: all 1.5s ease;
+    }
+
+    .slide .image-enter {
+      transform: translateX(100%);
+    }
+
+    .slide .image-leave {
+      transform: translateX(0);
+    }
+    .slide .slideBtn{
+      position: absolute;
+      font-size: 30px;
+      text-decoration: none;
+      padding: 1%;
+      text-align: center;
+      background-color: black;
+      top: 49%;
+      z-index: 10000;
+    }
+    .clos{
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: white;
+      font-size: 25px;
+      background-color: deepskyblue;
+      padding: 0.1% 2%;
+      text-decoration: none;
+      z-index: 100000;
+    }
   </style>
 </head>
 <body>
@@ -260,6 +360,24 @@
       </div>
     </div>
   </div>
+  <div class="slide">
+    <a class="clos" @click="clos">X</a>
+    <a class="slideBtn"  @click="slideBtnL" style="left: 0;">&lt;</a>
+    <a class="slideBtn"  @click="slideBtnR" style="right: 0;">&gt;</a>
+    <div class="slideshow" >
+      <transition-group tag="ul" name="image">
+        <li class="liimg" v-for="(img, index) in goodImg" v-show="index===mark" :key="index">
+          <a href="javascript:;">
+            <img :src="['http://tp1.015144.com'+img]">
+          </a>
+        </li>
+      </transition-group>
+    </div>
+    <!--<div class="bullet">-->
+    <!--<span v-for="(item, index) in goodImg" :class="{ 'active':index===mark }" @click="change(index)" :key="index">-->
+    <!--</span>-->
+    <!--</div>-->
+  </div>
 
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -321,12 +439,15 @@
       goodXm: [],
       goodImg: [],
       isChoose: -1,
+      timer: null, //定时器
+      mark: 0, //比对图片索引的变量
       bol: false,
       /*裁剪*/
       model: false,
       modelSrc: '',
       crap: false,
       previews: {},
+
       option: {
         img: '',
         size: 1,
@@ -341,11 +462,12 @@
         autoCropWidth: 200,
         autoCropHeight: 150,
         centerBox: true,
-        high: true,
+        high: true
       },
       show: true,
       countryName:{},
-      cityName:"请选择城市"
+      cityName:"请选择城市",
+      num:0
     },
     components: {
       'vue-cropper': window['vue-cropper'].default
@@ -354,6 +476,21 @@
       let _this = this;
     },
     methods: {
+      slideBtnL() {
+        this.mark++;
+        if (this.mark === $(".liimg").length) {
+          this.mark = 0;
+        }
+      },
+      slideBtnR() {
+        this.mark--;
+        if (this.mark <=0) {
+          this.mark = $(".liimg").length-1;
+        }
+      },
+      clos(){
+        $(".slide").hide();
+      },
       selectCountry(value){
         this.cityName=this.countryName.city[0];
       },
@@ -396,6 +533,7 @@
                 $(".rw").val("http://"+window.location.host+"/img/"+ res);
                 $(".bs-example-modal-lg").hide();
                 $(".modal-backdrop").hide();
+                alert("正在生产,请稍后...");
                 thit.getcode();
                 // console.log(a)
               },
@@ -461,6 +599,10 @@
         })
       },
       getcode() {
+        if(this.num>0){
+          $(".rowImg .divImg").hide();
+        }
+        this.num++;
         //目录时间
         var time = new Date();
         var years = time.getFullYear();
@@ -508,6 +650,7 @@
                         console.log(thit.goodImg);
                         console.log(res.body.length);
                         console.log(res.data);
+                        $(".rowImg .divImg").show();
                         if(res.body.length<1){
                           alert("图片加载失败");
                           return;
@@ -538,19 +681,20 @@
       rowImg: function (index, event) {
         console.log(event.currentTarget);
         console.log(index);
-        this.isChoose = index;
-        this.bol = !this.bol;
-        if (!this.bol) {
-          if (this.isChoose == index) {
-            this.isChoose = -1;
-          }
-        }
-        console.log(this.isChoose);
+        $(".slide").show();
+        // this.isChoose = index;
+        // this.bol = !this.bol;
+        // if (!this.bol) {
+        //   if (this.isChoose == index) {
+        //     this.isChoose = -1;
+        //   }
+        // }
+        // console.log(this.isChoose);
       }
     },
     created() {
       this.getGoods();
-        this.getXm()
+      this.getXm()
     },
     watch: {
       goods(val) {
