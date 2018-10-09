@@ -10,7 +10,23 @@ const router = require('./router');
 const PORT = 3010;
 
 const cors = require('cors');
+//随机码
 const uuid = require('node-uuid');
+//数据库
+const mongoose=require('mongoose');
+// 连接数据库
+mongoose.connect('mongodb://localhost:27017/db');
+
+// 得到数据库连接句柄
+const db=mongoose.connection;
+//通过 数据库连接句柄，监听mongoose数据库成功的事件
+db.on('open',function(err){
+  if(err){
+    console.log('数据库连接失败');
+    throw err;
+  }
+  console.log('数据库连接成功')
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false, limit: 2 * 1024 * 1024 * 1024 * 1024}));
