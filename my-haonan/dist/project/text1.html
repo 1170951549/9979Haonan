@@ -229,11 +229,13 @@
       position: absolute;
       font-size: 30px;
       text-decoration: none;
-      padding: 1%;
+      padding: 1% 2%;
       text-align: center;
       background-color: black;
       top: 49%;
       z-index: 10000;
+      border-radius: 50%;
+      color: white;
     }
     .clos{
       position: absolute;
@@ -301,8 +303,8 @@
           <!--<select class="form-control" name="厂家">-->
           <!--<option v-bind:value="goods.Name">{{goods.Name}}</option>-->
           <!--</select>-->
-          <select class="form-control" name="" v-model="countryName" @change="selectCountry">
-            <option :value="item" v-for="(item,index) in goods" class="changjia">
+          <select class="form-control changjia" name="" v-model="countryName" @change="selectCountry">
+            <option :value="item" v-for="(item,index) in goods" class="">
               {{item.country}}
               <svg class="icon icon-arrow-bottom" aria-hidden="true">
                 <use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>
@@ -374,8 +376,8 @@
       </transition-group>
     </div>
     <!--<div class="bullet">-->
-      <!--<span v-for="(item, index) in goodImg" :class="{ 'active':index===mark }" @click="change(index)" :key="index">-->
-      <!--</span>-->
+    <!--<span v-for="(item, index) in goodImg" :class="{ 'active':index===mark }" @click="change(index)" :key="index">-->
+    <!--</span>-->
     <!--</div>-->
   </div>
 
@@ -600,7 +602,7 @@
       },
       getcode() {
         if(this.num>0){
-            $(".rowImg .divImg").hide();
+          $(".rowImg .divImg").hide();
         }
         this.num++;
         //目录时间
@@ -614,8 +616,8 @@
         //获取图片的value
         var rws = $(".porId").val();
         //获取厂家  去掉左右空格
-        var changjia = $.trim($(".changjia").html())
-        $(".proCJ").val(changjia);
+        var x = $('.changjia option:selected').text();
+        $(".proCJ").val($.trim(x));
         //截取图片名称
         var reg = rws.substring(rws.lastIndexOf('/') + 1, rws.indexOf(' '));
         var rwsImg = reg;
@@ -681,7 +683,16 @@
       rowImg: function (index, event) {
         console.log(event.currentTarget);
         console.log(index);
+        if($(window).width()<=850){
+          $(".slide").css("height","50%");
+        }
         $(".slide").show();
+        var top = ($(window).height() - $(".slide").height())/2;
+        var left = ($(window).width() - $(".slide").width())/2;
+        var scrollTop = $(document).scrollTop();
+        $(".slide").css( { position : 'absolute', 'top' : top + scrollTop} ).show();
+
+
         // this.isChoose = index;
         // this.bol = !this.bol;
         // if (!this.bol) {

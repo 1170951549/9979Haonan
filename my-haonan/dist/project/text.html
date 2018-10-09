@@ -683,6 +683,9 @@
       rowImg: function (index, event) {
         console.log(event.currentTarget);
         console.log(index);
+        var top = ($(window).height() - $(".slide").height())/2;
+        var scrollTop = $(document).scrollTop();
+        $(".slide").css( { position : 'absolute', 'top' : top + scrollTop} ).show();
         if($(window).width()<=850){
           $(".slide").css("height","50%");
         }
