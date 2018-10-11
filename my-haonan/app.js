@@ -107,6 +107,41 @@ app.use(express.static('dist'));
 app.post('/vender', (req, res) => {
 console.log(req.body);
   res.send(req.body);
+  //定义数据库模型 就是关系表
+//监控模型
+//定义数据结构 厂家
+  var vender = new mongoose.Schema({
+    "用户名": String,
+    "公司名称": String,
+    "联系人电话": String,
+    "地址": String,
+  });
+
+  var Venders = mongoose.model('厂家表',vender);//将该Schema发布为Model
+  var venders = new Venders({
+    "用户名": req.body.用户名,
+    "公司名称":  req.body.公司名称,
+    "联系人电话":  req.body.联系人电话,
+    "地址":  req.body.地址,
+  });
+  venders.save(function (err) {//增加
+    console.log('save status:', err ? 'failed' : 'success');
+  });
+
+  Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+    if(err){
+      console.log('error message',err);
+      return;
+    }
+    console.log('results',results);
+  });
+  Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+    if(err){
+      console.log('error message',err);
+      return;
+    }
+    console.log('results',results);
+  });
 });
 //添加产品
 app.post('/product', (req, res) => {
