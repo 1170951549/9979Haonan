@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <title>添加产品</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/cropper.min.css">
+  <!--<link rel="stylesheet" href="css/ImgCropping.css">-->
+  <style>
+    a{
+      text-decoration: none;
+    }
+    ul li{
+      list-style: none;
+    }
+    .navbar-brand{
+      padding: 0;
+
+    }
+    .navbar-inverse{
+      background-color: white;
+      background-image: none;
+      border: none;
+      box-shadow: 1px 3px 1px #9d9d9d;
+    }
+    .dropdown-toggle:hover {
+      color: black !important;
+    }
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img style="width: 75px;;height: 50px" src="h80809-9979-客户.png"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              新增 <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">产品</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              admin <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">切换用户</a></li>
+              <li><a href="#">退出</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container" style="padding: 2%">
+    <div class="row" style="margin: 0">
+      <h2>添加产品</h2>
+      <hr>
+      <form id="form-member-add">
+        <div class="form-group">
+          <label>产品名称</label>
+          <input type="text" class="form-control" placeholder="产品名称" name="产品名称">
+        </div>
+        <div class="form-group">
+          <label>图片</label>
+          <input type="text" class="form-control"  placeholder="图片" name="图片">
+        </div>
+        <div class="form-group">
+          <label>尺寸</label>
+          <input type="text" class="form-control"  placeholder="尺寸" name="尺寸">
+        </div>
+        <!--<div class="form-group">-->
+          <!--<label>重量</label>-->
+          <!--<input type="text" class="form-control"  placeholder="图片" name="重量">-->
+        <!--</div>-->
+        <div class="form-group">
+          <label>产品单价</label>
+          <input type="text" class="form-control"  placeholder="产品单价" name="产品单价">
+        </div>
+        <div class="form-group">
+          <label>生产ID</label>
+          <input type="text" class="form-control"  placeholder="生产ID" name="生产ID">
+        </div>
+        <div class="form-group">
+          <label>选择</label>
+          <select class="form-control" name="生产厂家">
+            <option value="">1</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" @click="btnPro" style="margin-top: 30px">确定</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script src="http://cdn.bootcss.com/vue-resource/1.1.0/vue-resource.js"></script>
+<script src="js/ceshi.js"></script>
+<script type="text/javascript" src="js/cropper.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+
+    },
+    methods: {
+      btnPro(){
+        // this.$http.post("/vender", $("#form-member-add").serialize(),{
+        //   headers: {
+        //     'Accept': '*/*',
+        //     'Content-Type': "application/x-www-form-urlencoded",
+        //     'Access-Control-Allow-Origin': '*'
+        //   }
+        // }).then(function (res) {
+        //   console.log(111);
+        //   console.log(res);
+        // }).catch(function (err) {
+        //   console.log(err);
+        //   console.log(123456789);
+        // });
+        $.ajax({
+          url: '/product',
+          method: 'POST',
+          data: $("#form-member-add").serialize(),
+          //默认为true，设为false后直到ajax请求结束(调完回掉函数)后才会执行$.ajax(...)后面的代码
+          async: false,
+          //下面三个，因为直接使用FormData作为数据，contentType会自动设置，也不需要jquery做进一步的数据处理(序列化)。
+          cache: false,
+          processData: true,
+          type: JSON,
+          success: function (res) {
+            console.log(res);
+            console.log(111);
+          },
+          error: function (error) {
+            console.log(error)
+          }
+        });
+
+      }
+    }
+  })
+</script>

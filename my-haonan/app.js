@@ -28,34 +28,36 @@ mongoose.Promise = global.Promise;//为了避免警告的出现，因为mongoose
 //定义数据库模型 就是关系表
 //监控模型
 //定义数据结构 厂家
-var vender = new mongoose.Schema({
-  "厂家": String,
-  "所属产品": String,
-});
+// var vender = new mongoose.Schema({
+//   "厂家": String,
+//   "所属产品": String,
+// });
+//
+// var Venders = mongoose.model('厂家表',vender);//将该Schema发布为Model
+// var venders = new Venders({
+//   "厂家": "厦门",
+//   "所属产品": "aaa",
+// });
+// venders.save(function (err) {//增加
+//   console.log('save status:', err ? 'failed' : 'success');
+// });
+//
+// Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+//   if(err){
+//     console.log('error message',err);
+//     return;
+//   }
+//   console.log('results',results);
+// });
+// Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+//   if(err){
+//     console.log('error message',err);
+//     return;
+//   }
+//   console.log('results',results);
+// });
 
-var Venders = mongoose.model('厂家表',vender);//将该Schema发布为Model
-var venders = new Venders({
-  "厂家": "厦门",
-  "所属产品": "aaa",
-});
-venders.save(function (err) {//增加
-  console.log('save status:', err ? 'failed' : 'success');
-});
 
-Venders.find({}, function (err,results) {  //查找出数据库中所有数据
-  if(err){
-    console.log('error message',err);
-    return;
-  }
-  console.log('results',results);
-});
-Venders.find({}, function (err,results) {  //查找出数据库中所有数据
-  if(err){
-    console.log('error message',err);
-    return;
-  }
-  console.log('results',results);
-});
 // exports.addAccount=function (a) {
 //   var venders = new Venders();
 //   venders.厂家 = a.厂家;
@@ -101,6 +103,16 @@ app.use(express.static('dist'));
 //     console.log(222);
 //   }
 // });
+//添加厂家
+app.post('/vender', (req, res) => {
+console.log(req.body);
+  res.send(req.body);
+});
+//添加产品
+app.post('/product', (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
 
 app.post('/upload', (req, res) => {
   var imgPath = uuid.v4();
