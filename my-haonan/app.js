@@ -8,7 +8,6 @@ const fs = require('fs');
 const path = require('path');
 const router = require('./router');
 const PORT = 3010;
-
 const cors = require('cors');
 //随机码
 const uuid = require('node-uuid');
@@ -16,17 +15,66 @@ const uuid = require('node-uuid');
 const mongoose=require('mongoose');
 // 连接数据库
 mongoose.connect('mongodb://localhost:27017/db');
-
-// 得到数据库连接句柄
-const db=mongoose.connection;
-//通过 数据库连接句柄，监听mongoose数据库成功的事件
-db.on('open',function(err){
-  if(err){
-    console.log('数据库连接失败');
-    throw err;
-  }
-  console.log('数据库连接成功')
+mongoose.connection.on('connected', () => {
+  console.log('数据库连接成功！');
 });
+mongoose.connection.on('error', () => {
+  console.log('数据库连接失败！');
+});
+mongoose.connection.on('disconnected', () => {
+  console.log('数据库连接断开！');
+});
+mongoose.Promise = global.Promise;//为了避免警告的出现，因为mongoose的默认promise已经弃用了
+//定义数据库模型 就是关系表
+//监控模型
+//定义数据结构 厂家
+var vender = new mongoose.Schema({
+  "厂家": String,
+  "所属产品": String,
+});
+
+var Venders = mongoose.model('厂家表',vender);//将该Schema发布为Model
+var venders = new Venders({
+  "厂家": "厦门",
+  "所属产品": "aaa",
+});
+venders.save(function (err) {//增加
+  console.log('save status:', err ? 'failed' : 'success');
+});
+
+Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+  if(err){
+    console.log('error message',err);
+    return;
+  }
+  console.log('results',results);
+});
+Venders.find({}, function (err,results) {  //查找出数据库中所有数据
+  if(err){
+    console.log('error message',err);
+    return;
+  }
+  console.log('results',results);
+});
+// exports.addAccount=function (a) {
+//   var venders = new Venders();
+//   venders.厂家 = a.厂家;
+//   venders.所属产品 = a.所属产品;
+//   return venders.save();
+// };
+// exports.findAllAccount=function () {
+//   return Products.find({});
+// };
+// var url = "mongodb://127.0.0.1:27017/db";
+// var db = mongoose.connect(url);
+// db.connection.on("error", function (error) {
+//   console.log("数据库连接失败：" + error);
+// });
+// db.connection.on("open", function () {
+//   console.log("数据库连接成功");
+// });
+
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false, limit: 2 * 1024 * 1024 * 1024 * 1024}));
@@ -55,9 +103,6 @@ app.use(express.static('dist'));
 // });
 
 app.post('/upload', (req, res) => {
- // console.log(req.body.base64);
-  //res.send("0");
-  //console.log(uuid.v4());
   var imgPath = uuid.v4();
   var tpye = ".unknow";
   if (req.body.base64.indexOf("image/png") > 0)
@@ -78,7 +123,6 @@ app.post('/upload', (req, res) => {
     }
   });
 });
-
 var server = app.listen(PORT, "0.0.0.0", function () {
   console.log('已启动', PORT);
 });
