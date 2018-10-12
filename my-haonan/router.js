@@ -1,12 +1,13 @@
-// const express = require('express');
-// const router = express.Router();
-//
-// router.get('/',(req,res)=>{
-//   res.send('Amazon Search Team Sever Start');
-// });
+const express = require('express');
+const router = express.Router();
+const vender =require('./Vender');
+// const order = require('./order');
 
-// router.get('/index',(req,res)=>{
-//   res.render('index');
-// });
+router.use('/vender',vender);
+// router.use('/order',order);
 
-// module.exports = router;
+router.get('/',(req,res)=>{
+  res.send('Sever Start');
+});
+
+module.exports = router;
