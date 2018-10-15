@@ -102,12 +102,12 @@
           <label>生产ID</label>
           <input type="text" class="form-control"  placeholder="生产ID" name="生产ID">
         </div>
-        <!--<div class="form-group">-->
-          <!--<label>选择厂家</label>-->
-          <!--<select class="form-control" name="生产厂家">-->
-            <!--<option value="" v-for="(item,index) in goodPro">{{item}}</option>-->
-          <!--</select>-->
-        <!--</div>-->
+        <div class="form-group">
+          <label>公司名称</label>
+          <select class="form-control" name="生产厂家">
+            <option v-bind:value="item.公司名称" v-for="(item,index) in goodPro">{{item.公司名称}}</option>
+          </select>
+        </div>
         <button type="button" class="btn btn-primary" @click="btnPro" style="margin-top: 30px">确定</button>
       </form>
     </div>
@@ -133,8 +133,8 @@
     },
     methods: {
       getPro() {
-        this.$http.get('/findVenderAll').then((res) => {
-          this.goodPro = res.data;
+        this.$http.get('/product/list').then((res) => {
+          this.goodPro = res.data.data;
           console.log(this.goodPro);
           //console.log(this.goodXm);
         }, (err) => {

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const vender =require('./Vender');
+const vender =require('./vender');
 const product =require('./products');
 // const order = require('./order');
 
