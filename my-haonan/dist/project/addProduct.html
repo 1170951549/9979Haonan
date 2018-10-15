@@ -102,12 +102,12 @@
           <label>生产ID</label>
           <input type="text" class="form-control"  placeholder="生产ID" name="生产ID">
         </div>
-        <div class="form-group">
-          <label>选择厂家</label>
-          <select class="form-control" name="生产厂家">
-            <option value="" v-for="(item,index) in goodPro">{{goodPro}}</option>
-          </select>
-        </div>
+        <!--<div class="form-group">-->
+          <!--<label>选择厂家</label>-->
+          <!--<select class="form-control" name="生产厂家">-->
+            <!--<option value="" v-for="(item,index) in goodPro">{{item}}</option>-->
+          <!--</select>-->
+        <!--</div>-->
         <button type="button" class="btn btn-primary" @click="btnPro" style="margin-top: 30px">确定</button>
       </form>
     </div>
@@ -133,8 +133,8 @@
     },
     methods: {
       getPro() {
-        this.$http.post('/getPro').then((res) => {
-          this.goodPro = res.status;
+        this.$http.get('/findVenderAll').then((res) => {
+          this.goodPro = res.data;
           console.log(this.goodPro);
           //console.log(this.goodXm);
         }, (err) => {
@@ -156,7 +156,7 @@
         //   console.log(123456789);
         // });
         $.ajax({
-          url: '/vender/add',
+          url: '/product/add',
           method: 'POST',
           data: $("#form-member-add").serialize(),
           //默认为true，设为false后直到ajax请求结束(调完回掉函数)后才会执行$.ajax(...)后面的代码
@@ -175,6 +175,14 @@
         });
 
       }
-    }
+    },
+    created() {
+      this.getPro();
+    },
+    watch: {
+      goodPro(val) {
+        this.goodPro = val;
+      }
+    },
   })
 </script>
