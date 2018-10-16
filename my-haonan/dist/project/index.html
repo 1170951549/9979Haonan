@@ -16,29 +16,25 @@
 <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
 <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
 <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<!--<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />-->
 <!--[if IE 6]>
-<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
-<script>DD_belatedPNG.fix('*');</script>
+<!--<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>-->
+<!--<script>DD_belatedPNG.fix('*');</script>-->
 <![endif]-->
 <title>9979</title>
-<meta name="keywords" content="H-ui.admin v3.1,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
-<meta name="description" content="H-ui.admin v3.1，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+
 </head>
 <body>
 <header class="navbar-wrapper" id="app">
 	<div class="navbar navbar-fixed-top">
 		<div class="container-fluid cl">
 			<a class="logo navbar-logo f-l mr-10 hidden-xs" href="/index.html">{{title}}</a>
-			<!--<a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a> -->
-			<!--<span class="logo navbar-slogan f-l mr-10 hidden-xs">v3.1</span> -->
-			<!--<a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>-->
 			<nav class="nav navbar-nav">
 				<ul class="cl">
 					<li class="dropDown dropDown_hover">
 						<a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
-							<li><a href="javascript:;" onclick="product_add('添加产品','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
+							<li><a href="javascript:;"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -152,90 +148,6 @@
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript">
-$(function(){
-  var app = new Vue({
-    el:'#app',
-    data:{
-      title:"9979",
-      users:[]
-    },
-    methods:{
-      getUsers(){
-        var _self = this;
-        $.get('../interface/user.json', function(obj){
-          _self.users = obj.data;
-          console.log( _self.users);
-        })
-        console.log(this.users);
-      }
-    },
-    created(){
-      this.getUsers()
-    },
-    watch:{
-      users(val){
-        this.users = val
-      }
-    }
-  })
-	/*$("#min_title_list li").contextMenu('Huiadminmenu', {
-		bindings: {
-			'closethis': function(t) {
-				console.log(t);
-				if(t.find("i")){
-					t.find("i").trigger("click");
-				}
-			},
-			'closeall': function(t) {
-				alert('Trigger was '+t.id+'\nAction was Email');
-			},
-		}
-	});*/
-});
-/*个人信息*/
-function myselfinfo(){
-	layer.open({
-		type: 1,
-		area: ['300px','200px'],
-		fix: false, //不固定
-		maxmin: true,
-		shade:0.4,
-		title: '查看信息',
-		content: '<div>管理员信息</div>'
-	});
-}
-/*资讯-添加*/
-function article_add(title,url){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
-/*图片-添加*/
-function picture_add(title,url){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
-/*产品-添加*/
-function product_add(title,url){
-	var index = layer.open({
-		type: 2,
-		title: title,
-		content: url
-	});
-	layer.full(index);
-}
-/*用户-添加*/
-function member_add(title,url,w,h){
-	layer_show(title,url,w,h);
-}
-
 
 </script>
 
