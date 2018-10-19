@@ -1,7 +1,7 @@
 const express = require('express');
 const vender = express.Router();
 const VenderDB = require('./venderDB');
-
+//添加厂家
 vender.post('/add',(req,res)=>{
   VenderDB.AddNewVender(req.body)
     .then((doc) => {

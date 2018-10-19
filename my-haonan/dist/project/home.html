@@ -55,7 +55,7 @@
         <!-- 厂家管理模块 -->
         <div role="tabpanel" class="tab-pane" id="char">
           <div class="check-div">
-            <button class="btn btn-yellow btn-xs" data-toggle="modal" data-target="#addChar">查询全部</button>
+            <a href="addVender.html" class="btn btn-yellow btn-xs" target="_blank">添加厂家</a>
           </div>
           <div class="data-div">
             <div class="row tableHeader">
@@ -278,23 +278,23 @@
         <div role="tabpanel" class="tab-pane" id="user">
           <div class="check-div form-inline">
             <div class="col-xs-3">
-              <button class="btn btn-yellow btn-xs" data-toggle="modal" data-target="#addUser">查询全部</button>
+              <a href="addProduct.html" class="btn btn-yellow btn-xs" target="_blank">添加产品</a>
             </div>
-            <div class="col-xs-4">
-              <input type="text" class="form-control input-sm" placeholder="输入文字搜索">
-              <button class="btn btn-white btn-xs ">查 询</button>
-            </div>
-            <div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">
-              <label for="paixu">排序:&nbsp;</label>
-              <select class=" form-control">
-                <option>地区</option>
-                <option>地区</option>
-                <option>班期</option>
-                <option>性别</option>
-                <option>年龄</option>
-                <option>份数</option>
-              </select>
-            </div>
+            <!--<div class="col-xs-4">-->
+              <!--<input type="text" class="form-control input-sm" placeholder="输入文字搜索">-->
+              <!--<button class="btn btn-white btn-xs ">查 询</button>-->
+            <!--</div>-->
+            <!--<div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">-->
+              <!--<label for="paixu">排序:&nbsp;</label>-->
+              <!--<select class=" form-control">-->
+                <!--<option>地区</option>-->
+                <!--<option>地区</option>-->
+                <!--<option>班期</option>-->
+                <!--<option>性别</option>-->
+                <!--<option>年龄</option>-->
+                <!--<option>份数</option>-->
+              <!--</select>-->
+            <!--</div>-->
           </div>
           <div class="data-div">
             <div class="row tableHeader">
@@ -471,6 +471,7 @@
       // removeVens:[]
     },
     methods: {
+      //查询厂家
       getVender() {
         this.$http.get('/vender/venderList').then((res) => {
           this.goodVender = res.data.data;
@@ -480,6 +481,7 @@
           console.log(err);
         })
       },
+      //查询产品
       getProduct() {
         this.$http.get('/product/productList').then((res) => {
           this.goodProduct = res.data.data;
@@ -489,6 +491,7 @@
           console.log(err);
         })
       },
+      //删除产品
       removePro(row){
         this.$confirm('是否继续?', '提示', {
           confirmButtonText: '确定',
@@ -506,6 +509,7 @@
           })
         })
       },
+      //删除厂家
       removeVen(row){
         this.$confirm('是否删除厂家?', '提示', {
           confirmButtonText: '确定',
@@ -535,15 +539,21 @@
         console.log(this.form)
       },
       updataProOK(){
-        this.$http.post('/product/update',this.form).then((res) => {
-          // this.removeVens = res.data.data;
-          // console.log(this.removeVens);
-          //console.log(this.goodXm);
-          //console.log(row._id);
-          this.getProduct();
-          console.log(res);
-        }, (err) => {
-          console.log(err);
+        this.$confirm('是否修改?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=> {
+          this.$http.post('/product/update', this.form).then((res) => {
+            // this.removeVens = res.data.data;
+            // console.log(this.removeVens);
+            //console.log(this.goodXm);
+            //console.log(row._id);
+            this.getProduct();
+            console.log(res);
+          }, (err) => {
+            console.log(err);
+          })
         })
       },
       //修改厂家
@@ -557,18 +567,23 @@
         this.getVender();
       },
       updataVenOK(){
-        this.$http.post('/vender/update',this.formv).then((res) => {
-          // this.removeVens = res.data.data;
-          // console.log(this.removeVens);
-          //console.log(this.goodXm);
-          //console.log(row._id);
-          this.getVender();
-          console.log(res);
-        }, (err) => {
-          console.log(err);
+        this.$confirm('是否修改?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=> {
+            this.$http.post('/vender/update', this.formv).then((res) => {
+              // this.removeVens = res.data.data;
+              // console.log(this.removeVens);
+              //console.log(this.goodXm);
+              //console.log(row._id);
+              this.getVender();
+              console.log(res);
+            }, (err) => {
+              console.log(err);
+            })
         })
       }
-
     },
     created() {
       this.getVender();

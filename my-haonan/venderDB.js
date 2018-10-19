@@ -102,6 +102,10 @@ exports.findVenderNameAll=function(){
 exports.findProductAll=function(){
   return ProductoudModel.find({}).populate('公司名称');
 };
+//条件查询
+exports.findProductAllName=function(name){
+  return ProductoudModel.find({"产品名称":name})
+};
 
 //删除产品
 exports.removeProduct=function (id) {
