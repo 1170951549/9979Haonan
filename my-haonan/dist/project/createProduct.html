@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-  <title>9979</title>
+  <title>生成</title>
   <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
@@ -219,30 +219,24 @@
         </div>
         <div class="form-group">
           <label>生产厂家</label>
-          <!--<select class="form-control" name="厂家">-->
-          <!--<option v-bind:value="goods.Name">{{goods.Name}}</option>-->
-          <!--</select>-->
           <select class="form-control changjia" name="" v-model="countryName" @change="selectCountry">
-            <option :value="item" v-for="(item,index) in goods" class="">
-              {{item.country}}
-              <svg class="icon icon-arrow-bottom" aria-hidden="true">
-                <use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>
-              </svg>
+            <option :value="item" v-for="item in goods" class="">
+              {{item.公司名称}}
+              <!--<svg class="icon icon-arrow-bottom" aria-hidden="true">-->
+                <!--<use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>-->
+              <!--</svg>-->
             </option>
           </select>
         </div>
         <!--产品ID-->
         <div class="form-group">
           <label>产品ID</label>
-          <!--<select class="form-control proID" name="产品ID">-->
-          <!--<option v-bind:value="pro.proID" v-for="pro in goods.data">{{pro.proName}}-{{pro.proID}}</option>-->
-          <!--</select>-->
           <select  class="form-control proID" name="产品ID" v-model="cityName">
-            <option :value="item.proID" v-for="(item,index) in countryName.city">
-              {{item.proName}}-{{item.proID}}
-              <svg class="icon icon-arrow-bottom" aria-hidden="true">
-                <use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>
-              </svg>
+            <option :value="item.生产ID" v-for="item in countryName.所属产品">
+              {{item.产品名称}}-{{item.生产ID}}
+              <!--<svg class="icon icon-arrow-bottom" aria-hidden="true">-->
+                <!--<use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>-->
+              <!--</svg>-->
             </option>
           </select>
         </div>
@@ -265,6 +259,7 @@
         <button type="button" class="btn btn-primary" @click="getcode" style="margin-top: 30px">生成</button>
       </form>
     </div>
+    <!--生成图片-->
     <div class="row rowImg" style="margin: 0">
       <h3>图片
         <small>生成图片</small>
@@ -281,25 +276,7 @@
       </div>
     </div>
   </div>
-  <div class="slide">
-    <a class="clos" @click="clos">X</a>
-    <a class="slideBtn"  @click="slideBtnL" style="left: 0;">&lt;</a>
-    <a class="slideBtn"  @click="slideBtnR" style="right: 0;">&gt;</a>
-    <div class="slideshow" >
-      <transition-group tag="ul" name="image">
-        <li class="liimg" v-for="(img, index) in goodImg" v-show="index===mark" :key="index">
-          <a href="javascript:;">
-            <img :src="['http://tp1.015144.com'+img]">
-          </a>
-        </li>
-      </transition-group>
-    </div>
-    <!--<div class="bullet">-->
-    <!--<span v-for="(item, index) in goodImg" :class="{ 'active':index===mark }" @click="change(index)" :key="index">-->
-    <!--</span>-->
-    <!--</div>-->
-  </div>
-
+  <!--上传图片-->
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -341,15 +318,14 @@
 </body>
 </html>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<!--<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
-<script src="http://cdn.bootcss.com/vue-resource/1.1.0/vue-resource.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/vue-resource.js"></script>
 <script src="js/ceshi.js"></script>
 <script type="text/javascript" src="js/cropper.min.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
   var ezjsUtil = Vue.ezjsUtil;
   var app = new Vue({
@@ -357,8 +333,9 @@
     data: {
       title: "9979",
       goods: [],
-      goodXm: [],
       goodImg: [],
+      tempJson:[],
+      tempJsons:[],
       isChoose: -1,
       timer: null, //定时器
       mark: 0, //比对图片索引的变量
@@ -413,7 +390,7 @@
         $(".slide").hide();
       },
       selectCountry(value){
-        this.cityName=this.countryName.city[0];
+        this.cityName=this.countryName.所属产品[0];
       },
       // 实时预览函数
       realTime(data) {
@@ -503,18 +480,19 @@
       },
       /**/
       getGoods() {
-        this.$http.get('../interface/xmPro.json').then((res) => {
-          this.goods = res.data;
+        this.$http.get('/vender/venderList').then((res) => {
+          this.goods = res.data.data;
+         // this.goods.所属产品;
           //console.log(JSON.stringify(this.goods));
-          //console.log(this.goods);
-        }, (err) => {
-          console.log(err);
-        })
-      },
-      getXm() {
-        this.$http.get('../interface/xmPro.json').then((res) => {
-          this.goodXm = res.data;
-          //console.log(this.goodXm);
+          for(var i=0;i< this.goods.length;i++){
+            this.tempJson=this.goods[i].所属产品
+          }
+         console.log( this.tempJson);
+          for(var i=0;i<this.tempJson.length;i++){
+            this.tempJsons.push(this.tempJson[i].产品名称);
+          }
+          console.log(this.tempJsons)
+         // console.log(this.goods);
         }, (err) => {
           console.log(err);
         })
@@ -621,15 +599,11 @@
     },
     created() {
       this.getGoods();
-      this.getXm()
     },
     watch: {
       goods(val) {
         this.goods = val;
       },
-      goodXm(val) {
-        this.goodXm = val;
-      }
     },
     mounted() {
       console.log(this.$refs.cropper);

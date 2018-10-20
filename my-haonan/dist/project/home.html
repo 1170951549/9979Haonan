@@ -14,6 +14,13 @@
   <link rel="stylesheet" type="text/css" href="css/flat-ui.min.css"/>
   <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
   <link rel="stylesheet" href="css/element-ui.css">
+  <style>
+    .row>div{
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 
 <body>
@@ -366,6 +373,14 @@
                       <div class="modal-body">
                         <div class="container-fluid">
                           <form class="form-horizontal">
+                            <!--<div class="form-group">-->
+                              <!--<label  class="col-xs-3 control-label">厂家</label>-->
+                              <!--<div class="col-xs-8 ">-->
+                                <!--<select class="form-control input-sm duiqi" name="生产厂家" v-model="form.尺寸">-->
+                                  <!--<option v-bind:value="item.公司名称" v-for="(item,index) in goodPro">{{item.公司名称}}</option>-->
+                                <!--</select>-->
+                              <!--</div>-->
+                            <!--</div>-->
                             <div class="form-group ">
                               <label class="col-xs-3 control-label">产品名称：</label>
                               <div class="col-xs-8 ">
@@ -378,10 +393,24 @@
                                 <input type="type" class="form-control input-sm duiqi" placeholder="" name="图片" v-model="form.图片">
                               </div>
                             </div>
-                            <div class="form-group ">
+                            <!--<div class="form-group ">-->
+                              <!--<label class="col-xs-3 control-label">尺寸：</label>-->
+                              <!--<div class="col-xs-8 ">-->
+                                <!--<input type="type" class="form-control input-sm duiqi" placeholder="" name="尺寸" v-model="form.尺寸">-->
+                              <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group">
                               <label class="col-xs-3 control-label">尺寸：</label>
                               <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="尺寸" v-model="form.尺寸">
+                                <select class="form-control input-sm duiqi" name="尺寸" v-model="form.尺寸">
+                                  <option value="1200x840">1200x840</option>
+                                  <option value="1440x960">1440x960</option>
+                                  <option value="1680x1200">1680x1200</option>
+                                  <option value="1920x1440">1920x1440</option>
+                                  <option value="2500x2000">2500x2000</option>
+                                  <option value="2400x1920">2400x1920</option>
+                                  <option value="3000x2000">3000x2000</option>
+                                </select>
                               </div>
                             </div>
                             <div class="form-group ">
@@ -447,11 +476,13 @@
 <script src="js/element-ui.js"></script>
 <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
 <script>
+
   var app = new Vue({
     el: '#app',
     data: {
       goodVender:[],
       goodProduct:[],
+      goodPro:[],
       form:{
         id:"",
         "产品名称":"",
@@ -486,6 +517,16 @@
         this.$http.get('/product/productList').then((res) => {
           this.goodProduct = res.data.data;
           console.log(this.goodProduct);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      //查询产品名称  数据绑定
+      getPro() {
+        this.$http.get('/product/list').then((res) => {
+          this.goodPro = res.data.data;
+          console.log(this.goodPro);
           //console.log(this.goodXm);
         }, (err) => {
           console.log(err);
@@ -544,6 +585,11 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(()=> {
+          $(".modal-backdrop.in").css({
+            "opacity":'0',
+            "display":"none"
+          });
+          $("#reviseUser").hide();
           this.$http.post('/product/update', this.form).then((res) => {
             // this.removeVens = res.data.data;
             // console.log(this.removeVens);
@@ -572,6 +618,11 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(()=> {
+          $(".modal-backdrop.in").css({
+            "opacity":'0',
+            "display":"none"
+          });
+          $("#changeChar").hide();
             this.$http.post('/vender/update', this.formv).then((res) => {
               // this.removeVens = res.data.data;
               // console.log(this.removeVens);
@@ -588,6 +639,7 @@
     created() {
       this.getVender();
       this.getProduct();
+      this.getPro();
     },
     watch: {
       goodVender(val) {
@@ -595,6 +647,9 @@
       },
       goodProduct(val) {
         this.goodProduct = val;
+      },
+      goodPro(val) {
+        this.goodPro = val;
       }
     },
   })

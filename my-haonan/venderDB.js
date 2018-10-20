@@ -74,7 +74,6 @@ exports.updateProduct =function (orderInfo) {
   };
   var options = {upsert : true};
   return ProductoudModel.updateOne(conditions,update, options).then(updataDoc=> {
-    //console.log('00');
     //console.log(updataDoc);
       if(updataDoc.upserted != undefined){
        // console.log(orderInfo.生产厂家);
@@ -83,7 +82,6 @@ exports.updateProduct =function (orderInfo) {
         var update = {
           $push: {'所属产品': updataDoc.upserted[0]._id}
         };
-        //console.log('22');
         var options = {upsert: false};
         return VenderInfModel.updateOne(conditions, update, options);
       }
@@ -125,6 +123,7 @@ exports.updateProductById=function (productInfo) {
         '尺寸': productInfo.尺寸,
         '产品单价': productInfo.产品单价,
         '生产ID': productInfo.生产ID,
+        "创建时间": moment().utcOffset(8).format('YYYY-MM-DD HH:mm:ss'),
       }
   };
   var options = {upsert : false};
@@ -139,6 +138,7 @@ exports.updateVenderById=function (venderInfo) {
         '公司名称': venderInfo.公司名称,
         '联系人电话': venderInfo.联系人电话,
         '地址': venderInfo.地址,
+        "创建时间": moment().utcOffset(8).format('YYYY-MM-DD HH:mm:ss'),
       }
   };
   var options = {upsert : false};

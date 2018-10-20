@@ -24,7 +24,7 @@ product.get("/list",(req,res)=>{
 //产品查询
 product.get("/productList",(req,res)=>{
   productDB.findProductAll().then((doc)=>{
-    //console.log(doc);
+    console.log(doc);
     res.json({data:doc});
   })
 });
@@ -32,7 +32,7 @@ product.get("/productList",(req,res)=>{
 product.get("/findProductAllName",(req,res)=>{
   productDB.findProductAll(req.body.产品名称).then((doc)=>{
     //console.log(doc);
-    console.log(req.body.产品名称);
+   // console.log(req.body.产品名称);
     res.json({data:doc});
   })
 });
