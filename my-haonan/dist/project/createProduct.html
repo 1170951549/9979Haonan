@@ -230,16 +230,19 @@
         </div>
         <!--产品ID-->
         <div class="form-group">
-          <label>产品ID</label>
+          <label>产品</label>
           <select  class="form-control proID" name="产品ID" v-model="cityName">
             <option :value="item.生产ID" v-for="item in countryName.所属产品">
-              {{item.产品名称}}-{{item.生产ID}}
+              {{item.产品名称}}--{{item.尺寸}}
               <!--<svg class="icon icon-arrow-bottom" aria-hidden="true">-->
                 <!--<use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>-->
               <!--</svg>-->
             </option>
           </select>
         </div>
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control proCC" name="产品尺寸">-->
+        <!--</div>-->
         <!--保存目录-->
         <div class="form-group" style="display: none;">
           <label>保存目录</label>
@@ -248,8 +251,10 @@
         </div>
         <label>URL地址</label>
         <div class="input-group">
-          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="">
-          <span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>
+          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="任务1">
+          <!--<span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>-->
+          <label class="input-group-addon" for="uploads">上传图片</label>
+          <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg" @change="uploadImg($event, 1)" data-toggle="modal" data-target=".bs-example-modal-lg">
         </div>
         <!--地址-->
         <div class="form-group" style="display: none">
@@ -298,11 +303,11 @@
                          :original="option.original"
                          :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth"
                          :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
-                         @real-time="realTime" :high="option.high"></vue-cropper>
+                         @real-time="realTime" :high="option.high" :fixed="true" :fixed-number="[1,1]"></vue-cropper>
           </div>
           <div class="test-button">
-            <label class="btn" for="uploads">上传图片</label>
-            <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg" @change="uploadImg($event, 1)">
+            <!--<label class="btn" for="uploads">上传图片</label>-->
+            <!--<input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg" @change="uploadImg($event, 1)">-->
             <a @click="down('base64')" class="btn">生成产品</a><!--(base64)-->
           </div>
           <div class="show-preview" :style="{'width': previews.w + 'px', 'height': previews.h + 'px',  'overflow': 'hidden', 'margin': '5px'}">
@@ -322,7 +327,7 @@
 <script src="js/axios.min.js"></script>
 <script src="js/vue-resource.js"></script>
 <script src="js/ceshi.js"></script>
-<script type="text/javascript" src="js/cropper.min.js"></script>
+<script type="text/javascript" src="js/cropper.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
@@ -331,7 +336,6 @@
   var app = new Vue({
     el: '#app',
     data: {
-      title: "9979",
       goods: [],
       goodImg: [],
       tempJson:[],
@@ -345,10 +349,10 @@
       modelSrc: '',
       crap: false,
       previews: {},
-
       option: {
         img: '',
         size: 1,
+        info:false,
         full: false,
         outputType: 'jpg',
         canMove: false,
@@ -357,11 +361,15 @@
         canMoveBox: true,
         autoCrop: true,
         // 只有自动截图开启 宽度高度才生效
-        autoCropWidth: 200,
-        autoCropHeight: 150,
+        autoCropWidth:this.imgWidth,
+        autoCropHeight:this.imgHeight,
         centerBox: true,
+        fixed: true,
+        fixedNumber: [1, 1],
         high: true
       },
+      imgWidth:"",
+      imgHeight:"",
       show: true,
       countryName:{},
       cityName:"请选择城市",
@@ -458,6 +466,21 @@
         var reader = new FileReader();
         reader.onload = (e) => {
           let data;
+          /*1*/
+          // data = e.target.result;
+          // let img = new Image();
+          // img.src = data;
+          // img.onload = function () {
+          //   console.log('width', img.width);
+          //   console.log('height', img.height);
+          //   console.log(img.width=100);
+          //   this.imgWidth=img.width;
+          //   this.imgHeight=img.height;
+          //   console.log(this.imgWidth);
+          //   console.log(img.width);
+          //   console.log(this.autoCropWidth)
+          // };
+          /*2*/
           if (typeof e.target.result === 'object') {
             // 把Array Buffer转化为blob 如果是base64不需要
             data = window.URL.createObjectURL(new Blob([e.target.result]));
@@ -470,10 +493,13 @@
             this.example2.img = data;
           }
         };
+          reader.readAsDataURL(file);
+
         // 转化为base64
         // reader.readAsDataURL(file)
         // 转化为blob
-        reader.readAsArrayBuffer(file);
+       // reader.readAsArrayBuffer(file);
+
       },
       imgLoad(msg) {
         console.log(msg);
@@ -489,8 +515,9 @@
           }
          console.log( this.tempJson);
           for(var i=0;i<this.tempJson.length;i++){
-            this.tempJsons.push(this.tempJson[i].产品名称);
+            this.tempJsons.push({'产品名称':this.tempJson[i].产品名称,'尺寸':this.tempJson[i].尺寸});
           }
+
           console.log(this.tempJsons)
          // console.log(this.goods);
         }, (err) => {
@@ -518,7 +545,6 @@
         //截取图片名称
         var reg = rws.substring(rws.lastIndexOf('/') + 1, rws.indexOf(' '));
         var rwsImg = reg;
-
         var Newstr =  rwsImg.replace("png","jpg");
         //创建数据
         this.$http.post("/picSever/creatMisson", $('#form-member-add').serialize(),{

@@ -85,10 +85,8 @@ exports.updateProduct =function (orderInfo) {
         var options = {upsert: false};
         return VenderInfModel.updateOne(conditions, update, options);
       }
-
   });
 };
-
 //查询所有
 exports.findVenderAll=function(){
   return VenderInfModel.find({}).populate('所属产品');

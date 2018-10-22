@@ -86,39 +86,39 @@
         </div>
         <div class="form-group">
           <label>产品名称</label>
-          <input type="text" class="form-control" placeholder="产品名称" name="产品名称">
+          <input type="text" class="form-control proName" placeholder="产品名称" name="产品名称">
         </div>
         <div class="form-group">
           <label>图片</label>
-          <input type="text" class="form-control"  placeholder="图片" name="图片">
-        </div>
-        <div class="form-group">
-          <label>尺寸</label>
-          <select class="form-control" name="尺寸">
-            <option value="1200x840">1200x840</option>
-            <option value="1440x960">1440x960</option>
-            <option value="1680x1200">1680x1200</option>
-            <option value="1920x1440">1920x1440</option>
-            <option value="2500x2000">2500x2000</option>
-            <option value="2400x1920">2400x1920</option>
-            <option value="3000x2000">3000x2000</option>
-          </select>
+          <input type="text" class="form-control proImg"  placeholder="图片" name="图片">
         </div>
         <!--<div class="form-group">-->
           <!--<label>尺寸</label>-->
-          <!--<input type="text" class="form-control"  placeholder="尺寸" name="尺寸">-->
+          <!--<select class="form-control" name="尺寸">-->
+            <!--<option value="1200x840">1200x840</option>-->
+            <!--<option value="1440x960">1440x960</option>-->
+            <!--<option value="1680x1200">1680x1200</option>-->
+            <!--<option value="1920x1440">1920x1440</option>-->
+            <!--<option value="2500x2000">2500x2000</option>-->
+            <!--<option value="2400x1920">2400x1920</option>-->
+            <!--<option value="3000x2000">3000x2000</option>-->
+          <!--</select>-->
         <!--</div>-->
+        <div class="form-group">
+          <label>尺寸</label>
+          <input type="text" class="form-control imgSize"  placeholder="尺寸" name="尺寸">
+        </div>
         <!--<div class="form-group">-->
           <!--<label>重量</label>-->
           <!--<input type="text" class="form-control"  placeholder="图片" name="重量">-->
         <!--</div>-->
         <div class="form-group">
           <label>产品单价</label>
-          <input type="text" class="form-control"  placeholder="产品单价" name="产品单价">
+          <input type="text" class="form-control proPrice"  placeholder="产品单价" name="产品单价">
         </div>
         <div class="form-group">
           <label>生产ID</label>
-          <input type="text" class="form-control"  placeholder="生产ID" name="生产ID">
+          <input type="text" class="form-control proID"  placeholder="生产ID" name="生产ID">
         </div>
         <button type="button" class="btn btn-primary" @click="btnPro" style="margin-top: 30px">确定</button>
       </form>
@@ -155,6 +155,37 @@
         })
       },
       btnPro(){
+          var imgSize = /^\d{1,4}\*\d{1,4}$/;//图片尺寸
+          var num = /^[0-9]*$/;
+         if($(".proName").val() == ""){
+           alert("产品名称不能为空");
+           return;
+         }
+         if($(".proImg").val() == ""){
+           alert("图片不能为空");
+           return;
+         }
+        if($(".imgSize").val() == ""){
+           alert("尺寸不能为空");
+          return;
+         }else if(!(imgSize.test($(".imgSize").val()))){
+           alert("填写格式有误! 123*123");
+          return;
+        }
+        if($(".proPrice").val() == ""){
+           alert("单价不能为空");
+          return;
+        }else if(!(num.test($(".proPrice").val()))){
+          alert("只能输入数字");
+          return;
+        }
+         if($(".proID").val() == ""){
+           alert("生产ID不能为空");
+           return;
+         }else if(!(num.test($(".proID").val()))){
+           alert("只能输入数字");
+           return;
+         }
         $.ajax({
           url: '/product/add',
           method: 'POST',
@@ -167,14 +198,12 @@
           type: JSON,
           success: function (res) {
             console.log(res);
-            console.log(111);
             alert("添加成功");
           },
           error: function (error) {
             console.log(error)
           }
         });
-
       }
     },
     created() {

@@ -80,19 +80,19 @@
       <form id="form-member-add">
         <div class="form-group">
           <label>用户名</label>
-          <input type="text" class="form-control" placeholder="用户名" name="用户名">
+          <input type="text" class="form-control venName" placeholder="用户名" name="用户名">
         </div>
         <div class="form-group">
           <label>公司名称</label>
-          <input type="text" class="form-control"  placeholder="公司名称" name="公司名称">
+          <input type="text" class="form-control venderName"  placeholder="公司名称" name="公司名称">
         </div>
         <div class="form-group">
           <label>联系人电话</label>
-          <input type="text" class="form-control"  placeholder="联系人电话" name="联系人电话">
+          <input type="text" class="form-control venPhone"  placeholder="联系人电话" name="联系人电话">
         </div>
         <div class="form-group">
           <label>地址</label>
-          <input type="text" class="form-control"  placeholder="地址" name="地址">
+          <input type="text" class="form-control venSite"  placeholder="地址" name="地址">
         </div>
         <button type="button" class="btn btn-primary"  @click="btnVender" style="margin-top: 30px">确定</button>
       </form>
@@ -119,6 +119,26 @@
     },
     methods: {
       btnVender(){
+        var phone = /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+        if($(".venName").val() == ""){
+          alert("用户名不能为空");
+          return;
+        }
+        if($(".venderName").val() == ""){
+          alert("公司名称不能为空");
+          return;
+        }
+        if($(".venPhone").val() == ""){
+          alert("请填写电话");
+          return;
+        }else if(!(phone.test($(".venPhone").val()))){
+          alert("电话格式有误!");
+          return;
+        }
+        if($(".venSite").val() == ""){
+          alert("地址不能为空");
+          return;
+        }
         $.ajax({
           url: '/vender/add',
           method: 'POST',
@@ -131,7 +151,6 @@
           type: JSON,
           success: function (res) {
             console.log(res);
-            console.log(111);
             alert("添加成功");
           },
           error: function (error) {
