@@ -43,7 +43,7 @@
         </p>
       </div>
       <div class="meun-title">管理</div>
-      <div class="meun-item" href="#char" aria-controls="char" role="tab" data-toggle="tab">
+      <div class="meun-item " href="#char" aria-controls="char" role="tab" data-toggle="tab">
         <img src="images/icon_chara_grey.png">
         厂家管理
       </div>
@@ -60,7 +60,7 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <!-- 厂家管理模块 -->
-        <div role="tabpanel" class="tab-pane" id="char">
+        <div role="tabpanel" class="tab-pane active" id="char">
           <div class="check-div">
             <a href="addVender.html" class="btn btn-yellow btn-xs" target="_blank">添加厂家</a>
           </div>
@@ -106,7 +106,7 @@
                   <span>{{vender.所属产品.length}}</span>
                 </div>
                 <div class="col-xs-2">
-                 {{vender.创建时间}}
+                 {{vender.创建时间|dateFrm}}
                 </div>
                 <div class="col-xs-2">
                   <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#changeChar" @click="updataVen(vender)">
@@ -115,7 +115,11 @@
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteChar" @click="removeVen(vender)">
                     删除
                   </button>
+                  <button class="btn btn-info btn-xs">
+                    预览
+                  </button>
                 </div>
+                <!--修改厂家-->
                 <div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -188,98 +192,6 @@
               </li>
             </ul>
           </footer>
-          <!--增加权限弹出窗口-->
-          <!--<div class="modal fade" id="addChar" role="dialog" aria-labelledby="gridSystemModalLabel">-->
-            <!--<div class="modal-dialog" role="document">-->
-              <!--<div class="modal-content">-->
-                <!--<div class="modal-header">-->
-                  <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
-                    <!--aria-hidden="true">&times;</span></button>-->
-                  <!--<h4 class="modal-title" id="gridSystemModalLabel">添加权限</h4>-->
-                <!--</div>-->
-                <!--<div class="modal-body">-->
-                  <!--<div class="container-fluid">-->
-                    <!--<form class="form-horizontal">-->
-                      <!--<div class="form-group ">-->
-                        <!--<label for="sName" class="col-xs-3 control-label">权限名：</label>-->
-                        <!--<div class="col-xs-6 ">-->
-                          <!--<input type="email" class="form-control input-sm duiqi" id="sName"-->
-                                 <!--placeholder="">-->
-                        <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="form-group">-->
-                        <!--<label for="sLink" class="col-xs-3 control-label">描述：</label>-->
-                        <!--<div class="col-xs-6 ">-->
-                          <!--<textarea class="form-control input-sm duiqi"></textarea>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="form-group">-->
-                        <!--<label for="sOrd" class="col-xs-3 control-label">系统资源：</label>-->
-                        <!--<div class="col-xs-6">-->
-                          <!--<input type="" class="form-control input-sm duiqi" id="sOrd"-->
-                                 <!--placeholder="">-->
-                        <!--</div>-->
-                      <!--</div>-->
-
-                    <!--</form>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div class="modal-footer">-->
-                  <!--<button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>-->
-                  <!--<button type="button" class="btn btn-xs btn-green">保 存</button>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--&lt;!&ndash; /.modal-content &ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
-          <!--</div>-->
-          <!-- /.modal -->
-          <!--修改权限弹出窗口-->
-          <!--<div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">-->
-            <!--<div class="modal-dialog" role="document">-->
-              <!--<div class="modal-content">-->
-                <!--<div class="modal-header">-->
-                  <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
-                    <!--aria-hidden="true">&times;</span></button>-->
-                  <!--<h4 class="modal-title" id="gridSystemModalLabel">修改权限</h4>-->
-                <!--</div>-->
-                <!--<div class="modal-body">-->
-                  <!--<div class="container-fluid">-->
-                    <!--<form class="form-horizontal">-->
-                      <!--<div class="form-group ">-->
-                        <!--<label for="sName" class="col-xs-3 control-label">权限名：</label>-->
-                        <!--<div class="col-xs-6 ">-->
-                          <!--<input type="email" class="form-control input-sm duiqi" id="sName"-->
-                                 <!--placeholder="">-->
-                        <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="form-group">-->
-                        <!--<label for="sLink" class="col-xs-3 control-label">描述：</label>-->
-                        <!--<div class="col-xs-6 ">-->
-                          <!--<textarea class="form-control input-sm duiqi"></textarea>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="form-group">-->
-                        <!--<label for="sOrd" class="col-xs-3 control-label">系统资源：</label>-->
-                        <!--<div class="col-xs-6">-->
-                          <!--<input type="" class="form-control input-sm duiqi" id="sOrd"-->
-                                 <!--placeholder="">-->
-                        <!--</div>-->
-                      <!--</div>-->
-
-                    <!--</form>-->
-                  <!--</div>-->
-                <!--</div>-->
-                <!--<div class="modal-footer">-->
-                  <!--<button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>-->
-                  <!--<button type="button" class="btn btn-xs btn-green">保 存</button>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--&lt;!&ndash; /.modal-content &ndash;&gt;-->
-            <!--</div>-->
-            <!--&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
-          <!--</div>-->
-          <!-- /.modal -->
         </div>
         <!--产品管理模块-->
         <div role="tabpanel" class="tab-pane" id="user">
@@ -287,21 +199,16 @@
             <div class="col-xs-3">
               <a href="addProduct.html" class="btn btn-yellow btn-xs" target="_blank">添加产品</a>
             </div>
-            <!--<div class="col-xs-4">-->
+            <div class="col-xs-4">
               <!--<input type="text" class="form-control input-sm" placeholder="输入文字搜索">-->
               <!--<button class="btn btn-white btn-xs ">查 询</button>-->
-            <!--</div>-->
-            <!--<div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">-->
-              <!--<label for="paixu">排序:&nbsp;</label>-->
-              <!--<select class=" form-control">-->
-                <!--<option>地区</option>-->
-                <!--<option>地区</option>-->
-                <!--<option>班期</option>-->
-                <!--<option>性别</option>-->
-                <!--<option>年龄</option>-->
-                <!--<option>份数</option>-->
-              <!--</select>-->
-            <!--</div>-->
+            </div>
+            <div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">
+              <label for="paixu">厂家:&nbsp;</label>
+              <select class=" form-control" @change="selectCountry" v-model="countryName">
+                <option :value="item.公司名称" v-for="item in goodVender">{{item.公司名称}}</option>
+              </select>
+            </div>
           </div>
           <div class="data-div">
             <div class="row tableHeader">
@@ -332,7 +239,7 @@
             </div>
             <div class="tablebody">
               <div class="row" v-for="pro in goodProduct">
-                <div class="col-xs-1">
+                <div class="col-xs-1 selectCN">
                   {{pro.选择厂家}}
                 </div>
                 <div class="col-xs-2">
@@ -351,7 +258,7 @@
                   {{pro.生产ID}}
                 </div>
                 <div class="col-xs-2">
-                  {{pro.创建时间}}
+                  {{pro.创建时间|dateFrm}}
                 </div>
                 <div class="col-xs-2">
                   <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(pro)">
@@ -360,8 +267,11 @@
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(pro)"><!-- @click="removePro(pro)"-->
                     删除
                   </button>
+                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(pro)">
+                    预览
+                  </a>
                 </div>
-                <!--弹出修改用户窗口-->
+                <!--弹出修改产品窗口-->
                 <div class="modal fade" id="reviseUser" role="dialog" aria-labelledby="gridSystemModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -376,7 +286,7 @@
                             <!--<div class="form-group">-->
                               <!--<label  class="col-xs-3 control-label">厂家</label>-->
                               <!--<div class="col-xs-8 ">-->
-                                <!--<select class="form-control input-sm duiqi" name="生产厂家" v-model="form.尺寸">-->
+                                <!--<select class="form-control input-sm duiqi" name="生产厂家" v-model="form.厂家">-->
                                   <!--<option v-bind:value="item.公司名称" v-for="(item,index) in goodPro">{{item.公司名称}}</option>-->
                                 <!--</select>-->
                               <!--</div>-->
@@ -475,16 +385,19 @@
 <script src="js/vue-resource.js"></script>
 <script src="js/element-ui.js"></script>
 <!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script src="js/moment.min.js"></script>
 <script>
-
   var app = new Vue({
     el: '#app',
     data: {
       goodVender:[],
       goodProduct:[],
       goodPro:[],
+      goodProAll:[],
+      countryName:[],
       form:{
         id:"",
+        "厂家":"",
         "产品名称":"",
         "图片":"",
         "尺寸":"",
@@ -495,13 +408,38 @@
         id:"",
         "用户名":"",
         "公司名称":"",
+        "所属产品":[],
         "联系人电话":"",
         "地址":"",
       }
-      // removePros:[],
-      // removeVens:[]
+    },
+    filters:{
+      dateFrm:function(el){
+          return moment(el).format("YYYY-MM-DD HH:mm:ss");
+      }
     },
     methods: {
+      selectCountry(){
+        // console.log(this.countryName);
+        // console.log($(".tablebody .selectCN").text());
+        // var a=$(".tablebody .selectCN").text()
+        // if(a==this.countryName){
+        //   $(".tablebody .selectCN").show()
+        // }else if(a!=this.countryName){
+        //   $(".tablebody .selectCN").show()
+        console.log(this.goodProAll)
+        // }
+      },
+      previewPro(row){
+        row._id;
+        row.选择厂家;
+        row.产品名称;
+        row.图片;
+        row.尺寸;
+        row.产品单价;
+        row.生产ID;
+        return "createProduct.html?"+'厂家='+row.选择厂家+'&'+'产品名称='+row.产品名称+'&'+'图片='+row.图片+'&'+'生产ID='+row.生产ID;
+      },
       //查询厂家
       getVender() {
         this.$http.get('/vender/venderList').then((res) => {
@@ -521,6 +459,16 @@
         }, (err) => {
           console.log(err);
         })
+      },
+      //查询按厂家显示
+      getProductAll() {
+        // this.$http.get('/product/findProductAllName').then((res) => {
+        //   this.goodProAll = res.data.data;
+        //   console.log(this.goodProAll);
+        //   //console.log(this.goodXm);
+        // }, (err) => {
+        //   console.log(err);
+        // })
       },
       //查询产品名称  数据绑定
       getPro() {
@@ -571,6 +519,7 @@
       //修改产品
       updataPro(row){
         this.form.id = row._id;
+        this.form.厂家 = row.选择厂家;
         this.form.产品名称 = row.产品名称;
         this.form.图片 = row.图片;
         this.form.尺寸 = row.尺寸;
@@ -606,10 +555,11 @@
       updataVen(row){
         this.formv.id = row._id;
         this.formv.用户名 = row.用户名;
+        this.formv.所属产品 = row.所属产品;
         this.formv.公司名称 = row.公司名称;
         this.formv.联系人电话 = row.联系人电话;
         this.formv.地址 = row.地址;
-        console.log(this.form);
+        console.log(this.formv);
         this.getVender();
       },
       updataVenOK(){
@@ -640,6 +590,7 @@
       this.getVender();
       this.getProduct();
       this.getPro();
+      this.getProductAll();
     },
     watch: {
       goodVender(val) {
@@ -650,6 +601,9 @@
       },
       goodPro(val) {
         this.goodPro = val;
+      },
+      goodProAll(val) {
+        this.goodProAll = val;
       }
     },
   })

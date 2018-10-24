@@ -24,11 +24,10 @@ product.get("/list",(req,res)=>{
 //产品查询
 product.get("/productList",(req,res)=>{
   productDB.findProductAll().then((doc)=>{
-    console.log(doc);
     res.json({data:doc});
   })
 });
-//产品名称查询
+//产品名称查询(地区)
 product.get("/findProductAllName",(req,res)=>{
   productDB.findProductAll(req.body.产品名称).then((doc)=>{
     //console.log(doc);

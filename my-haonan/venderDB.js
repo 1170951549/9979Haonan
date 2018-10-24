@@ -100,9 +100,12 @@ exports.findProductAll=function(){
 };
 //条件查询
 exports.findProductAllName=function(name){
-  return ProductoudModel.find({"产品名称":name})
+  return ProductoudModel.find({"产品名称":name});
 };
-
+//条件查询(按厂家名字显示产品)
+// exports.findVenAndProNameAll=function(){
+//   return ProductoudModel.find({}).populate('公司名称')
+// };
 //删除产品
 exports.removeProduct=function (id) {
   return ProductoudModel.remove({"_id":id});

@@ -194,7 +194,6 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">VIP</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               admin <span class="caret"></span>
@@ -240,9 +239,9 @@
             </option>
           </select>
         </div>
-        <!--<div class="form-group">-->
-          <!--<input type="text" class="form-control proCC" name="产品尺寸">-->
-        <!--</div>-->
+        <div class="form-group" style="display: none">
+          <input type="text" class="form-control proCC" name="产品尺寸">
+        </div>
         <!--保存目录-->
         <div class="form-group" style="display: none;">
           <label>保存目录</label>
@@ -303,7 +302,7 @@
                          :original="option.original"
                          :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth"
                          :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
-                         @real-time="realTime" :high="option.high" :fixed="true" :fixed-number="[1,1]"></vue-cropper>
+                         @real-time="realTime" :high="option.high" :fixed="true" :fixed-number="[tjWidth,tjHeight]"></vue-cropper>
           </div>
           <div class="test-button">
             <!--<label class="btn" for="uploads">上传图片</label>-->
@@ -361,18 +360,19 @@
         canMoveBox: true,
         autoCrop: true,
         // 只有自动截图开启 宽度高度才生效
-        autoCropWidth:this.imgWidth,
-        autoCropHeight:this.imgHeight,
+        autoCropWidth:300,
+        autoCropHeight:300,
         centerBox: true,
         fixed: true,
-        fixedNumber: [1, 1],
+        fixedNumber: [this.tjWidth, this.tjHeight],
         high: true
       },
-      imgWidth:"",
-      imgHeight:"",
+      tjWidth:"",
+      tjHeight:"",
       show: true,
       countryName:{},
       cityName:"请选择城市",
+      hrefs:[],
       num:0
     },
     components: {
@@ -399,6 +399,8 @@
       },
       selectCountry(value){
         this.cityName=this.countryName.所属产品[0];
+        console.log(this.cityName);
+        console.log(this.countryName);
       },
       // 实时预览函数
       realTime(data) {
@@ -466,21 +468,15 @@
         var reader = new FileReader();
         reader.onload = (e) => {
           let data;
-          /*1*/
-          // data = e.target.result;
-          // let img = new Image();
-          // img.src = data;
-          // img.onload = function () {
-          //   console.log('width', img.width);
-          //   console.log('height', img.height);
-          //   console.log(img.width=100);
-          //   this.imgWidth=img.width;
-          //   this.imgHeight=img.height;
-          //   console.log(this.imgWidth);
-          //   console.log(img.width);
-          //   console.log(this.autoCropWidth)
-          // };
-          /*2*/
+          /**/
+          var x = $('.proID option:selected').text();
+          var xx = $(".proCC").val($.trim(x));
+          var xxx = xx.val();
+          var reg = xxx.substring(xxx.lastIndexOf(''), xxx.indexOf('--')+2);
+          var rwsImg= reg.split("*");
+          this.tjWidth=rwsImg[0];
+          this.tjHeight=rwsImg[1];
+          /**/
           if (typeof e.target.result === 'object') {
             // 把Array Buffer转化为blob 如果是base64不需要
             data = window.URL.createObjectURL(new Blob([e.target.result]));
@@ -494,7 +490,6 @@
           }
         };
           reader.readAsDataURL(file);
-
         // 转化为base64
         // reader.readAsDataURL(file)
         // 转化为blob
@@ -517,9 +512,24 @@
           for(var i=0;i<this.tempJson.length;i++){
             this.tempJsons.push({'产品名称':this.tempJson[i].产品名称,'尺寸':this.tempJson[i].尺寸});
           }
+          /*获取当前地址 并裁剪*/
+              const getQuery = () => {
+                let result = {};
+                location.search.slice(1).split('&').map(str => {
+                  let arr = str.split('=');
+                  result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
+                });
+                return result
+              };
+          console.log(getQuery());
+          console.log(getQuery().厂家);
+          console.log(getQuery().产品名称);
+          console.log(getQuery().生产ID);
+          console.log(this.goods);
+          console.log(this.cityName=getQuery());
+          $(".changjia  option:selected").text();
 
-          console.log(this.tempJsons)
-         // console.log(this.goods);
+          console.log(this.countryName[0])
         }, (err) => {
           console.log(err);
         })
