@@ -166,7 +166,22 @@
     .navbar-brand{
       padding: 0;
     }
-
+    .form-group{
+      position: relative;
+    }
+    .changjias,.proIDs{
+      position: absolute;
+      width: 5%;
+      border: 0;
+      /* height: 32px; */
+      padding: 4px 12px;
+      height: 30px;
+      margin-top: 1px;
+      margin-left: 1px;
+    }
+    .proIDs{
+      width: 20%
+    }
   </style>
 </head>
 <body>
@@ -212,30 +227,26 @@
       <h2>生成产品</h2>
       <hr>
       <form id="form-member-add">
-        <!--生产厂家-->
+        <!--生产厂家 给后台提交的-->
         <div class="form-group" style="display: none;">
           <input type="text" class="form-control proCJ" name="厂家">
         </div>
         <div class="form-group">
           <label>生产厂家</label>
+          <input type="text" class="form-control changjias" name="">
           <select class="form-control changjia" name="" v-model="countryName" @change="selectCountry">
             <option :value="item" v-for="item in goods" class="">
               {{item.公司名称}}
-              <!--<svg class="icon icon-arrow-bottom" aria-hidden="true">-->
-                <!--<use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>-->
-              <!--</svg>-->
             </option>
           </select>
         </div>
         <!--产品ID-->
         <div class="form-group">
           <label>产品</label>
-          <select  class="form-control proID" name="产品ID" v-model="cityName">
+          <input type="text" class="form-control proIDs" name="">
+          <select  class="form-control proID" name="产品ID" v-model="cityName" @click="selectCountrys">
             <option :value="item.生产ID" v-for="item in countryName.所属产品">
               {{item.产品名称}}--{{item.尺寸}}
-              <!--<svg class="icon icon-arrow-bottom" aria-hidden="true">-->
-                <!--<use xlink:href="#icon-arrow-bottom" rel="external nofollow" rel="external nofollow" ></use>-->
-              <!--</svg>-->
             </option>
           </select>
         </div>
@@ -296,13 +307,15 @@
             </div>
           </div>
           <div class="cut">
-            <vue-cropper ref="cropper" :img="option.img" :output-size="option.size" :output-type="option.outputType"
-                         :info="true" :full="option.full"
-                         :can-move="option.canMove" :can-move-box="option.canMoveBox" :fixed-box="option.fixedBox"
-                         :original="option.original"
-                         :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth"
-                         :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
-                         @real-time="realTime" :high="option.high" :fixed="true" :fixed-number="[tjWidth,tjHeight]"></vue-cropper>
+            <vue-cropper
+              ref="cropper" :img="option.img" :output-size="option.size" :output-type="option.outputType"
+              :info="true" :full="option.full"
+              :can-move="option.canMove" :can-move-box="option.canMoveBox" :fixed-box="option.fixedBox"
+              :original="option.original"
+              :auto-crop="option.autoCrop" :auto-crop-width="option.autoCropWidth"
+              :auto-crop-height="option.autoCropHeight" :center-box="option.centerBox"
+              @real-time="realTime" :high="option.high" :fixed="true" :fixed-number="[tjWidth,tjHeight]">
+            </vue-cropper>
           </div>
           <div class="test-button">
             <!--<label class="btn" for="uploads">上传图片</label>-->
@@ -401,6 +414,13 @@
         this.cityName=this.countryName.所属产品[0];
         console.log(this.cityName);
         console.log(this.countryName);
+        var x = $('.changjia option:selected').text();
+        $(".changjias").val($.trim(x));
+
+      },
+      selectCountrys(){
+        var x = $('.proID option:selected').text();
+        $(".proIDs").val($.trim(x));
       },
       // 实时预览函数
       realTime(data) {
@@ -469,13 +489,34 @@
         reader.onload = (e) => {
           let data;
           /**/
+            const getQuery = () => {
+              let result = {};
+              location.search.slice(1).split('&').map(str => {
+                let arr = str.split('=');
+                result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
+              });
+              return result
+            };
+
+
           var x = $('.proID option:selected').text();
           var xx = $(".proCC").val($.trim(x));
+
           var xxx = xx.val();
           var reg = xxx.substring(xxx.lastIndexOf(''), xxx.indexOf('--')+2);
           var rwsImg= reg.split("*");
           this.tjWidth=rwsImg[0];
           this.tjHeight=rwsImg[1];
+          if(x==""){
+            $(".proCC").val(getQuery().尺寸);
+            var proCCS =  $(".proCC").val();
+            var regs = proCCS.substring(proCCS.lastIndexOf(''), proCCS.indexOf('--')+1);
+            var rwsImgs= regs.split("*");
+            this.tjWidth=rwsImgs[0];
+            this.tjHeight=rwsImgs[1];
+            console.log(this.tjWidth)
+            console.log(this.tjHeight)
+          }
           /**/
           if (typeof e.target.result === 'object') {
             // 把Array Buffer转化为blob 如果是base64不需要
@@ -521,15 +562,10 @@
                 });
                 return result
               };
-          console.log(getQuery());
-          console.log(getQuery().厂家);
-          console.log(getQuery().产品名称);
-          console.log(getQuery().生产ID);
-          console.log(this.goods);
-          console.log(this.cityName=getQuery());
-          $(".changjia  option:selected").text();
-
-          console.log(this.countryName[0])
+          $(".rw").val(getQuery().图片);
+          $(".changjias").val(getQuery().厂家);
+          $(".proIDs").val(getQuery().生产ID);
+          $(".proCC").val(getQuery().尺寸);
         }, (err) => {
           console.log(err);
         })
@@ -545,13 +581,27 @@
         var monts = time.getMonth() + 1;
         var dates = time.getDate();
         $('.proMl').val("F" + years + "" + monts + "" + dates);
+        $('.proIDs').val($(".proID").val());
+
+        if($('.proIDs').val()==""){
+          /**/
+          const getQuery = () => {
+            let result = {};
+            location.search.slice(1).split('&').map(str => {
+              let arr = str.split('=');
+              result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
+            });
+            return result
+          };
+          $('.proIDs').val(getQuery().生产ID);
+        }
         //任务名称+ XXX 0
-        $(".porId").val($(".rw").val() + " " + $('.proID').val() + " " + 0);
+        $(".porId").val($(".rw").val() + " " + $('.proIDs').val() + " " + 0);
         //获取图片的value
         var rws = $(".porId").val();
         //获取厂家  去掉左右空格
-        var x = $('.changjia option:selected').text();
-        $(".proCJ").val($.trim(x));
+        var changjias = $(".changjias").val();
+        $(".proCJ").val(changjias);
         //截取图片名称
         var reg = rws.substring(rws.lastIndexOf('/') + 1, rws.indexOf(' '));
         var rwsImg = reg;
@@ -578,7 +628,7 @@
                     clearInterval(t);//等于空闲（完成）清除定时器
                     $(".loadingS").hide();
                     //完成后加载图片到页面
-                    thit.$http.get('/picSever/viewImage/' + $('.proMl').val() + '/' + $('.proID').val() + '/?ImageName=' + Newstr + '&onlyList=1')
+                    thit.$http.get('/picSever/viewImage/' + $('.proMl').val() + '/' + $('.proIDs').val() + '/?ImageName=' + Newstr + '&onlyList=1')
                       .then((res) => {
                         thit.goodImg = res.data;
                         console.log(JSON.stringify(thit.goodImg));

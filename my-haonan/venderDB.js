@@ -53,7 +53,6 @@ exports.AddNewVender=function(VenderInf) {
   venderInfModel.公司名称 = VenderInf.公司名称;
   venderInfModel.联系人电话 = VenderInf.联系人电话;
   venderInfModel.地址 = VenderInf.地址;
-  //venderInfModel.所属产品 = "";
   return venderInfModel.save();
 };
 var ProductoudModel = mongoose.model('产品表',productoudSchema);  //所有产品
@@ -91,6 +90,7 @@ exports.updateProduct =function (orderInfo) {
 exports.findVenderAll=function(){
   return VenderInfModel.find({}).populate('所属产品');
 };
+
 exports.findVenderNameAll=function(){
   return VenderInfModel.find({}).select("公司名称");
 };
@@ -98,14 +98,15 @@ exports.findVenderNameAll=function(){
 exports.findProductAll=function(){
   return ProductoudModel.find({}).populate('公司名称');
 };
+//查询所有(地区管理)
+exports.findProAllSelect=function(name){
+  return ProductoudModel.find({"选择厂家":name});
+};
 //条件查询
 exports.findProductAllName=function(name){
   return ProductoudModel.find({"产品名称":name});
 };
-//条件查询(按厂家名字显示产品)
-// exports.findVenAndProNameAll=function(){
-//   return ProductoudModel.find({}).populate('公司名称')
-// };
+
 //删除产品
 exports.removeProduct=function (id) {
   return ProductoudModel.remove({"_id":id});

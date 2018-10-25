@@ -115,9 +115,9 @@
                   <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteChar" @click="removeVen(vender)">
                     删除
                   </button>
-                  <button class="btn btn-info btn-xs">
-                    预览
-                  </button>
+                  <!--<button class="btn btn-info btn-xs">-->
+                    <!--预览-->
+                  <!--</button>-->
                 </div>
                 <!--修改厂家-->
                 <div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">
@@ -198,6 +198,7 @@
           <div class="check-div form-inline">
             <div class="col-xs-3">
               <a href="addProduct.html" class="btn btn-yellow btn-xs" target="_blank">添加产品</a>
+              <!--<button  class="btn btn-info btn-xs" @click="getProduct">查询全部</button>-->
             </div>
             <div class="col-xs-4">
               <!--<input type="text" class="form-control input-sm" placeholder="输入文字搜索">-->
@@ -206,6 +207,7 @@
             <div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">
               <label for="paixu">厂家:&nbsp;</label>
               <select class=" form-control" @change="selectCountry" v-model="countryName">
+                <option>查询全部</option>
                 <option :value="item.公司名称" v-for="item in goodVender">{{item.公司名称}}</option>
               </select>
             </div>
@@ -238,36 +240,37 @@
               </div>
             </div>
             <div class="tablebody">
-              <div class="row" v-for="pro in goodProduct">
+              <div class="row" v-for="item in movieInfoList"><!-- v-for="pro in goodProduct"-->
                 <div class="col-xs-1 selectCN">
-                  {{pro.选择厂家}}
+                  {{item.选择厂家}}
                 </div>
                 <div class="col-xs-2">
-                  {{pro.产品名称}}
+                  {{item.产品名称}}
                 </div>
                 <div class="col-xs-2">
-                  {{pro.图片}}
+                  {{item.图片}}
                 </div>
                 <div class="col-xs-1">
-                  {{pro.尺寸}}
+                  {{item.尺寸}}
                 </div>
                 <div class="col-xs-1">
-                  {{pro.产品单价}}
+                  {{item.产品单价}}
                 </div>
                 <div class="col-xs-1">
-                  {{pro.生产ID}}
+                  {{item.生产ID}}
                 </div>
                 <div class="col-xs-2">
-                  {{pro.创建时间|dateFrm}}
+                  {{item.创建时间|dateFrm}}
                 </div>
                 <div class="col-xs-2">
-                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(pro)">
+                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(item)">
                     修改
                   </button>
-                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(pro)"><!-- @click="removePro(pro)"-->
+                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(item)"><!-- @click="removePro(pro)"-->
                     删除
                   </button>
-                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(pro)">
+                  <!--传参预览到createProduct.html页面-->
+                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(item)">
                     预览
                   </a>
                 </div>
@@ -355,19 +358,19 @@
             <ul class="pagination">
               <li>
                 <select>
-                  <option>1</option>
+                  <option v-for="item in pageSize">{{item}}</option>
                 </select>
                 页
               </li>
               <li class="gray">
-                共20页
+                共{{pageSize}}页
               </li>
               <li>
-                <i class="glyphicon glyphicon-menu-left">
+                <i class="glyphicon glyphicon-menu-left" @click="prev">
                 </i>
               </li>
               <li>
-                <i class="glyphicon glyphicon-menu-right">
+                <i class="glyphicon glyphicon-menu-right" @click="next">
                 </i>
               </li>
             </ul>
@@ -393,7 +396,6 @@
       goodVender:[],
       goodProduct:[],
       goodPro:[],
-      goodProAll:[],
       countryName:[],
       form:{
         id:"",
@@ -411,6 +413,18 @@
         "所属产品":[],
         "联系人电话":"",
         "地址":"",
+      },
+      nextText:'下一页',
+      prveText:'上一页',
+      curPage: 1,
+      pageCount:10,//每页显示的数量
+    },
+    computed:{
+      pageSize(){ // 一共有几页
+        return Math.ceil(this.goodProduct.length / this.pageCount)
+      },
+      movieInfoList(){
+        return this.goodProduct.slice( (this.curPage - 1) * this.pageCount,  (this.curPage - 1) * this.pageCount + this.pageCount );
       }
     },
     filters:{
@@ -419,17 +433,36 @@
       }
     },
     methods: {
-      selectCountry(){
-        // console.log(this.countryName);
-        // console.log($(".tablebody .selectCN").text());
-        // var a=$(".tablebody .selectCN").text()
-        // if(a==this.countryName){
-        //   $(".tablebody .selectCN").show()
-        // }else if(a!=this.countryName){
-        //   $(".tablebody .selectCN").show()
-        console.log(this.goodProAll)
-        // }
+      prev(){
+        if(this.curPage > 1 && this.pageSize != 1 ){
+          this.curPage--;
+          console.log('可以上一页')
+        }else{
+          console.log('当前已经是第一页, 或者是只有一页')
+        }
       },
+      next(){
+        if(this.curPage < this.pageSize && this.pageSize != 1){
+          this.curPage++;
+          console.log('可以下一页')
+        }else{
+          console.log('当前已经是最后一页, 或者是只有一页')
+        }
+      },
+      /*地区查询*/
+      selectCountry(){
+        this.$http.post('/product/proListSelect',{"公司名称":this.countryName}).then((res) => {
+          this.goodProduct = res.body.data;
+          console.log(this.countryName);
+          if(this.countryName == "查询全部"){
+            this.getProduct();
+          }
+          console.log(res);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      /*预览传值*/
       previewPro(row){
         row._id;
         row.选择厂家;
@@ -438,7 +471,7 @@
         row.尺寸;
         row.产品单价;
         row.生产ID;
-        return "createProduct.html?"+'厂家='+row.选择厂家+'&'+'产品名称='+row.产品名称+'&'+'图片='+row.图片+'&'+'生产ID='+row.生产ID;
+        return "createProduct.html?"+'厂家='+row.选择厂家+'&'+'产品名称='+row.产品名称+'&'+'图片='+row.图片+'&'+'生产ID='+row.生产ID+'&'+'尺寸='+row.尺寸;
       },
       //查询厂家
       getVender() {
@@ -459,16 +492,6 @@
         }, (err) => {
           console.log(err);
         })
-      },
-      //查询按厂家显示
-      getProductAll() {
-        // this.$http.get('/product/findProductAllName').then((res) => {
-        //   this.goodProAll = res.data.data;
-        //   console.log(this.goodProAll);
-        //   //console.log(this.goodXm);
-        // }, (err) => {
-        //   console.log(err);
-        // })
       },
       //查询产品名称  数据绑定
       getPro() {
@@ -590,7 +613,6 @@
       this.getVender();
       this.getProduct();
       this.getPro();
-      this.getProductAll();
     },
     watch: {
       goodVender(val) {
@@ -601,9 +623,6 @@
       },
       goodPro(val) {
         this.goodPro = val;
-      },
-      goodProAll(val) {
-        this.goodProAll = val;
       }
     },
   })

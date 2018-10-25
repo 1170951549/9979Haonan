@@ -38,7 +38,6 @@ app.use(router);
 //     console.log(222);
 //   }
 // });
-
 app.post('/upload', (req, res) => {
   var imgPath = uuid.v4();
   var tpye = ".unknow";

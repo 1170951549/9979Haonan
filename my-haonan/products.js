@@ -27,11 +27,11 @@ product.get("/productList",(req,res)=>{
     res.json({data:doc});
   })
 });
-//产品名称查询(地区)
-product.get("/findProductAllName",(req,res)=>{
-  productDB.findProductAll(req.body.产品名称).then((doc)=>{
-    //console.log(doc);
-   // console.log(req.body.产品名称);
+//关联地区
+product.post("/proListSelect",(req,res)=>{
+  productDB.findProAllSelect(req.body.公司名称).then((doc)=>{
+    console.log(doc);
+    // console.log(doc);
     res.json({data:doc});
   })
 });

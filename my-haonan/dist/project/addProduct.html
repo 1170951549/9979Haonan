@@ -94,7 +94,7 @@
         </div>
         <div class="form-group">
           <label>尺寸</label>
-          <input type="text" class="form-control imgSize"  placeholder="尺寸" name="尺寸">
+          <input type="text" class="form-control imgSize"  placeholder="尺寸（尺寸*尺寸）" name="尺寸">
         </div>
         <!--<div class="form-group">-->
           <!--<label>重量</label>-->
@@ -137,7 +137,6 @@
         this.$http.get('/product/list').then((res) => {
           this.goodPro = res.data.data;
           console.log(this.goodPro);
-          //console.log(this.goodXm);
         }, (err) => {
           console.log(err);
         })
