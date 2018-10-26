@@ -1,162 +1,765 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ch">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Cropper.js</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/cropper.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="9979">
+  <meta name="keywords" content="9979">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>9979</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/flat-ui.min.css"/>
+  <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
+  <link rel="stylesheet" href="css/element-ui.css">
   <style>
-    .label {
+    .row>div{
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+    }
+    .page-helper {
+      font-weight: 500;
+      height: 40px;
+      text-align: center;
+      color: #888;
+      margin: 10px auto;
+    }
+    .page-list {
+      font-size: 0;
+      height: 50px;
+      line-height: 50px;
+    }
+    .page-list span {
+      font-size: 14px;
+      margin-right: 5px;
+      user-select: none;
+    }
+    .page-list .page-item {
+      border: 1px solid #aaa;
+      padding: 5px 8px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
       cursor: pointer;
+      margin-right: 5px;
     }
-    .progress {
-      display: none;
-      margin-bottom: 1rem;
+    .page-ellipsis {
+      padding: 0 8px;
     }
-    .alert {
-      display: none;
+    .page-jump-to input {
+      width: 45px;
+      height: 26px;
+      font-size: 13px;
+      border: 1px solid #aaa;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      text-align: center;
     }
-    .img-container img {
-      max-width: 100%;
+    .page-list .jump-go-btn {
+      font-size: 12px;
+    }
+    .page-select{
+      border: 1px solid #aaa;
+      padding: 5px 8px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .page-list .page-item .disabled{
+      pointer-events: none;
+      background: #ddd;
+    }
+    .page-list .page-current {
+      cursor: default;
+      color: #fff;
+      background: #337ab7;
+      border-color: #337ab7;
     }
   </style>
 </head>
+
 <body>
-<div class="container">
-  <h1>Cropper in a Bootstrap modal</h1>
-
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal">
-    Launch the demo
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Cropper</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="img-container">
-            <img id="image" src="../docs/images/picture.jpg" alt="Picture">
+<div id="app">
+  <div id="wrap">
+    <!-- 左侧菜单栏目块 -->
+    <div class="leftMeun" id="leftMeun">
+      <div id="logoDiv">
+        <p id="logoP">
+          <img id="logo" alt="9979后台" src="h80809-9979-客户.png"><span>9979后台</span>
+        </p>
+      </div>
+      <div id="personInfor">
+        <p id="userName">XXXX</p>
+        <p>
+          <span>XXXX@qq.com</span>
+        </p>
+        <p>
+          <a>退出登录</a>
+        </p>
+      </div>
+      <div class="meun-title">管理</div>
+      <div class="meun-item " href="#char" aria-controls="char" role="tab" data-toggle="tab">
+        <img src="images/icon_chara_grey.png">
+        厂家管理
+      </div>
+      <div class="meun-item" href="#user" aria-controls="user" role="tab" data-toggle="tab">
+        <img src="images/icon_user_grey.png">
+        产品管理
+      </div>
+    </div>
+    <!-- 右侧具体内容栏目 -->
+    <div id="rightContent">
+      <a class="toggle-btn" id="nimei">
+        <i class="glyphicon glyphicon-align-justify"></i>
+      </a>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- 厂家管理模块 -->
+        <div role="tabpanel" class="tab-pane active" id="char">
+          <div class="check-div">
+            <a href="addVender.html" class="btn btn-yellow btn-xs" target="_blank">添加厂家</a>
           </div>
+          <div class="data-div">
+            <div class="row tableHeader">
+              <div class="col-xs-1">
+                用户名
+              </div>
+              <div class="col-xs-2">
+                公司名称
+              </div>
+              <div class="col-xs-1">
+                联系人电话
+              </div>
+              <div class="col-xs-2">
+                地址
+              </div>
+              <div class="col-xs-2">
+                所属产品
+              </div>
+              <div class="col-xs-2">
+                <span>时间</span>
+              </div>
+              <div class="col-xs-2">
+                操作
+              </div>
+            </div>
+            <div class="tablebody">
+              <div class="row"  v-for="vender in goodVender">
+                <div class="col-xs-1">
+                  {{vender.用户名}}
+                </div>
+                <div class="col-xs-2">
+                  <span>{{vender.公司名称}}</span>
+                </div>
+                <div class="col-xs-1">
+                  <span>{{vender.联系人电话}}</span>
+                </div>
+                <div class="col-xs-2">
+                  <span>{{vender.地址}}</span>
+                </div>
+                <div class="col-xs-2">
+                  <span>{{vender.所属产品.length}}</span>
+                </div>
+                <div class="col-xs-2">
+                  {{vender.创建时间|dateFrm}}
+                </div>
+                <div class="col-xs-2">
+                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#changeChar" @click="updataVen(vender)">
+                    修改
+                  </button>
+                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteChar" @click="removeVen(vender)">
+                    删除
+                  </button>
+                  <!--<button class="btn btn-info btn-xs">-->
+                  <!--预览-->
+                  <!--</button>-->
+                </div>
+                <!--修改厂家-->
+                <div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                          aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">修改</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <form class="form-horizontal">
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">用户名：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="用户名" v-model="formv.用户名">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">公司名称：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="公司名称" v-model="formv.公司名称">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">联系人电话：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="联系人电话" v-model="formv.联系人电话">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">地址：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="地址" v-model="formv.地址">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                        <button type="button" class="btn btn-xs btn-green" @click="updataVenOK">保 存</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--页码块-->
+          <footer class="footer">
+            <ul class="pagination">
+              <li>
+                <select>
+                  <option>1</option>
+                </select>
+                页
+              </li>
+              <li class="gray">
+                共20页
+              </li>
+              <li>
+                <i class="glyphicon glyphicon-menu-left">
+                </i>
+              </li>
+              <li>
+                <i class="glyphicon glyphicon-menu-right">
+                </i>
+              </li>
+            </ul>
+          </footer>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!--产品管理模块-->
+        <div role="tabpanel" class="tab-pane" id="user">
+          <div class="check-div form-inline">
+            <div class="col-xs-3">
+              <a href="addProduct.html" class="btn btn-yellow btn-xs" target="_blank">添加产品</a>
+              <!--<button  class="btn btn-info btn-xs" @click="getProduct">查询全部</button>-->
+            </div>
+            <div class="col-xs-4">
+              <!--<input type="text" class="form-control input-sm" placeholder="输入文字搜索">-->
+              <!--<button class="btn btn-white btn-xs ">查 询</button>-->
+            </div>
+            <div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">
+              <label for="paixu">厂家:&nbsp;</label>
+              <select class=" form-control" @change="selectCountry" v-model="countryName">
+                <option>全部</option>
+                <option :value="item.公司名称" v-for="item in goodVender">{{item.公司名称}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="data-div">
+            <div class="row tableHeader">
+              <div class="col-xs-1">
+                厂家
+              </div>
+              <div class="col-xs-2">
+                产品名称
+              </div>
+              <div class="col-xs-2">
+                图片
+              </div>
+              <div class="col-xs-1">
+                尺寸
+              </div>
+              <div class="col-xs-1">
+                产品单价
+              </div>
+              <div class="col-xs-1">
+                生产ID
+              </div>
+              <div class="col-xs-2">
+                时间
+              </div>
+              <div class="col-xs-2">
+                操作
+              </div>
+            </div>
+            <div class="tablebody">
+              <div class="rowDisplay" style="display: none">暂无数据</div>
+              <div class="row" v-for="item in movieInfoList"><!-- v-for="pro in goodProduct"-->
+                <div class="col-xs-1 selectCN">
+                  {{item.选择厂家}}
+                </div>
+                <div class="col-xs-2">
+                  {{item.产品名称}}
+                </div>
+                <div class="col-xs-2">
+                  {{item.图片}}
+                </div>
+                <div class="col-xs-1">
+                  {{item.尺寸}}
+                </div>
+                <div class="col-xs-1">
+                  {{item.产品单价}}
+                </div>
+                <div class="col-xs-1">
+                  {{item.生产ID}}
+                </div>
+                <div class="col-xs-2">
+                  {{item.创建时间|dateFrm}}
+                </div>
+                <div class="col-xs-2">
+                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(item)">
+                    修改
+                  </button>
+                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(item)"><!-- @click="removePro(pro)"-->
+                    删除
+                  </button>
+                  <!--传参预览到createProduct.html页面-->
+                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(item)">
+                    预览
+                  </a>
+                </div>
+                <!--弹出修改产品窗口-->
+                <div class="modal fade" id="reviseUser" role="dialog" aria-labelledby="gridSystemModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                          aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="">修改</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <form class="form-horizontal">
+                            <!--<div class="form-group">-->
+                            <!--<label  class="col-xs-3 control-label">厂家</label>-->
+                            <!--<div class="col-xs-8 ">-->
+                            <!--<select class="form-control input-sm duiqi" name="生产厂家" v-model="form.厂家">-->
+                            <!--<option v-bind:value="item.公司名称" v-for="(item,index) in goodPro">{{item.公司名称}}</option>-->
+                            <!--</select>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">产品名称：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品名称" v-model="form.产品名称">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">图片：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="图片" v-model="form.图片">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">尺寸：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="尺寸" v-model="form.尺寸">
+                              </div>
+                            </div>
+                            <!--<div class="form-group">-->
+                            <!--<label class="col-xs-3 control-label">尺寸：</label>-->
+                            <!--<div class="col-xs-8 ">-->
+                            <!--<select class="form-control input-sm duiqi" name="尺寸" v-model="form.尺寸">-->
+                            <!--<option value="1200x840">1200x840</option>-->
+                            <!--<option value="1440x960">1440x960</option>-->
+                            <!--<option value="1680x1200">1680x1200</option>-->
+                            <!--<option value="1920x1440">1920x1440</option>-->
+                            <!--<option value="2500x2000">2500x2000</option>-->
+                            <!--<option value="2400x1920">2400x1920</option>-->
+                            <!--<option value="3000x2000">3000x2000</option>-->
+                            <!--</select>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">产品单价：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品单价" v-model="form.产品单价">
+                              </div>
+                            </div>
+                            <div class="form-group ">
+                              <label class="col-xs-3 control-label">生产ID：</label>
+                              <div class="col-xs-8 ">
+                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="生产ID" v-model="form.生产ID">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                        <button type="button" class="btn btn-xs btn-green" @click="updataProOK">保 存</button>
+                      </div>
+                    </div>
+                    <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--页码块-->
+          <footer class="footer">
+            <div>
+              <div class="page-helper" v-if="showPageHelper">
+                <div class="page-list">
+                  <span>共{{ totalPage }}页 / {{ totalCount }}条</span>
+                  <span class="page-item" @click="jumpPage(1)">首页</span>
+                  <span class="page-item" :class="{'disabled': currentPage === 1}"  @click="prevPage">上一页</span>
+                  <span class="page-ellipsis" v-if="showPrevMore" @click="showPrevPage">...</span>
+                  <span class="page-item" v-for="num in groupList" :class="{'page-current':currentPage===num}" :key="num"
+                        @click="jumpPage(num)">{{num}}</span>
+                  <span class="page-ellipsis" v-if="showNextMore" @click="showNextPage">...</span>
+                  <span class="page-item" :class="{'disabled': currentPage === totalPage}" @click="nextPage">下一页</span>
+                  <span class="page-item" @click="jumpPage(totalPage)">末页</span>
+                  <select class="page-select" @change="jumpPage(currentPage)" v-model="currentSize">
+                    <option v-for="size in pageSizeArray" :key="size" :value="size">{{ size }}条/页</option>
+                  </select>
+                  <span class="ml20">跳至</span>
+                  <span class="page-jump-to"><input type="type" v-model="jumpPageNumber"></span>
+                  <span>页</span>
+                  <span class="page-item jump-go-btn" @click="goPage(jumpPageNumber)">GO</span>
+                </div>
+              </div>
+            </div>
+
+          </footer>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/vue.js"></script>
-<script src="js/axios.min.js"></script>
-<script src="js/vue-resource.js"></script>
-<script src="js/ceshi.js"></script>
-<script type="text/javascript" src="js/cropper.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="js/bootstrap.min.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    var avatar = document.getElementById('avatar');
-    var image = document.getElementById('image');
-    var input = document.getElementById('input');
-    var $progress = $('.progress');
-    var $progressBar = $('.progress-bar');
-    var $alert = $('.alert');
-    var $modal = $('#modal');
-    var cropper;
-    $('[data-toggle="tooltip"]').tooltip();
-    input.addEventListener('change', function (e) {
-      var files = e.target.files;
-      var done = function (url) {
-        input.value = '';
-        image.src = url;
-        $alert.hide();
-        $modal.modal('show');
-      };
-      var reader;
-      var file;
-      var url;
-      if (files && files.length > 0) {
-        file = files[0];
-        if (URL) {
-          done(URL.createObjectURL(file));
-        } else if (FileReader) {
-          reader = new FileReader();
-          reader.onload = function (e) {
-            done(reader.result);
-          };
-          reader.readAsDataURL(file);
-        }
-      }
-    });
-    $modal.on('shown.bs.modal', function () {
-      cropper = new Cropper(image, {
-        aspectRatio: 1,
-        viewMode: 3,
-      });
-    }).on('hidden.bs.modal', function () {
-      cropper.destroy();
-      cropper = null;
-    });
-    document.getElementById('crop').addEventListener('click', function () {
-      var initialAvatarURL;
-      var canvas;
-      $modal.modal('hide');
-      if (cropper) {
-        canvas = cropper.getCroppedCanvas({
-          width: 160,
-          height: 160,
-        });
-        initialAvatarURL = avatar.src;
-        avatar.src = canvas.toDataURL();
-        $progress.show();
-        $alert.removeClass('alert-success alert-warning');
-        canvas.toBlob(function (blob) {
-          var formData = new FormData();
-          formData.append('avatar', blob, 'avatar.jpg');
-          $.ajax('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            xhr: function () {
-              var xhr = new XMLHttpRequest();
-              xhr.upload.onprogress = function (e) {
-                var percent = '0';
-                var percentage = '0%';
-                if (e.lengthComputable) {
-                  percent = Math.round((e.loaded / e.total) * 100);
-                  percentage = percent + '%';
-                  $progressBar.width(percentage).attr('aria-valuenow', percent).text(percentage);
-                }
-              };
-              return xhr;
-            },
-            success: function () {
-              $alert.show().addClass('alert-success').text('Upload success');
-            },
-            error: function () {
-              avatar.src = initialAvatarURL;
-              $alert.show().addClass('alert-warning').text('Upload error');
-            },
-            complete: function () {
-              $progress.hide();
-            },
-          });
-        });
-      }
-    });
-  });
-</script>
 </body>
 </html>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue-resource.js"></script>
+<script src="js/element-ui.js"></script>
+<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script src="js/moment.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      goodVender:[],
+      goodProduct:[],
+      goodPro:[],
+      countryName:[],
+      form:{
+        id:"",
+        "厂家":"",
+        "产品名称":"",
+        "图片":"",
+        "尺寸":"",
+        "产品单价":"",
+        "生产ID":"",
+      },
+      formv:{
+        id:"",
+        "用户名":"",
+        "公司名称":"",
+        "所属产品":[],
+        "联系人电话":"",
+        "地址":"",
+      },
+      currentPage: this.pageNumber,
+      currentSize: this.pageSizeArray[0],
+      jumpPageNumber: 1,
+      showPrevMore: false,
+      showNextMore: false,
+    },
+    props: {
+      pageNumber: {   //当前页面
+        type: Number,
+        default: 1
+      },
+      pageSizeArray: {   //每页显示数量
+        type: Array,
+        default () {
+          return [10,20,30,50]
+        }
+      },
+      totalCount: {   //总条数
+        type: Number,
+        default: 1000
+      },
+      pageGroup: {   //连续页码个数
+        type: Number,
+        default: 5
+      }
+    },
+    computed:{
+      showPageHelper () {
+        return this.totalCount > 0
+      },
+      totalPage () {   //总页数
+        return Math.ceil(this.totalCount / this.currentSize);
+      },
+      groupList () {  //获取分页码
+        const groupArray = []
+        const totalPage = this.totalPage
+        const pageGroup = this.pageGroup
+        const _offset = (pageGroup - 1) / 2
+        let current = this.currentPage
+        const offset = {
+          start: current - _offset,
+          end: current + _offset
+        }
+        if (offset.start < 1) {
+          offset.end = offset.end + (1 - offset.start)
+          offset.start = 1
+        }
+        if (offset.end > totalPage) {
+          offset.start = offset.start - (offset.end - totalPage)
+          offset.end = totalPage
+        }
+        if (offset.start < 1) offset.start = 1
+        this.showPrevMore = (offset.start > 1)
+        this.showNextMore = (offset.end < totalPage)
+        for (let i = offset.start; i <= offset.end; i++) {
+          groupArray.push(i)
+        }
+        return groupArray
+      },
+    },
+    filters:{
+      dateFrm:function(el){
+        return moment(el).format("YYYY-MM-DD HH:mm:ss");
+      }
+    },
+    methods: {
+      prevPage () {
+        if (this.currentPage > 1) {
+          this.jumpPage(this.currentPage - 1)
+        }
+      },
+      nextPage () {
+        if (this.currentPage < this.totalPage) {
+          this.jumpPage(this.currentPage + 1)
+        }
+      },
+      showPrevPage() {
+        this.currentPage = this.currentPage - this.pageGroup > 0 ? this.currentPage - this.pageGroup : 1
+      },
+      showNextPage() {
+        this.currentPage = this.currentPage + this.pageGroup < this.totalPage ? this.currentPage + this.pageGroup : this.totalPage
+      },
+      goPage (jumpPageNumber) {
+        if(Number(jumpPageNumber) <= 0){
+          jumpPageNumber = 1
+        }if(Number(jumpPageNumber) >= this.totalPage){
+          jumpPageNumber = this.totalPage
+        }
+        this.jumpPage(Number(jumpPageNumber))
+      },
+      jumpPage (pageNumber) {
+        if (this.currentPage !== pageNumber) {  //点击的页码不是当前页码
+          this.currentPage = pageNumber
+          //父组件通过change方法来接受当前的页码
+          this.$emit('jumpPage', {currentPage: this.currentPage, currentSize: this.currentSize})
+        }
+      },
+      /*地区查询*/
+      selectCountry(){
+        this.$http.post('/product/proListSelect',{"公司名称":this.countryName}).then((res) => {
+          this.goodProduct = res.body.data;
+          console.log(this.countryName);
+          if(this.goodProduct==""){
+            $(".rowDisplay").show();
+          }else{
+            $(".rowDisplay").hide();
+          }
+          if(this.countryName == "全部"){
+            $(".rowDisplay").hide();
+            this.getProduct();
+          }
+          console.log(res);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      /*预览传值*/
+      previewPro(row){
+        row._id;
+        row.选择厂家;
+        row.产品名称;
+        row.图片;
+        row.尺寸;
+        row.产品单价;
+        row.生产ID;
+        return "createProduct.html?"+'厂家='+row.选择厂家+'&'+'产品名称='+row.产品名称+'&'+'图片='+row.图片+'&'+'生产ID='+row.生产ID+'&'+'尺寸='+row.尺寸;
+      },
+      //查询厂家
+      getVender() {
+        this.$http.get('/vender/venderList').then((res) => {
+          this.goodVender = res.data.data;
+          console.log(this.goodVender);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      //查询产品
+      getProduct() {
+        this.$http.get('/product/productList').then((res) => {
+          this.goodProduct = res.data.data;
+          console.log(this.goodProduct);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      //查询产品名称  数据绑定
+      getPro() {
+        this.$http.get('/product/list').then((res) => {
+          this.goodPro = res.data.data;
+          console.log(this.goodPro);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      //删除产品
+      removePro(row){
+        this.$confirm('是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=>{
+          this.$http.post('/product/remove',{'id':row._id}).then((res) => {
+            this. selectCountry();
+            //this.getProduct();
+          }, (err) => {
+            console.log(err);
+          })
+        })
+      },
+      //删除厂家
+      removeVen(row){
+        this.$confirm('是否删除厂家?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=>{
+          this.$http.post('/vender/remove',{'id':row._id}).then((res) => {
+            // this.removeVens = res.data.data;
+            // console.log(this.removeVens);
+            //console.log(this.goodXm);
+            //console.log(row._id);
+            this.getVender();
+          }, (err) => {
+            console.log(err);
+          })
+        })
+      },
+      //修改产品
+      updataPro(row){
+        this.form.id = row._id;
+        this.form.厂家 = row.选择厂家;
+        this.form.产品名称 = row.产品名称;
+        this.form.图片 = row.图片;
+        this.form.尺寸 = row.尺寸;
+        this.form.产品单价 = row.产品单价;
+        this.form.生产ID = row.生产ID;
+        this.selectCountry();
+        // this.getProduct();
+        console.log(this.form)
+      },
+      updataProOK(){
+        this.$confirm('是否修改?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=> {
+          $(".modal-backdrop.in").css({
+            "opacity":'0',
+            "display":"none"
+          });
+          $("#reviseUser").hide();
+          this.$http.post('/product/update', this.form).then((res) => {
+            this.selectCountry();
+            //this.getProduct();
+            console.log(res);
+          }, (err) => {
+            console.log(err);
+          })
+        })
+      },
+      //修改厂家
+      updataVen(row){
+        this.formv.id = row._id;
+        this.formv.用户名 = row.用户名;
+        this.formv.所属产品 = row.所属产品;
+        this.formv.公司名称 = row.公司名称;
+        this.formv.联系人电话 = row.联系人电话;
+        this.formv.地址 = row.地址;
+        // console.log(this.formv);
+        this.getVender();
+        this.getProduct();
+      },
+      updataVenOK(){
+        this.$confirm('是否修改?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(()=> {
+          $(".modal-backdrop.in").css({
+            "opacity":'0',
+            "display":"none"
+          });
+          $("#changeChar").hide();
+          this.$http.post('/vender/update', this.formv).then((res) => {
+            this.getVender();
+            this.getProduct();
+            console.log(res);
+          }, (err) => {
+            console.log(err);
+          })
+        })
+      }
+    },
+    created() {
+      this.getVender();
+      this.getProduct();
+      this.getPro();
+    },
+    watch: {
+      currentSize (newValue, oldValue) {
+        if(newValue !== oldValue){
+          if(this.currentPage >= this.totalPage){ //当前页面大于总页面数
+            this.currentPage = this.totalPage
+          }
+          this.$emit('jumpPage', {currentPage: this.currentPage, currentSize: this.currentSize})
+        }
+      },
+      goodVender(val) {
+        this.goodVender = val;
+      },
+      goodProduct(val) {
+        this.goodProduct = val;
+      },
+      goodPro(val) {
+        this.goodPro = val;
+      }
+    },
+  })
+</script>

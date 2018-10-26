@@ -175,19 +175,19 @@
             <ul class="pagination">
               <li>
                 <select>
-                  <option>1</option>
+                  <option v-for="item in pageSize">{{item}}</option>
                 </select>
                 页
               </li>
               <li class="gray">
-                共20页
+                共{{pageSize}}页
               </li>
               <li>
-                <i class="glyphicon glyphicon-menu-left">
+                <i class="glyphicon glyphicon-menu-left" @click="prev">
                 </i>
               </li>
               <li>
-                <i class="glyphicon glyphicon-menu-right">
+                <i class="glyphicon glyphicon-menu-right" @click="next">
                 </i>
               </li>
             </ul>
@@ -207,7 +207,7 @@
             <div class="col-lg-3 col-lg-offset-2 col-xs-4" style=" padding-right: 40px;text-align: right;">
               <label for="paixu">厂家:&nbsp;</label>
               <select class=" form-control" @change="selectCountry" v-model="countryName">
-                <option>查询全部</option>
+                <option>全部</option>
                 <option :value="item.公司名称" v-for="item in goodVender">{{item.公司名称}}</option>
               </select>
             </div>
@@ -240,6 +240,7 @@
               </div>
             </div>
             <div class="tablebody">
+              <div class="rowDisplay" style="display: none">暂无数据</div>
               <div class="row" v-for="item in movieInfoList"><!-- v-for="pro in goodProduct"-->
                 <div class="col-xs-1 selectCN">
                   {{item.选择厂家}}
@@ -454,7 +455,13 @@
         this.$http.post('/product/proListSelect',{"公司名称":this.countryName}).then((res) => {
           this.goodProduct = res.body.data;
           console.log(this.countryName);
-          if(this.countryName == "查询全部"){
+          if(this.goodProduct==""){
+            $(".rowDisplay").show();
+          }else{
+            $(".rowDisplay").hide();
+          }
+          if(this.countryName == "全部"){
+            $(".rowDisplay").hide();
             this.getProduct();
           }
           console.log(res);
@@ -511,11 +518,8 @@
           type: 'warning'
         }).then(()=>{
           this.$http.post('/product/remove',{'id':row._id}).then((res) => {
-            // this.removePros = res.data.data;
-            // console.log(this.removePros);
-            this.getProduct();
-            //console.log(this.goodXm);
-            //console.log(row._id);
+            this. selectCountry();
+            //this.getProduct();
           }, (err) => {
             console.log(err);
           })
@@ -548,7 +552,8 @@
         this.form.尺寸 = row.尺寸;
         this.form.产品单价 = row.产品单价;
         this.form.生产ID = row.生产ID;
-        this.getProduct();
+        this.selectCountry();
+       // this.getProduct();
         console.log(this.form)
       },
       updataProOK(){
@@ -563,11 +568,8 @@
           });
           $("#reviseUser").hide();
           this.$http.post('/product/update', this.form).then((res) => {
-            // this.removeVens = res.data.data;
-            // console.log(this.removeVens);
-            //console.log(this.goodXm);
-            //console.log(row._id);
-            this.getProduct();
+            this.selectCountry();
+            //this.getProduct();
             console.log(res);
           }, (err) => {
             console.log(err);
@@ -582,8 +584,9 @@
         this.formv.公司名称 = row.公司名称;
         this.formv.联系人电话 = row.联系人电话;
         this.formv.地址 = row.地址;
-        console.log(this.formv);
+       // console.log(this.formv);
         this.getVender();
+        this.getProduct();
       },
       updataVenOK(){
         this.$confirm('是否修改?', '提示', {
@@ -597,11 +600,8 @@
           });
           $("#changeChar").hide();
             this.$http.post('/vender/update', this.formv).then((res) => {
-              // this.removeVens = res.data.data;
-              // console.log(this.removeVens);
-              //console.log(this.goodXm);
-              //console.log(row._id);
               this.getVender();
+              this.getProduct();
               console.log(res);
             }, (err) => {
               console.log(err);

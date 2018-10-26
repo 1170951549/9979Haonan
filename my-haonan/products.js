@@ -5,7 +5,7 @@ const productDB = require('./venderDB');
 product.post('/add',(req,res)=>{
   productDB.updateProduct(req.body)
     .then((doc) => {
-      console.log(doc);
+      //console.log(doc);
       res.json({ data: doc});
     }).catch( err => {
     console.log("添加失败",err);
@@ -30,26 +30,21 @@ product.get("/productList",(req,res)=>{
 //关联地区
 product.post("/proListSelect",(req,res)=>{
   productDB.findProAllSelect(req.body.公司名称).then((doc)=>{
-    console.log(doc);
-    // console.log(doc);
+    //console.log(doc);
     res.json({data:doc});
   })
 });
 //删除产品
 product.post("/remove",(req,res)=>{
   productDB.removeProduct(req.body.id).then((doc)=>{
-    console.log(1111);
-    console.log(req.body.id);
-    console.log(doc);
+    //console.log(req.body.id);
     res.json({data:doc});
   })
 });
 //修改产品
 product.post("/update",(req,res)=>{
   productDB.updateProductById(req.body).then((doc)=>{
-    console.log(1111);
-    console.log(req.body.id);
-    console.log(doc);
+   // console.log(req.body.id);
     res.json({data:doc});
   })
 });

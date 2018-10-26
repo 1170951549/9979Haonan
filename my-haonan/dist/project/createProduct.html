@@ -123,11 +123,12 @@
       background: rgba(0, 0, 0, 0.8);
     }
     .model-show {
-      display: flex;
+      /*display: flex;*/
       justify-content: center;
       align-items: center;
-      width: 100vw;
-      height: 100vh;
+      margin-top: 25px;
+      /*width: 100vw;*/
+      /*height: 100vh;*/
     }
     .model img {
       display: block;
@@ -172,12 +173,13 @@
     .changjias,.proIDs{
       position: absolute;
       width: 5%;
-      border: 0;
       /* height: 32px; */
       padding: 4px 12px;
       height: 30px;
       margin-top: 1px;
       margin-left: 1px;
+      border:0;
+      outline:none !important;
     }
     .proIDs{
       width: 20%
@@ -259,12 +261,15 @@
           <input type="text" class="form-control proMl" name="保存目录">
           <span class="help-block">本次生产保存的路径</span>
         </div>
-        <label>URL地址</label>
+        <!--<label>URL地址</label>-->
         <div class="input-group">
-          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="任务1">
+          <input type="text" value="https://images.wallpaperscraft.com/image/coast_sea_turbidite_layers_126232_1280x720.jpg" class="form-control rw" placeholder="" aria-describedby="basic-addon2" name="任务1" style="display: none">
           <!--<span class="input-group-addon" id="replaceImg" @click="" data-toggle="modal" data-target=".bs-example-modal-lg">上传图片</span>-->
           <label class="input-group-addon" for="uploads">上传图片</label>
           <input type="file" id="uploads" style="position:absolute; clip:rect(0 0 0 0);" accept="image/png, image/jpeg, image/gif, image/jpg" @change="uploadImg($event, 1)" data-toggle="modal" data-target=".bs-example-modal-lg">
+        </div>
+        <div class="model-show">
+          <img :src="modelSrc" alt="">
         </div>
         <!--地址-->
         <div class="form-group" style="display: none">
@@ -291,6 +296,7 @@
       </div>
     </div>
   </div>
+
   <!--上传图片-->
   <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
@@ -340,7 +346,6 @@
 <script src="js/vue-resource.js"></script>
 <script src="js/ceshi.js"></script>
 <script type="text/javascript" src="js/cropper.js"></script>
-
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
 <script>
@@ -414,9 +419,9 @@
         this.cityName=this.countryName.所属产品[0];
         console.log(this.cityName);
         console.log(this.countryName);
+        // console.log(this.goods);
         var x = $('.changjia option:selected').text();
         $(".changjias").val($.trim(x));
-
       },
       selectCountrys(){
         var x = $('.proID option:selected').text();
@@ -445,6 +450,10 @@
             // this.downImg = data
             // aLink.href = data
             // aLink.click()
+            this.$refs.cropper.getCropData((data) => {
+              this.model = true
+              this.modelSrc = data
+            })
             $.ajax({
               url: '/upload',
               method: 'POST',
@@ -461,8 +470,8 @@
                 $(".rw").val("http://"+window.location.host+"/img/"+ res);
                 $(".bs-example-modal-lg").hide();
                 $(".modal-backdrop").hide();
-                alert("正在生产,请稍后...");
-                thit.getcode();
+                //alert("正在生产,请稍后...");
+               // thit.getcode();
                 // console.log(a)
               },
               error: function (error) {
@@ -489,19 +498,16 @@
         reader.onload = (e) => {
           let data;
           /**/
-            const getQuery = () => {
-              let result = {};
-              location.search.slice(1).split('&').map(str => {
-                let arr = str.split('=');
-                result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
-              });
-              return result
-            };
-
-
+          const getQuery = () => {
+            let result = {};
+            location.search.slice(1).split('&').map(str => {
+              let arr = str.split('=');
+              result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1]);
+            });
+            return result
+          };
           var x = $('.proID option:selected').text();
           var xx = $(".proCC").val($.trim(x));
-
           var xxx = xx.val();
           var reg = xxx.substring(xxx.lastIndexOf(''), xxx.indexOf('--')+2);
           var rwsImg= reg.split("*");
@@ -514,8 +520,8 @@
             var rwsImgs= regs.split("*");
             this.tjWidth=rwsImgs[0];
             this.tjHeight=rwsImgs[1];
-            console.log(this.tjWidth)
-            console.log(this.tjHeight)
+            console.log(this.tjWidth);
+            console.log(this.tjHeight);
           }
           /**/
           if (typeof e.target.result === 'object') {
@@ -530,12 +536,11 @@
             this.example2.img = data;
           }
         };
-          reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
         // 转化为base64
         // reader.readAsDataURL(file)
         // 转化为blob
-       // reader.readAsArrayBuffer(file);
-
+        // reader.readAsArrayBuffer(file);
       },
       imgLoad(msg) {
         console.log(msg);
@@ -544,28 +549,36 @@
       getGoods() {
         this.$http.get('/vender/venderList').then((res) => {
           this.goods = res.data.data;
-         // this.goods.所属产品;
+          // this.goods.所属产品;
           //console.log(JSON.stringify(this.goods));
           for(var i=0;i< this.goods.length;i++){
             this.tempJson=this.goods[i].所属产品
           }
-         console.log( this.tempJson);
+          console.log( this.tempJson);
           for(var i=0;i<this.tempJson.length;i++){
             this.tempJsons.push({'产品名称':this.tempJson[i].产品名称,'尺寸':this.tempJson[i].尺寸});
           }
           /*获取当前地址 并裁剪*/
-              const getQuery = () => {
-                let result = {};
-                location.search.slice(1).split('&').map(str => {
-                  let arr = str.split('=');
-                  result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
-                });
-                return result
-              };
+          const getQuery = () => {
+            let result = {};
+            location.search.slice(1).split('&').map(str => {
+              let arr = str.split('=');
+              result[decodeURIComponent(arr[0])] = decodeURIComponent(arr[1])
+            });
+            return result
+          };
           $(".rw").val(getQuery().图片);
           $(".changjias").val(getQuery().厂家);
           $(".proIDs").val(getQuery().生产ID);
           $(".proCC").val(getQuery().尺寸);
+          // if($(".changjias").val()!=""&&$(".proIDs").val()!=""){
+          //   $(".changjia").attr("disabled","disabled");
+          //   $(".proID").attr("disabled","disabled");
+          //   $(".changjias").attr("disabled","disabled");
+          //   $(".proIDs").attr("disabled","disabled");
+          // }
+          $(".changjias").attr("disabled","disabled").css({"background-color":"white","cursor":"pointer"});
+          $(".proIDs").attr("disabled","disabled").css({"background-color":"white","cursor":"pointer"})
         }, (err) => {
           console.log(err);
         })

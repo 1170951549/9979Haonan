@@ -38,6 +38,7 @@ app.use(router);
 //     console.log(222);
 //   }
 // });
+/*图片裁剪*/
 app.post('/upload', (req, res) => {
   var imgPath = uuid.v4();
   var tpye = ".unknow";
