@@ -12,7 +12,6 @@
   <link rel="stylesheet" type="text/css" href="css/common.css"/>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/flat-ui.min.css"/>
-  <!--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">-->
   <link rel="stylesheet" href="css/element-ui.css">
   <style>
     .row>div{
@@ -20,67 +19,8 @@
       text-overflow:ellipsis;
       white-space: nowrap;
     }
-    .page-helper {
-      font-weight: 500;
-      height: 40px;
-      text-align: center;
-      color: #888;
-      margin: 10px auto;
-    }
-    .page-list {
-      font-size: 0;
-      height: 50px;
-      line-height: 50px;
-    }
-    .page-list span {
-      font-size: 14px;
-      margin-right: 5px;
-      user-select: none;
-    }
-    .page-list .page-item {
-      border: 1px solid #aaa;
-      padding: 5px 8px;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 5px;
-    }
-    .page-ellipsis {
-      padding: 0 8px;
-    }
-    .page-jump-to input {
-      width: 45px;
-      height: 26px;
-      font-size: 13px;
-      border: 1px solid #aaa;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .page-list .jump-go-btn {
-      font-size: 12px;
-    }
-    .page-select{
-      border: 1px solid #aaa;
-      padding: 5px 8px;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 5px;
-      margin-left: 5px;
-    }
-    .page-list .page-item .disabled{
-      pointer-events: none;
-      background: #ddd;
-    }
-    .page-list .page-current {
-      cursor: default;
-      color: #fff;
-      background: #337ab7;
-      border-color: #337ab7;
+    .el-table__header-wrapper tr th{
+      background-color: #e3e8ee;
     }
   </style>
 </head>
@@ -127,132 +67,110 @@
             <a href="addVender.html" class="btn btn-yellow btn-xs" target="_blank">添加厂家</a>
           </div>
           <div class="data-div">
-            <div class="row tableHeader">
-              <div class="col-xs-1">
-                用户名
-              </div>
-              <div class="col-xs-2">
-                公司名称
-              </div>
-              <div class="col-xs-1">
-                联系人电话
-              </div>
-              <div class="col-xs-2">
-                地址
-              </div>
-              <div class="col-xs-2">
-                所属产品
-              </div>
-              <div class="col-xs-2">
-                <span>时间</span>
-              </div>
-              <div class="col-xs-2">
-                操作
-              </div>
-            </div>
-            <div class="tablebody">
-              <div class="row"  v-for="vender in goodVender">
-                <div class="col-xs-1">
-                  {{vender.用户名}}
-                </div>
-                <div class="col-xs-2">
-                  <span>{{vender.公司名称}}</span>
-                </div>
-                <div class="col-xs-1">
-                  <span>{{vender.联系人电话}}</span>
-                </div>
-                <div class="col-xs-2">
-                  <span>{{vender.地址}}</span>
-                </div>
-                <div class="col-xs-2">
-                  <span>{{vender.所属产品.length}}</span>
-                </div>
-                <div class="col-xs-2">
-                  {{vender.创建时间|dateFrm}}
-                </div>
-                <div class="col-xs-2">
-                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#changeChar" @click="updataVen(vender)">
+            <el-table style="width: 100%;" :data="goodVender.slice((currentPage-1)*pagesize,currentPage*pagesize)">
+              <el-table-column label="用户名" prop="date" width="180">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.用户名 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="公司名称" prop="name" width="300">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.公司名称 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="联系人电话" prop="email" width="360">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.联系人电话 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="地址" prop="address" width="250">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.地址 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="所属产品" prop="address" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.所属产品.length }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="时间" prop="address" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.创建时间|dateFrm }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="操作" prop="address" width="220">
+                <template slot-scope="scope" >
+                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#changeChar" @click="updataVen(scope.row)">
                     修改
                   </button>
-                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteChar" @click="removeVen(vender)">
+                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteChar" @click="removeVen(scope.row)">
                     删除
                   </button>
-                  <!--<button class="btn btn-info btn-xs">-->
-                  <!--预览-->
-                  <!--</button>-->
-                </div>
-                <!--修改厂家-->
-                <div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                          aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="gridSystemModalLabel">修改</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="container-fluid">
-                          <form class="form-horizontal">
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">用户名：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="用户名" v-model="formv.用户名">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">公司名称：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="公司名称" v-model="formv.公司名称">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">联系人电话：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="联系人电话" v-model="formv.联系人电话">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">地址：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="地址" v-model="formv.地址">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
-                        <button type="button" class="btn btn-xs btn-green" @click="updataVenOK">保 存</button>
-                      </div>
-                    </div>
-                    <!-- /.modal-content -->
+                </template>
+              </el-table-column>
+            </el-table>
+            <!--修改厂家-->
+            <div class="modal fade" id="changeChar" role="dialog" aria-labelledby="gridSystemModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">修改</h4>
                   </div>
-                  <!-- /.modal-dialog -->
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <form class="form-horizontal">
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">用户名：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="用户名" v-model="formv.用户名">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">公司名称：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="公司名称" v-model="formv.公司名称">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">联系人电话：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="联系人电话" v-model="formv.联系人电话">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">地址：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="地址" v-model="formv.地址">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                    <button type="button" class="btn btn-xs btn-green" @click="updataVenOK">保 存</button>
+                  </div>
                 </div>
+                <!-- /.modal-content -->
               </div>
+              <!-- /.modal-dialog -->
             </div>
           </div>
           <!--页码块-->
           <footer class="footer">
-            <ul class="pagination">
-              <li>
-                <select>
-                  <option>1</option>
-                </select>
-                页
-              </li>
-              <li class="gray">
-                共20页
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-menu-left">
-                </i>
-              </li>
-              <li>
-                <i class="glyphicon glyphicon-menu-right">
-                </i>
-              </li>
-            </ul>
+            <footer class="footer" style="margin-top:20px">
+              <el-pagination
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="currentPage"
+                :page-sizes="[5, 10, 20, 40]"
+                :page-size="pagesize"
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="goodVender.length">
+              </el-pagination>
+            </footer>
           </footer>
         </div>
         <!--产品管理模块-->
@@ -275,172 +193,122 @@
             </div>
           </div>
           <div class="data-div">
-            <div class="row tableHeader">
-              <div class="col-xs-1">
-                厂家
-              </div>
-              <div class="col-xs-2">
-                产品名称
-              </div>
-              <div class="col-xs-2">
-                图片
-              </div>
-              <div class="col-xs-1">
-                尺寸
-              </div>
-              <div class="col-xs-1">
-                产品单价
-              </div>
-              <div class="col-xs-1">
-                生产ID
-              </div>
-              <div class="col-xs-2">
-                时间
-              </div>
-              <div class="col-xs-2">
-                操作
-              </div>
-            </div>
-            <div class="tablebody">
-              <div class="rowDisplay" style="display: none">暂无数据</div>
-              <div class="row" v-for="item in movieInfoList"><!-- v-for="pro in goodProduct"-->
-                <div class="col-xs-1 selectCN">
-                  {{item.选择厂家}}
-                </div>
-                <div class="col-xs-2">
-                  {{item.产品名称}}
-                </div>
-                <div class="col-xs-2">
-                  {{item.图片}}
-                </div>
-                <div class="col-xs-1">
-                  {{item.尺寸}}
-                </div>
-                <div class="col-xs-1">
-                  {{item.产品单价}}
-                </div>
-                <div class="col-xs-1">
-                  {{item.生产ID}}
-                </div>
-                <div class="col-xs-2">
-                  {{item.创建时间|dateFrm}}
-                </div>
-                <div class="col-xs-2">
-                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(item)">
+            <el-table style="width: 100%;" :data="goodProduct.slice((currentPage-1)*pagesize,currentPage*pagesize)">
+              <el-table-column label="厂家" prop="date" width="180">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.选择厂家 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="产品名称" prop="name" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.产品名称 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="图片" prop="email" width="250">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.图片 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="尺寸" prop="address" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.尺寸 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="产品单价" prop="address" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.产品单价 }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="生产ID" prop="address" width="200">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.生产ID }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="时间" prop="address" width="250">
+                <template slot-scope="scope">
+                  <span>{{ scope.row.创建时间|dateFrm }}</span>
+                </template>
+              </el-table-column>
+              <el-table-column label="操作" prop="address" width="220">
+                <template slot-scope="scope" >
+                  <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#reviseUser" @click="updataPro(scope.row)">
                     修改
                   </button>
-                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(item)"><!-- @click="removePro(pro)"-->
+                  <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#deleteUser" @click="removePro(scope.row)"><!-- @click="removePro(pro)"-->
                     删除
                   </button>
-                  <!--传参预览到createProduct.html页面-->
-                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(item)">
+                  <a target="_blank" class="btn btn-info btn-xs" :href="previewPro(scope.row)">
                     预览
                   </a>
-                </div>
-                <!--弹出修改产品窗口-->
-                <div class="modal fade" id="reviseUser" role="dialog" aria-labelledby="gridSystemModalLabel">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                          aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="">修改</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="container-fluid">
-                          <form class="form-horizontal">
-                            <!--<div class="form-group">-->
-                            <!--<label  class="col-xs-3 control-label">厂家</label>-->
-                            <!--<div class="col-xs-8 ">-->
-                            <!--<select class="form-control input-sm duiqi" name="生产厂家" v-model="form.厂家">-->
-                            <!--<option v-bind:value="item.公司名称" v-for="(item,index) in goodPro">{{item.公司名称}}</option>-->
-                            <!--</select>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">产品名称：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品名称" v-model="form.产品名称">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">图片：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="图片" v-model="form.图片">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">尺寸：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="尺寸" v-model="form.尺寸">
-                              </div>
-                            </div>
-                            <!--<div class="form-group">-->
-                            <!--<label class="col-xs-3 control-label">尺寸：</label>-->
-                            <!--<div class="col-xs-8 ">-->
-                            <!--<select class="form-control input-sm duiqi" name="尺寸" v-model="form.尺寸">-->
-                            <!--<option value="1200x840">1200x840</option>-->
-                            <!--<option value="1440x960">1440x960</option>-->
-                            <!--<option value="1680x1200">1680x1200</option>-->
-                            <!--<option value="1920x1440">1920x1440</option>-->
-                            <!--<option value="2500x2000">2500x2000</option>-->
-                            <!--<option value="2400x1920">2400x1920</option>-->
-                            <!--<option value="3000x2000">3000x2000</option>-->
-                            <!--</select>-->
-                            <!--</div>-->
-                            <!--</div>-->
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">产品单价：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品单价" v-model="form.产品单价">
-                              </div>
-                            </div>
-                            <div class="form-group ">
-                              <label class="col-xs-3 control-label">生产ID：</label>
-                              <div class="col-xs-8 ">
-                                <input type="type" class="form-control input-sm duiqi" placeholder="" name="生产ID" v-model="form.生产ID">
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
-                        <button type="button" class="btn btn-xs btn-green" @click="updataProOK">保 存</button>
-                      </div>
-                    </div>
-                    <!-- /.modal-content -->
+                </template>
+              </el-table-column>
+            </el-table>
+            <!--弹出修改产品窗口-->
+            <div class="modal fade" id="reviseUser" role="dialog" aria-labelledby="gridSystemModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                      aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="">修改</h4>
                   </div>
-                  <!-- /.modal-dialog -->
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <form class="form-horizontal">
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">产品名称：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品名称" v-model="form.产品名称">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">图片：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="图片" v-model="form.图片">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">尺寸：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="尺寸" v-model="form.尺寸">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">产品单价：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="产品单价" v-model="form.产品单价">
+                          </div>
+                        </div>
+                        <div class="form-group ">
+                          <label class="col-xs-3 control-label">生产ID：</label>
+                          <div class="col-xs-8 ">
+                            <input type="type" class="form-control input-sm duiqi" placeholder="" name="生产ID" v-model="form.生产ID">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-xs btn-white" data-dismiss="modal">取 消</button>
+                    <button type="button" class="btn btn-xs btn-green" @click="updataProOK">保 存</button>
+                  </div>
                 </div>
+                <!-- /.modal-content -->
               </div>
+              <!-- /.modal-dialog -->
             </div>
           </div>
           <!--页码块-->
-          <footer class="footer">
-            <div>
-              <div class="page-helper" v-if="showPageHelper">
-                <div class="page-list">
-                  <span>共{{ totalPage }}页 / {{ totalCount }}条</span>
-                  <span class="page-item" @click="jumpPage(1)">首页</span>
-                  <span class="page-item" :class="{'disabled': currentPage === 1}"  @click="prevPage">上一页</span>
-                  <span class="page-ellipsis" v-if="showPrevMore" @click="showPrevPage">...</span>
-                  <span class="page-item" v-for="num in groupList" :class="{'page-current':currentPage===num}" :key="num"
-                        @click="jumpPage(num)">{{num}}</span>
-                  <span class="page-ellipsis" v-if="showNextMore" @click="showNextPage">...</span>
-                  <span class="page-item" :class="{'disabled': currentPage === totalPage}" @click="nextPage">下一页</span>
-                  <span class="page-item" @click="jumpPage(totalPage)">末页</span>
-                  <select class="page-select" @change="jumpPage(currentPage)" v-model="currentSize">
-                    <option v-for="size in pageSizeArray" :key="size" :value="size">{{ size }}条/页</option>
-                  </select>
-                  <span class="ml20">跳至</span>
-                  <span class="page-jump-to"><input type="type" v-model="jumpPageNumber"></span>
-                  <span>页</span>
-                  <span class="page-item jump-go-btn" @click="goPage(jumpPageNumber)">GO</span>
-                </div>
-              </div>
-            </div>
-
+          <footer class="footer" style="margin-top:20px">
+            <el-pagination
+              @size-change="handleSizeChange"
+              @current-change="handleCurrentChange"
+              :current-page="currentPage"
+              :page-sizes="[5, 10, 20, 40]"
+              :page-size="pagesize"
+              layout="total, sizes, prev, pager, next, jumper"
+            :total="goodProduct.length">
+            </el-pagination>
           </footer>
         </div>
       </div>
@@ -454,7 +322,6 @@
 <script src="js/vue.js"></script>
 <script src="js/vue-resource.js"></script>
 <script src="js/element-ui.js"></script>
-<!--<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
 <script src="js/moment.min.js"></script>
 <script>
   var app = new Vue({
@@ -481,65 +348,8 @@
         "联系人电话":"",
         "地址":"",
       },
-      currentPage: this.pageNumber,
-      currentSize: this.pageSizeArray[0],
-      jumpPageNumber: 1,
-      showPrevMore: false,
-      showNextMore: false,
-    },
-    props: {
-      pageNumber: {   //当前页面
-        type: Number,
-        default: 1
-      },
-      pageSizeArray: {   //每页显示数量
-        type: Array,
-        default () {
-          return [10,20,30,50]
-        }
-      },
-      totalCount: {   //总条数
-        type: Number,
-        default: 1000
-      },
-      pageGroup: {   //连续页码个数
-        type: Number,
-        default: 5
-      }
-    },
-    computed:{
-      showPageHelper () {
-        return this.totalCount > 0
-      },
-      totalPage () {   //总页数
-        return Math.ceil(this.totalCount / this.currentSize);
-      },
-      groupList () {  //获取分页码
-        const groupArray = []
-        const totalPage = this.totalPage
-        const pageGroup = this.pageGroup
-        const _offset = (pageGroup - 1) / 2
-        let current = this.currentPage
-        const offset = {
-          start: current - _offset,
-          end: current + _offset
-        }
-        if (offset.start < 1) {
-          offset.end = offset.end + (1 - offset.start)
-          offset.start = 1
-        }
-        if (offset.end > totalPage) {
-          offset.start = offset.start - (offset.end - totalPage)
-          offset.end = totalPage
-        }
-        if (offset.start < 1) offset.start = 1
-        this.showPrevMore = (offset.start > 1)
-        this.showNextMore = (offset.end < totalPage)
-        for (let i = offset.start; i <= offset.end; i++) {
-          groupArray.push(i)
-        }
-        return groupArray
-      },
+      currentPage:1, //初始页
+      pagesize:20,    //    每页的数据
     },
     filters:{
       dateFrm:function(el){
@@ -547,36 +357,28 @@
       }
     },
     methods: {
-      prevPage () {
-        if (this.currentPage > 1) {
-          this.jumpPage(this.currentPage - 1)
-        }
+      // 初始页currentPage、初始每页数据数pagesize和数据data
+      handleSizeChange: function (size) {
+        this.pagesize = size;
+        console.log(this.pagesize)  //每页下拉显示数据
       },
-      nextPage () {
-        if (this.currentPage < this.totalPage) {
-          this.jumpPage(this.currentPage + 1)
-        }
+      handleCurrentChange: function(currentPage){
+        this.currentPage = currentPage;
+        console.log(this.currentPage);  //点击第几页
       },
-      showPrevPage() {
-        this.currentPage = this.currentPage - this.pageGroup > 0 ? this.currentPage - this.pageGroup : 1
+      /*产品分页*/
+      handleUserList() {
+        this.$http.get('/product/productList').then(res => {  //这是从本地请求的数据接口，
+          this.goodProduct = res.data.data;
+          console.log(this.goodProduct);
+        })
       },
-      showNextPage() {
-        this.currentPage = this.currentPage + this.pageGroup < this.totalPage ? this.currentPage + this.pageGroup : this.totalPage
-      },
-      goPage (jumpPageNumber) {
-        if(Number(jumpPageNumber) <= 0){
-          jumpPageNumber = 1
-        }if(Number(jumpPageNumber) >= this.totalPage){
-          jumpPageNumber = this.totalPage
-        }
-        this.jumpPage(Number(jumpPageNumber))
-      },
-      jumpPage (pageNumber) {
-        if (this.currentPage !== pageNumber) {  //点击的页码不是当前页码
-          this.currentPage = pageNumber
-          //父组件通过change方法来接受当前的页码
-          this.$emit('jumpPage', {currentPage: this.currentPage, currentSize: this.currentSize})
-        }
+      /*厂家分页*/
+      handleVenderList() {
+        this.$http.get('/vender/venderList').then(res => {  //这是从本地请求的数据接口，
+          this.goodVender = res.data.data;
+          console.log(this.goodVender);
+        })
       },
       /*地区查询*/
       selectCountry(){
@@ -589,6 +391,10 @@
             $(".rowDisplay").hide();
           }
           if(this.countryName == "全部"){
+            $(".rowDisplay").hide();
+            this.getProduct();
+          }
+          if(this.countryName == ""){
             $(".rowDisplay").hide();
             this.getProduct();
           }
@@ -646,8 +452,8 @@
           type: 'warning'
         }).then(()=>{
           this.$http.post('/product/remove',{'id':row._id}).then((res) => {
-            this. selectCountry();
-            //this.getProduct();
+            this.selectCountry();
+             // this.getProduct();
           }, (err) => {
             console.log(err);
           })
@@ -680,8 +486,8 @@
         this.form.尺寸 = row.尺寸;
         this.form.产品单价 = row.产品单价;
         this.form.生产ID = row.生产ID;
-        this.selectCountry();
-        // this.getProduct();
+       // this.selectCountry();
+         //this.getProduct();
         console.log(this.form)
       },
       updataProOK(){
@@ -741,16 +547,10 @@
       this.getVender();
       this.getProduct();
       this.getPro();
+      this.handleUserList();
+      this.handleVenderList();
     },
     watch: {
-      currentSize (newValue, oldValue) {
-        if(newValue !== oldValue){
-          if(this.currentPage >= this.totalPage){ //当前页面大于总页面数
-            this.currentPage = this.totalPage
-          }
-          this.$emit('jumpPage', {currentPage: this.currentPage, currentSize: this.currentSize})
-        }
-      },
       goodVender(val) {
         this.goodVender = val;
       },

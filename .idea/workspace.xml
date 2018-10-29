@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c66901d-5d06-498d-9999-129ae20012c8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/my-haonan/dist/project/js/pageination.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/app.js" afterPath="$PROJECT_DIR$/my-haonan/app.js" />
       <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
       <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/createProduct.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/createProduct.html" />
       <change beforePath="$PROJECT_DIR$/my-haonan/dist/project/home.html" afterPath="$PROJECT_DIR$/my-haonan/dist/project/home.html" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/products.js" afterPath="$PROJECT_DIR$/my-haonan/products.js" />
-      <change beforePath="$PROJECT_DIR$/my-haonan/vender.js" afterPath="$PROJECT_DIR$/my-haonan/vender.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,63 +20,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-983">
-              <caret line="209" column="35" lean-forward="true" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
+            <state relative-caret-position="245">
+              <caret line="552" column="12" lean-forward="true" selection-start-line="552" selection-start-column="12" selection-end-line="552" selection-end-column="12" />
               <folding>
                 <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#4590#4597#1" expanded="true" />
-                <element signature="n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#4706#4713#1" expanded="true" />
+                <element signature="n#style#0;n#footer#0;n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8475#8481#0" expanded="true" />
+                <element signature="e#8289#8295#0" expanded="true" />
+                <element signature="n#style#0;n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#11451#11458#1" expanded="true" />
-                <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#17496#17770#0" expanded="false" />
-                <element signature="e#17784#17886#0" expanded="false" />
-                <element signature="e#19217#19469#0" expanded="false" />
-                <element signature="e#19503#19759#0" expanded="false" />
-                <element signature="e#19797#20038#0" expanded="false" />
-                <element signature="e#20073#20460#0" expanded="false" />
-                <element signature="e#20495#21014#0" expanded="false" />
-                <element signature="e#21049#21380#0" expanded="false" />
-                <element signature="e#21401#21959#0" expanded="false" />
-                <element signature="e#21994#22300#0" expanded="false" />
-                <element signature="e#22321#22887#0" expanded="false" />
-                <element signature="e#22909#22986#0" expanded="false" />
-                <element signature="e#22999#23193#0" expanded="false" />
+                <element signature="e#11506#11513#1" expanded="true" />
+                <element signature="n#style#0;n#footer#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#15082#15214#0" expanded="false" />
+                <element signature="e#15228#15345#0" expanded="false" />
+                <element signature="e#15427#15527#0" expanded="false" />
+                <element signature="e#15631#15717#0" expanded="false" />
+                <element signature="e#15767#15864#0" expanded="false" />
+                <element signature="e#15904#16087#0" expanded="false" />
+                <element signature="e#16129#16308#0" expanded="false" />
+                <element signature="e#16346#16998#0" expanded="false" />
+                <element signature="e#17036#17295#0" expanded="false" />
+                <element signature="e#17328#17580#0" expanded="false" />
+                <element signature="e#17614#17870#0" expanded="false" />
+                <element signature="e#17908#18149#0" expanded="false" />
+                <element signature="e#18184#18571#0" expanded="false" />
+                <element signature="e#18606#19125#0" expanded="false" />
+                <element signature="e#19160#19494#0" expanded="false" />
+                <element signature="e#19515#20073#0" expanded="false" />
+                <element signature="e#20108#20415#0" expanded="false" />
+                <element signature="e#20436#20988#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addProduct.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/addProduct.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
-              <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="23" />
-              <folding>
-                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,7 +66,7 @@
       <file leaf-file-name="addVender.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/addVender.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
+            <state relative-caret-position="597">
               <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
               <folding />
             </state>
@@ -96,18 +76,18 @@
       <file leaf-file-name="venderDB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/venderDB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-241">
+            <state relative-caret-position="782">
               <caret line="118" column="42" lean-forward="false" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createProduct.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createProduct.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/createProduct.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="295" column="12" lean-forward="true" selection-start-line="295" selection-start-column="12" selection-end-line="295" selection-end-column="12" />
+            <state relative-caret-position="4041">
+              <caret line="395" column="17" lean-forward="false" selection-start-line="395" selection-start-column="17" selection-end-line="395" selection-end-column="17" />
               <folding>
                 <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -119,24 +99,9 @@
                 <element signature="e#13086#13199#0" expanded="false" />
                 <element signature="e#13219#13332#0" expanded="false" />
                 <element signature="e#13346#13383#0" expanded="false" />
-                <element signature="e#13698#13796#0" expanded="false" />
-                <element signature="e#13835#13901#0" expanded="false" />
-                <element signature="e#13920#15828#0" expanded="false" />
-                <element signature="e#15854#17811#0" expanded="false" />
-                <element signature="e#17832#17867#0" expanded="false" />
-                <element signature="e#19487#22792#0" expanded="false" />
-                <element signature="e#22850#23485#0" expanded="false" />
+                <element signature="e#13836#13902#0" expanded="false" />
+                <element signature="e#13921#15829#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/新建文件夹 (3)/demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="164" column="10" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="164" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,49 +109,41 @@
       <file leaf-file-name="ceshi3.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="509" column="0" lean-forward="true" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="351" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="565" selection-end-column="0" />
               <folding>
                 <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#5964#5971#1" expanded="true" />
-                <element signature="n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#4706#4713#1" expanded="true" />
+                <element signature="n#style#0;n#footer#0;n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#9779#9785#0" expanded="true" />
+                <element signature="e#8289#8295#0" expanded="true" />
+                <element signature="n#style#0;n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#12755#12762#1" expanded="true" />
-                <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#21217#21317#0" expanded="false" />
-                <element signature="e#22471#23005#0" expanded="false" />
-                <element signature="e#23335#23587#0" expanded="false" />
-                <element signature="e#23621#23877#0" expanded="false" />
-                <element signature="e#23915#24156#0" expanded="false" />
-                <element signature="e#24191#24578#0" expanded="false" />
-                <element signature="e#24613#25132#0" expanded="false" />
-                <element signature="e#25167#25499#0" expanded="false" />
-                <element signature="e#25520#26078#0" expanded="false" />
-                <element signature="e#26113#26420#0" expanded="false" />
-                <element signature="e#26441#26993#0" expanded="false" />
-                <element signature="e#27015#27092#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ceshi2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="157" column="10" lean-forward="true" selection-start-line="155" selection-start-column="3" selection-end-line="157" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11506#11513#1" expanded="true" />
+                <element signature="n#style#0;n#footer#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#15080#15212#0" expanded="false" />
+                <element signature="e#15226#15343#0" expanded="false" />
+                <element signature="e#15425#15525#0" expanded="false" />
+                <element signature="e#15629#15715#0" expanded="false" />
+                <element signature="e#15765#15862#0" expanded="false" />
+                <element signature="e#15902#16085#0" expanded="false" />
+                <element signature="e#16127#16306#0" expanded="false" />
+                <element signature="e#16344#16996#0" expanded="false" />
+                <element signature="e#17034#17293#0" expanded="false" />
+                <element signature="e#17326#17578#0" expanded="false" />
+                <element signature="e#17612#17868#0" expanded="false" />
+                <element signature="e#17906#18147#0" expanded="false" />
+                <element signature="e#18182#18570#0" expanded="false" />
+                <element signature="e#18605#19124#0" expanded="false" />
+                <element signature="e#19159#19493#0" expanded="false" />
+                <element signature="e#19514#20072#0" expanded="false" />
+                <element signature="e#20107#20414#0" expanded="false" />
+                <element signature="e#20435#20987#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -208,36 +165,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>productList</find>
-      <find>getProduct</find>
-      <find>getPro</find>
-      <find>goodVender</find>
-      <find>proName</find>
-      <find>updateProduct</find>
-      <find>rw</find>
-      <find>changjia</find>
-      <find>proCJ</find>
-      <find>proID</find>
-      <find>proIDs</find>
+      <find>this.pageChangge</find>
+      <find>dom</find>
+      <find>pageinationLength</find>
+      <find>length</find>
+      <find>jump</find>
+      <find>pageDown</find>
+      <find>pageChangge</find>
+      <find>tableData</find>
+      <find>number</find>
+      <find>handleSizeChange</find>
+      <find>tableRowClassName</find>
+      <find>handleCurrentChange</find>
+      <find>criteria</find>
+      <find>parameter</find>
+      <find>共</find>
+      <find>total</find>
+      <find>totalCount</find>
+      <find>computed</find>
+      <find>path</find>
+      <find>pageModel</find>
+      <find>pagesize</find>
+      <find>supplierProductEdit</find>
+      <find>removePro</find>
       <find>selectCountry</find>
+      <find>getProduct</find>
+      <find>currentPage</find>
+      <find>handleUserList</find>
+      <find>userList</find>
+      <find>pageSize</find>
       <find>goodProduct</find>
-      <find>findProductAllName</find>
-      <find>goodProAll</find>
-      <find>porId</find>
-      <find>tjWidth</find>
-      <find>proCC</find>
-      <find>goodPro</find>
-      <find>preview</find>
-      <find>square previewImg</find>
-      <find>previews</find>
-      <find>realTime</find>
-      <find>finish</find>
-      <find>getCropData</find>
-      <find>modelSrc</find>
-      <find>row rowImg</find>
-      <find>down</find>
-      <find>pageSizeArray</find>
-      <find>hrefs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,8 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/welcome.html" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/interface/lookOver.json" />
         <option value="$USER_HOME$/Documents/Tencent Files/1170951549/FileRecv/新建文本文档 (2).html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/proHttp.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/js/main.js" />
@@ -293,8 +248,10 @@
         <option value="$PROJECT_DIR$/my-haonan/products.js" />
         <option value="$PROJECT_DIR$/my-haonan/app.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html" />
-        <option value="$PROJECT_DIR$/my-haonan/dist/project/createProduct.html" />
         <option value="$USER_HOME$/Desktop/新建文件夹 (3)/demo.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/createProduct.html" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/js/1111.js" />
+        <option value="$PROJECT_DIR$/my-haonan/dist/project/js/pageination.js" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html" />
         <option value="$PROJECT_DIR$/my-haonan/dist/project/home.html" />
       </list>
@@ -315,7 +272,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/my-haonan/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="63" />
     <option name="y" value="134" />
     <option name="width" value="1936" />
@@ -337,6 +294,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,25 +308,10 @@
               <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
               <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="9979Haonan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="9979Haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="my-haonan" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,7 +490,8 @@
       <workItem from="1540170253676" duration="29826000" />
       <workItem from="1540342669907" duration="32953000" />
       <workItem from="1540429472467" duration="22084000" />
-      <workItem from="1540514360923" duration="22769000" />
+      <workItem from="1540514360923" duration="25817000" />
+      <workItem from="1540774770863" duration="27280000" />
     </task>
     <task id="LOCAL-00001" summary="优化">
       <created>1537951429923</created>
@@ -594,7 +539,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="893171000" />
+    <option name="totallyTimeSpent" value="923499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -606,7 +551,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15858799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -614,7 +559,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2687704" sideWeight="0.544784" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21545158" sideWeight="0.45521602" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20892274" sideWeight="0.45521602" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861805" sideWeight="0.4915701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -674,33 +619,11 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="806" column="14" lean-forward="false" selection-start-line="806" selection-start-column="14" selection-end-line="806" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/node_modules/mongoose/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.097.2543/HZ$D.097.2544/AmazonManger/server/api/accountDB.js" />
-    <entry file="file://$USER_HOME$/Desktop/checkDB(1).js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1426">
-          <caret line="100" column="98" lean-forward="false" selection-start-line="100" selection-start-column="77" selection-end-line="100" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.097.2543/HZ$D.097.2545/AmazonManger/server/api/account.js" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.097.2546/DataEntry.vue" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.097.2547/AccountList.vue" />
@@ -858,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3565">
           <caret line="155" column="31" lean-forward="false" selection-start-line="155" selection-start-column="29" selection-end-line="155" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,9 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1150">
           <caret line="1234" column="7" lean-forward="false" selection-start-line="1234" selection-start-column="7" selection-end-line="1234" selection-end-column="7" />
-          <folding>
-            <element signature="e#4#20795#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,15 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-356">
           <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/venderDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="118" column="42" lean-forward="false" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,15 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/addVender.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,24 +837,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1738">
           <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="157" column="10" lean-forward="true" selection-start-line="155" selection-start-column="3" selection-end-line="157" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/addProduct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
+        <state relative-caret-position="3381">
           <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="23" />
           <folding>
             <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -965,109 +850,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (3)/js/vue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-966">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (3)/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="164" column="10" lean-forward="true" selection-start-line="162" selection-start-column="8" selection-end-line="164" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="509" column="0" lean-forward="true" selection-start-line="509" selection-start-column="0" selection-end-line="509" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5964#5971#1" expanded="true" />
-            <element signature="n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#9779#9785#0" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#12755#12762#1" expanded="true" />
-            <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#21217#21317#0" expanded="false" />
-            <element signature="e#22471#23005#0" expanded="false" />
-            <element signature="e#23335#23587#0" expanded="false" />
-            <element signature="e#23621#23877#0" expanded="false" />
-            <element signature="e#23915#24156#0" expanded="false" />
-            <element signature="e#24191#24578#0" expanded="false" />
-            <element signature="e#24613#25132#0" expanded="false" />
-            <element signature="e#25167#25499#0" expanded="false" />
-            <element signature="e#25520#26078#0" expanded="false" />
-            <element signature="e#26113#26420#0" expanded="false" />
-            <element signature="e#26441#26993#0" expanded="false" />
-            <element signature="e#27015#27092#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="1058">
           <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/home.html">
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-983">
-          <caret line="209" column="35" lean-forward="true" selection-start-line="209" selection-start-column="35" selection-end-line="209" selection-end-column="35" />
+        <state relative-caret-position="217">
+          <caret line="157" column="10" lean-forward="false" selection-start-line="155" selection-start-column="3" selection-end-line="157" selection-end-column="10" />
           <folding>
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#7;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#4590#4597#1" expanded="true" />
-            <element signature="n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8475#8481#0" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#11451#11458#1" expanded="true" />
-            <element signature="n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#17496#17770#0" expanded="false" />
-            <element signature="e#17784#17886#0" expanded="false" />
-            <element signature="e#19217#19469#0" expanded="false" />
-            <element signature="e#19503#19759#0" expanded="false" />
-            <element signature="e#19797#20038#0" expanded="false" />
-            <element signature="e#20073#20460#0" expanded="false" />
-            <element signature="e#20495#21014#0" expanded="false" />
-            <element signature="e#21049#21380#0" expanded="false" />
-            <element signature="e#21401#21959#0" expanded="false" />
-            <element signature="e#21994#22300#0" expanded="false" />
-            <element signature="e#22321#22887#0" expanded="false" />
-            <element signature="e#22909#22986#0" expanded="false" />
-            <element signature="e#22999#23193#0" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/js/1111.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74646">
+          <caret line="3351" column="4" lean-forward="false" selection-start-line="3351" selection-start-column="4" selection-end-line="3351" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/addVender.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="152" column="29" lean-forward="false" selection-start-line="152" selection-start-column="29" selection-end-line="152" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (2)/AmazonManger/client/src/views/AccountList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2780">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (3)/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="8111" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="8116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (3)/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="78" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/js/pageination.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="62" column="2" lean-forward="false" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
+          <folding>
+            <marker date="1540798598404" expanded="true" signature="321:353" ph="..." />
+            <marker date="1540798598404" expanded="true" signature="424:441" ph="..." />
+            <marker date="1540798598404" expanded="true" signature="677:683" ph=" " />
+            <marker date="1540798598404" expanded="true" signature="683:689" ph=" " />
+            <marker date="1540798598404" expanded="true" signature="769:792" ph="..." />
+            <marker date="1540798598404" expanded="true" signature="883:929" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/新建文件夹 (2)/AmazonManger/client/src/views/SupplierProduct.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="72" column="99" lean-forward="true" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/venderDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="118" column="42" lean-forward="false" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/createProduct.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="295" column="12" lean-forward="true" selection-start-line="295" selection-start-column="12" selection-end-line="295" selection-end-column="12" />
+        <state relative-caret-position="4041">
+          <caret line="395" column="17" lean-forward="false" selection-start-line="395" selection-start-column="17" selection-end-line="395" selection-end-column="17" />
           <folding>
             <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1079,13 +957,90 @@
             <element signature="e#13086#13199#0" expanded="false" />
             <element signature="e#13219#13332#0" expanded="false" />
             <element signature="e#13346#13383#0" expanded="false" />
-            <element signature="e#13698#13796#0" expanded="false" />
-            <element signature="e#13835#13901#0" expanded="false" />
-            <element signature="e#13920#15828#0" expanded="false" />
-            <element signature="e#15854#17811#0" expanded="false" />
-            <element signature="e#17832#17867#0" expanded="false" />
-            <element signature="e#19487#22792#0" expanded="false" />
-            <element signature="e#22850#23485#0" expanded="false" />
+            <element signature="e#13836#13902#0" expanded="false" />
+            <element signature="e#13921#15829#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/ceshi3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="351" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="565" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4706#4713#1" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8289#8295#0" expanded="true" />
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#11506#11513#1" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#15080#15212#0" expanded="false" />
+            <element signature="e#15226#15343#0" expanded="false" />
+            <element signature="e#15425#15525#0" expanded="false" />
+            <element signature="e#15629#15715#0" expanded="false" />
+            <element signature="e#15765#15862#0" expanded="false" />
+            <element signature="e#15902#16085#0" expanded="false" />
+            <element signature="e#16127#16306#0" expanded="false" />
+            <element signature="e#16344#16996#0" expanded="false" />
+            <element signature="e#17034#17293#0" expanded="false" />
+            <element signature="e#17326#17578#0" expanded="false" />
+            <element signature="e#17612#17868#0" expanded="false" />
+            <element signature="e#17906#18147#0" expanded="false" />
+            <element signature="e#18182#18570#0" expanded="false" />
+            <element signature="e#18605#19124#0" expanded="false" />
+            <element signature="e#19159#19493#0" expanded="false" />
+            <element signature="e#19514#20072#0" expanded="false" />
+            <element signature="e#20107#20414#0" expanded="false" />
+            <element signature="e#20435#20987#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-haonan/dist/project/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="552" column="12" lean-forward="true" selection-start-line="552" selection-start-column="12" selection-end-line="552" selection-end-column="12" />
+          <folding>
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4706#4713#1" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#footer#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#8289#8295#0" expanded="true" />
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#el-table#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#11506#11513#1" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#15082#15214#0" expanded="false" />
+            <element signature="e#15228#15345#0" expanded="false" />
+            <element signature="e#15427#15527#0" expanded="false" />
+            <element signature="e#15631#15717#0" expanded="false" />
+            <element signature="e#15767#15864#0" expanded="false" />
+            <element signature="e#15904#16087#0" expanded="false" />
+            <element signature="e#16129#16308#0" expanded="false" />
+            <element signature="e#16346#16998#0" expanded="false" />
+            <element signature="e#17036#17295#0" expanded="false" />
+            <element signature="e#17328#17580#0" expanded="false" />
+            <element signature="e#17614#17870#0" expanded="false" />
+            <element signature="e#17908#18149#0" expanded="false" />
+            <element signature="e#18184#18571#0" expanded="false" />
+            <element signature="e#18606#19125#0" expanded="false" />
+            <element signature="e#19160#19494#0" expanded="false" />
+            <element signature="e#19515#20073#0" expanded="false" />
+            <element signature="e#20108#20415#0" expanded="false" />
+            <element signature="e#20436#20988#0" expanded="false" />
           </folding>
         </state>
       </provider>

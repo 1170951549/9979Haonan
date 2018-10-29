@@ -422,6 +422,7 @@
         // console.log(this.goods);
         var x = $('.changjia option:selected').text();
         $(".changjias").val($.trim(x));
+
       },
       selectCountrys(){
         var x = $('.proID option:selected').text();
@@ -554,10 +555,11 @@
           for(var i=0;i< this.goods.length;i++){
             this.tempJson=this.goods[i].所属产品
           }
-          console.log( this.tempJson);
           for(var i=0;i<this.tempJson.length;i++){
             this.tempJsons.push({'产品名称':this.tempJson[i].产品名称,'尺寸':this.tempJson[i].尺寸});
           }
+          console.log(this.tempJson);
+          console.log( this.tempJsons);
           /*获取当前地址 并裁剪*/
           const getQuery = () => {
             let result = {};
@@ -577,12 +579,13 @@
           //   $(".changjias").attr("disabled","disabled");
           //   $(".proIDs").attr("disabled","disabled");
           // }
-          $(".changjias").attr("disabled","disabled").css({"background-color":"white","cursor":"pointer"});
-          $(".proIDs").attr("disabled","disabled").css({"background-color":"white","cursor":"pointer"})
+          $(".changjias").attr("disabled","disabled").css({"background-color":"white","cursor":"default"});
+          $(".proIDs").attr("disabled","disabled").css({"background-color":"white","cursor":"default"});
         }, (err) => {
           console.log(err);
         })
       },
+      /*点击生成*/
       getcode() {
         if(this.num>0){
           $(".rowImg .divImg").hide();
