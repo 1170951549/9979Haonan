@@ -29,7 +29,6 @@
     .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
       color: white !important;
     }
-
     .navbar-brand{
       padding: 0;
     }
@@ -115,9 +114,9 @@
   var app = new Vue({
     el: '#app',
     data: {
-
     },
     methods: {
+      /*提交判断*/
       btnVender(){
         var phone = /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
         if($(".venName").val() == ""){
