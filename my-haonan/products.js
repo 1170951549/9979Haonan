@@ -13,17 +13,19 @@ product.post('/add',(req,res)=>{
 });
 //查询公司名称 数据绑定
 product.get("/list",(req,res)=>{
-  productDB.findVenderNameAll().then((doc)=>{
-    var tempJson=[];
-    for(var i=0;i<doc.length;i++){
-      tempJson.push({公司名称:doc[i].公司名称});
-    }
-    res.json({data:tempJson});
+  productDB.findVenderAll().then((doc)=>{
+    //console.log(doc);
+    // var tempJson=[];
+    // for(var i=0;i<doc.length;i++){
+    //   tempJson.push({公司名称:doc[i].公司名称});
+    // }
+     res.json({data:doc});
   })
 });
 //产品查询
 product.get("/productList",(req,res)=>{
   productDB.findProductAll().then((doc)=>{
+    //console.log(doc);
     res.json({data:doc});
   })
 });
@@ -37,7 +39,7 @@ product.post("/proListSelect",(req,res)=>{
 //删除产品
 product.post("/remove",(req,res)=>{
   productDB.removeProduct(req.body.id).then((doc)=>{
-    //console.log(req.body.id);
+    console.log(req.body.id);
     res.json({data:doc});
   })
 });

@@ -86,9 +86,9 @@ exports.updateProduct =function (orderInfo) {
       }
   });
 };
-//查询所有
+//查询厂家
 exports.findVenderAll=function(){
-  return VenderInfModel.find({}).populate('所属产品');
+  return VenderInfModel.find({}).populate("所属产品");
 };
 
 exports.findVenderNameAll=function(){
@@ -97,6 +97,7 @@ exports.findVenderNameAll=function(){
 //查询厂家
 exports.findProductAll=function(){
   return ProductoudModel.find({}).populate('公司名称');
+  // return VenderInfModel.find({}).populate("所属产品");
 };
 //查询所有(地区管理)
 exports.findProAllSelect=function(name){
@@ -109,7 +110,7 @@ exports.findProductAllName=function(name){
 
 //删除产品
 exports.removeProduct=function (id) {
-  return ProductoudModel.remove({"_id":id});
+  return ProductoudModel.remove({"_id":id})
 };
 //删除厂家
 exports.removeVebder=function (id) {

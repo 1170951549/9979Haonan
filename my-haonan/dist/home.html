@@ -358,6 +358,7 @@
     },
     methods: {
       // 初始页currentPage、初始每页数据数pagesize和数据data
+      // 切换每页显示的数量
       handleSizeChange: function (size) {
         this.pagesize = size;
         console.log(this.pagesize)  //每页下拉显示数据
@@ -368,16 +369,19 @@
       },
       /*产品分页*/
       handleUserList() {
-        this.$http.get('/product/productList').then(res => {  //这是从本地请求的数据接口，
+        this.$http.get('/product/productList').then((res) => {
           this.goodProduct = res.data.data;
-          console.log(this.goodProduct);
+         // console.log(this.goodProduct);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
         })
       },
       /*厂家分页*/
       handleVenderList() {
         this.$http.get('/vender/venderList').then(res => {  //这是从本地请求的数据接口，
           this.goodVender = res.data.data;
-          console.log(this.goodVender);
+          //console.log(this.goodVender);
         })
       },
       /*地区查询*/
@@ -428,7 +432,7 @@
       getProduct() {
         this.$http.get('/product/productList').then((res) => {
           this.goodProduct = res.data.data;
-          console.log(this.goodProduct);
+         // console.log(this.goodProduct);
           //console.log(this.goodXm);
         }, (err) => {
           console.log(err);
@@ -438,7 +442,7 @@
       getPro() {
         this.$http.get('/product/list').then((res) => {
           this.goodPro = res.data.data;
-          console.log(this.goodPro);
+        //  console.log(this.goodPro);
           //console.log(this.goodXm);
         }, (err) => {
           console.log(err);
@@ -452,6 +456,7 @@
           type: 'warning'
         }).then(()=>{
           this.$http.post('/product/remove',{'id':row._id}).then((res) => {
+            console.log(res);
             this.selectCountry();
             // this.getProduct();
           }, (err) => {

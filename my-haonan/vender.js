@@ -13,6 +13,8 @@ vender.post('/add',(req,res)=>{
 //查询厂家
 vender.get("/venderList",(req,res)=>{
   VenderDB.findVenderAll().then((doc)=>{
+    //console.log(doc.所属产品)
+    //console.log(doc);
     res.json({data:doc});
   })
 });
