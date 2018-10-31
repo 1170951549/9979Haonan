@@ -44,7 +44,7 @@ product.post("/remove",(req,res)=>{
       console.log(doc);
     // console.log(req.body.name);
     // console.log(req.body.id);
-    // res.json({data:doc});
+     res.json({data:doc});
   })
 });
 

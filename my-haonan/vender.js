@@ -29,6 +29,7 @@ vender.post("/remove",(req,res)=>{
 //修改厂家
 vender.post("/update",(req,res)=>{
   VenderDB.updateVenderById(req.body).then((doc)=>{
+   // console.log(req.body.name);
    // console.log(req.body.id);
     res.json({data:doc});
   })

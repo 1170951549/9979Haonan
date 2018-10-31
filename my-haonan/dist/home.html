@@ -539,7 +539,8 @@
             "display":"none"
           });
           $("#changeChar").hide();
-          this.$http.post('/vender/update', this.formv).then((res) => {
+          this.$http.post('/vender/update',this.formv,this.form).then((res) => {
+            console.log(this.form.body.所属产品);
             this.getVender();
             this.getProduct();
             console.log(res);
