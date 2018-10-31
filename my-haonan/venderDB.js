@@ -73,7 +73,7 @@ exports.updateProduct =function (orderInfo) {
   };
   var options = {upsert : true};
   return ProductoudModel.updateOne(conditions,update, options).then(updataDoc=> {
-    //console.log(updataDoc);
+   // console.log(updataDoc);
       if(updataDoc.upserted != undefined){
        // console.log(orderInfo.生产厂家);
         var conditions = {"公司名称":orderInfo.生产厂家};
@@ -109,9 +109,19 @@ exports.findProductAllName=function(name){
 };
 
 //删除产品
-exports.removeProduct=function (id) {
-  return ProductoudModel.remove({"_id":id})
+exports.removeProduct=function(id, name) {
+    var conditions = {"公司名称":name};
+    var update = {
+      $pull: {'所属产品': id}
+    };
+    var options = {upsert: false};
+    return VenderInfModel.updateOne(conditions, update,options).then(updataDoc=>{
+      console.log(updataDoc);
+      return ProductoudModel.deleteOne({"_id":id})
+    });
+
 };
+
 //删除厂家
 exports.removeVebder=function (id) {
   return VenderInfModel.remove({"_id":id});

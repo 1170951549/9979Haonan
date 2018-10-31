@@ -455,7 +455,8 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(()=>{
-          this.$http.post('/product/remove',{'id':row._id}).then((res) => {
+          console.log(row._id, row.选择厂家)
+          this.$http.post('/product/remove',{"id":row._id,"厂家":row.选择厂家}).then((res) => {
             console.log(res);
             this.selectCountry();
             // this.getProduct();

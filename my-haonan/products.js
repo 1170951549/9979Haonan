@@ -38,11 +38,16 @@ product.post("/proListSelect",(req,res)=>{
 });
 //删除产品
 product.post("/remove",(req,res)=>{
-  productDB.removeProduct(req.body.id).then((doc)=>{
-    console.log(req.body.id);
-    res.json({data:doc});
+    // console.log(req.body.厂家);
+    // console.log(req.body.id);
+    productDB.removeProduct(req.body.id, req.body.厂家).then((doc)=>{
+      console.log(doc);
+    // console.log(req.body.name);
+    // console.log(req.body.id);
+    // res.json({data:doc});
   })
 });
+
 //修改产品
 product.post("/update",(req,res)=>{
   productDB.updateProductById(req.body).then((doc)=>{
