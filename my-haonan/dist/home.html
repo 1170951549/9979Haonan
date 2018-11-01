@@ -196,32 +196,32 @@
             <el-table style="width: 100%;" :data="goodProduct.slice((currentPage-1)*pagesize,currentPage*pagesize)">
               <el-table-column label="厂家" prop="date" width="180">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.选择厂家 }}</span>
+                <span>{{ scope.row.公司名称 }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="产品名称" prop="name" width="200">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.产品名称 }}</span>
+                  <span>{{ scope.row.所属产品.产品名称 }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="图片" prop="email" width="250">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.图片 }}</span>
+                  <span>{{ scope.row.所属产品.图片 }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="尺寸" prop="address" width="200">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.尺寸 }}</span>
+                  <span>{{ scope.row.所属产品.尺寸 }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="产品单价" prop="address" width="200">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.产品单价 }}</span>
+                  <span>{{ scope.row.所属产品.产品单价 }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="生产ID" prop="address" width="200">
                 <template slot-scope="scope">
-                  <span>{{ scope.row.生产ID }}</span>
+                  <span>{{ scope.row.所属产品.生产ID }}</span>
                 </template>
               </el-table-column>
               <el-table-column label="时间" prop="address" width="250">
@@ -333,7 +333,6 @@
       countryName:[],
       form:{
         id:"",
-        "厂家":"",
         "产品名称":"",
         "图片":"",
         "尺寸":"",
@@ -384,11 +383,32 @@
           //console.log(this.goodVender);
         })
       },
+      //查询厂家
+      getVender() {
+        this.$http.get('/vender/venderList').then((res) => {
+          this.goodVender = res.data.data;
+          console.log(this.goodVender);
+          //console.log(this.goodXm);
+        }, (err) => {
+          console.log(err);
+        })
+      },
+      //查询产品
+      getProduct() {
+        this.$http.get('/product/productList').then((res) => {
+          this.goodProduct = res.data.data;
+          console.log(this.goodProduct)
+
+        }, (err) => {
+          console.log(err);
+        })
+      },
       /*地区查询*/
       selectCountry(){
         this.$http.post('/product/proListSelect',{"公司名称":this.countryName}).then((res) => {
-          this.goodProduct = res.body.data;
+          this.goodProduct = res.data.data;
           console.log(this.countryName);
+          console.log(this.goodProduct);
           if(this.goodProduct==""){
             $(".rowDisplay").show();
           }else{
@@ -407,37 +427,22 @@
           console.log(err);
         })
       },
+
+
+
       /*预览传值*/
       previewPro(row){
         row._id;
-        row.选择厂家;
-        row.产品名称;
-        row.图片;
-        row.尺寸;
-        row.产品单价;
-        row.生产ID;
-        return "createProduct.html?"+'厂家='+row.选择厂家+'&'+'产品名称='+row.产品名称+'&'+'图片='+row.图片+'&'+'生产ID='+row.生产ID+'&'+'尺寸='+row.尺寸;
+        row.公司名称;
+        row.所属产品.产品名称;
+        row.所属产品.图片;
+        row.所属产品.尺寸;
+        row.所属产品.产品单价;
+        row.所属产品.生产ID;
+        console.log(row);
+        return "createProduct.html?"+'厂家='+row.公司名称+'&'+'产品名称='+row.所属产品.产品名称+'&'+'图片='+row.所属产品.图片+'&'+'生产ID='+row.所属产品.生产ID+'&'+'尺寸='+row.所属产品.尺寸;
       },
-      //查询厂家
-      getVender() {
-        this.$http.get('/vender/venderList').then((res) => {
-          this.goodVender = res.data.data;
-          console.log(this.goodVender);
-          //console.log(this.goodXm);
-        }, (err) => {
-          console.log(err);
-        })
-      },
-      //查询产品
-      getProduct() {
-        this.$http.get('/product/productList').then((res) => {
-          this.goodProduct = res.data.data;
-         // console.log(this.goodProduct);
-          //console.log(this.goodXm);
-        }, (err) => {
-          console.log(err);
-        })
-      },
+
       //查询产品名称  数据绑定
       getPro() {
         this.$http.get('/product/list').then((res) => {
@@ -455,8 +460,8 @@
           cancelButtonText: '取消',
           type: 'warning'
         }).then(()=>{
-          console.log(row._id, row.选择厂家)
-          this.$http.post('/product/remove',{"id":row._id,"厂家":row.选择厂家}).then((res) => {
+          console.log(row.所属产品._id, row.公司名称)
+          this.$http.post('/product/remove',{"id":row.所属产品._id,"公司名称":row.公司名称}).then((res) => {
             console.log(res);
             this.selectCountry();
             // this.getProduct();
@@ -473,10 +478,7 @@
           type: 'warning'
         }).then(()=>{
           this.$http.post('/vender/remove',{'id':row._id}).then((res) => {
-            // this.removeVens = res.data.data;
-            // console.log(this.removeVens);
-            //console.log(this.goodXm);
-            //console.log(row._id);
+
             this.getVender();
           }, (err) => {
             console.log(err);
@@ -485,13 +487,12 @@
       },
       //修改产品
       updataPro(row){
-        this.form.id = row._id;
-        this.form.厂家 = row.选择厂家;
-        this.form.产品名称 = row.产品名称;
-        this.form.图片 = row.图片;
-        this.form.尺寸 = row.尺寸;
-        this.form.产品单价 = row.产品单价;
-        this.form.生产ID = row.生产ID;
+        this.form.id = row.所属产品._id;
+        this.form.产品名称 = row.所属产品.产品名称;
+        this.form.图片 = row.所属产品.图片;
+        this.form.尺寸 = row.所属产品.尺寸;
+        this.form.产品单价 = row.所属产品.产品单价;
+        this.form.生产ID = row.所属产品.生产ID;
         // this.selectCountry();
         //this.getProduct();
         console.log(this.form)
@@ -507,7 +508,8 @@
             "display":"none"
           });
           $("#reviseUser").hide();
-          this.$http.post('/product/update', this.form).then((res) => {
+          console.log(this.form);
+          this.$http.post('/product/update',this.form).then((res) => {
             this.selectCountry();
             //this.getProduct();
             console.log(res);
@@ -539,8 +541,7 @@
             "display":"none"
           });
           $("#changeChar").hide();
-          this.$http.post('/vender/update',this.formv,this.form).then((res) => {
-            console.log(this.form.body.所属产品);
+          this.$http.post('/vender/update',this.formv).then((res) => {
             this.getVender();
             this.getProduct();
             console.log(res);

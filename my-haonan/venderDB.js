@@ -24,7 +24,7 @@ var productoudSchema = new mongoose.Schema({
   尺寸: String,
   产品单价: String,
   生产ID:String,
-  选择厂家:String,
+ // 选择厂家:String,
   创建时间:{ type: Date, default: Date.now }
 });
 
@@ -35,7 +35,7 @@ exports.AddNewProduct=function(ProductInf) {
   productInfModel.尺寸 = ProductInf.尺寸;
   productInfModel.产品单价 = ProductInf.产品单价;
   productInfModel.生产ID = ProductInf.生产ID;
- productInfModel.选择厂家 = ProductInf.生产厂家;
+// productInfModel.选择厂家 = ProductInf.生产厂家;
   return productInfModel.save();
 };
 //厂家表
@@ -67,7 +67,7 @@ exports.updateProduct =function (orderInfo) {
         "尺寸": orderInfo.尺寸,
         "产品单价": orderInfo.产品单价,
         "生产ID": orderInfo.生产ID,
-        "选择厂家": orderInfo.生产厂家,
+       // "选择厂家": orderInfo.生产厂家,
         "创建时间": moment().utcOffset(8).format('YYYY-MM-DD HH:mm:ss'),
       }
   };
@@ -90,44 +90,33 @@ exports.updateProduct =function (orderInfo) {
 exports.findVenderAll=function(){
   return VenderInfModel.find({}).populate("所属产品");
 };
-
-exports.findVenderNameAll=function(){
-  return VenderInfModel.find({}).select("公司名称");
-};
 //查询厂家
 exports.findProductAll=function(){
-  return ProductoudModel.find({}).populate('公司名称');
-  // return VenderInfModel.find({}).populate("所属产品");
+  //return ProductoudModel.find({}).populate('公司名称');
+   return VenderInfModel.find({}).populate("所属产品");
 };
+
 //查询所有(地区管理)
 exports.findProAllSelect=function(name){
-  return ProductoudModel.find({"选择厂家":name});
-};
-//条件查询
-exports.findProductAllName=function(name){
-  return ProductoudModel.find({"产品名称":name});
+  return VenderInfModel.find({"公司名称":name}).populate("所属产品");
 };
 
 //删除产品
 exports.removeProduct=function(id, name) {
-    var conditions = {"公司名称":name};
-    var update = {
-      $pull: {'所属产品': id}
-    };
-    var options = {upsert: false};
-    return VenderInfModel.updateOne(conditions, update,options).then(updataDoc=>{
-      console.log(updataDoc);
-      return ProductoudModel.deleteOne({"_id":id})
-    });
-
-};
-
-//删除厂家
-exports.removeVebder=function (id) {
-  return VenderInfModel.remove({"_id":id});
+  console.log(name);
+  var conditions = {"公司名称":name};
+  var update = {
+    $pull: {'所属产品': id}
+  };
+  var options = {upsert: false};
+  return VenderInfModel.updateOne(conditions, update,options).then(updataDoc=>{
+    console.log(updataDoc);
+    return ProductoudModel.deleteOne({"_id":id})
+  });
 };
 //修改产品
 exports.updateProductById=function (productInfo) {
+  //console.log(productInfo)
   var conditions = {'_id' : productInfo['id']};
   var update     = {$set :
       {
@@ -140,8 +129,33 @@ exports.updateProductById=function (productInfo) {
       }
   };
   var options = {upsert : false};
-  return ProductoudModel.update(conditions,update,options)
+  return ProductoudModel.updateOne(conditions,update,options)
 };
+
+
+
+
+
+
+
+
+exports.findVenderNameAll=function(){
+  return VenderInfModel.find({}).select("公司名称");
+};
+
+
+//条件查询
+exports.findProductAllName=function(name){
+  return ProductoudModel.find({"产品名称":name});
+};
+
+
+
+//删除厂家
+exports.removeVebder=function (id) {
+  return VenderInfModel.remove({"_id":id});
+};
+
 //修改厂家
 exports.updateVenderById=function (venderInfo) {
   var gs = venderInfo.公司名称;
@@ -159,16 +173,4 @@ exports.updateVenderById=function (venderInfo) {
   var options = {upsert : false};
   console.log(venderInfo.公司名称)
   return VenderInfModel.updateOne(conditions,update,options)
-  //   .then(updateDoc=>{
-  //  // var conditions = {'_id' : venderInfo['id']}
-  //   var conditions = {'公司名称' : venderInfo.公司名称};
-  //   var update     = {$set :
-  //       {
-  //         '厂家': venderInfo.公司名称,
-  //         "创建时间": moment().utcOffset(8).format('YYYY-MM-DD HH:mm:ss'),
-  //       }
-  //   };
-  //   var options = {upsert : false};
-  //   return ProductoudModel.updateOne(conditions,update,options)
-  // })
 };
